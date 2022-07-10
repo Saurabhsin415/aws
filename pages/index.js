@@ -50,28 +50,28 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
   <div className="text-center py-3 text-family1 result-update">
 <h3 style={{'marginBottom':'0px'}}>MATKA LIVE RESULTS</h3>  <div className='text-color1'>Date:10/07/2022</div>
  </div> 
- <div className='content-wrap1 text-center text-family result-div'>
+ <div className='content-wrap1 text-center result-div text-family2'>
 <h2 className='text-color2'>SRIDEVI</h2>
 <p className=''>222-66-178</p>
  </div>
- <div className='content-wrap1 text-center text-family result-div'>
+ <div className='content-wrap1 text-center text-family2 result-div'>
 <h2 className='text-color2'>TIME BAZAR</h2>
 <p className=''>222-66-178</p>
  </div>
- <div className='content-wrap1 text-center text-family result-div'>
+ <div className='content-wrap1 text-center text-family2 result-div'>
 <h2 className='text-color2'>MADHUR DAY</h2>
 <p className=''>222-66-178</p>
  </div>
- <div className='content-wrap1 text-center text-family result-div'>
+ <div className='content-wrap1 text-center text-family2 result-div'>
 <h2 className='text-color2'>RAJDHANI DAY</h2>
 <p className=''>222-66-178</p>
  </div>
- <div className='content-wrap1 text-center text-family result-div'>
+ <div className='content-wrap1 text-center text-family2 result-div'>
 <h2 className='text-color2'>MILAN DAY</h2>
 <p className=''>222-66-178</p>
  </div>
 
- <TimeTable/>
+ {/* <TimeTable/> */}
 {/* 
  <div className="text-center py-3 text-family1 result-update">
 <h3 style={{'marginBottom':'0px'}}>TimeTable</h3>

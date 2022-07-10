@@ -14,7 +14,13 @@ body{
 .text-family1{
     font-family: 'Poppins', sans-serif;
 }
+
+.text-family2{
+    font-family: 'Roboto', sans-serif;
+} 
+
 .header{
+    left: 0;
     z-index: 9999;
     font-family: 'Kalam', cursive!important;
     background-image: linear-gradient(179deg, #e3edf7 0%, white 100%);
@@ -32,6 +38,40 @@ body{
     text-align: center;
     padding: 10px;
     line-height: 1.2;
+}
+.footer{
+
+    left: 0;
+    z-index: 9999;
+    font-family: 'Kalam', cursive!important;
+    background-image: linear-gradient(179deg, #e3edf7 0%, white 100%);
+    -webkit-box-shadow: -5.657px -5.657px 10px 0px rgb(245 249 252 / 0%), 4.096px 2.868px 15px 0px rgb(127 163 199 / 30%);
+    box-shadow: -5.657px -5.657px 10px 0px rgb(245 249 252 / 0%), 4.096px 2.868px 15px 0px rgb(127 163 199 / 30%);
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    /* font-size: 25px; */
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+    line-height: 1.2;
+    background: #e3edf7;
+    border-radius: 5px;
+    display: flex;
+    -webkit-box-shadow: -6px -6px 10px 0px #f5f9fc, 4px 3px 15px 0px rgb(127 163 199 / 30%);
+    box-shadow: -6px -6px 10px 0px #f5f9fc, 4px 3px 15px 0px rgb(127 163 199 / 30%);
+}
+.footer div{
+    width: 25%;
+}
+.footer div a{
+    font-size: 20px;
+    color: #e70280;
+    text-decoration: none;
 }
 .text-color1{
     color:#08203a;
@@ -164,6 +204,7 @@ body{
 .result-update{
     color: #e70280;
     font-size: 24px!important;
+    font-family: 'Kalam', cursive!important;
 }
 .result-div {
     padding: 8px;
@@ -210,6 +251,28 @@ body{
   color: #08203a;
     text-decoration: none;
     font-weight:700;
-    font-size: 20px;
+    font-size: 18px;
  }
  
+ .active{
+    background: linear-gradient(103deg, #e3edf7, #ffffff);
+    -webkit-box-shadow: -6px -6px 10px 0px #f5f9fc, 4px 3px 15px 0px rgb(127 163 199 / 30%);
+    box-shadow: -6px -6px 10px 0px #f5f9fc, 4px 3px 15px 0px rgb(127 163 199 / 30%);
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    border-radius: 5px;
+ }
+ .aspan{
+    display: block;
+    font-size: 15px;
+ }
+ .foot{
+    position: relative;
+    margin-bottom: 75px;
+ }
+ .foot img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: -99;
+ }
