@@ -32,7 +32,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
 </div>
 
 <div className='content-wrap1'>
-<img src="http://localhost:3000/img/portfolio-shape.png"  className='img2'/>
+<img src="https://matka-one.vercel.app/img/portfolio-shape.png"  className='img2'/>
 <span className='bedage'>New</span>
   <div className="text-center py-3 text-family1 live-update">
 <Typed
@@ -45,6 +45,9 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
           backSpeed={30}
           loop
         /></div></div>
+        <div className='text-center' style={{'margin':'200px 0px'}}>
+comming soon
+        </div>
     </>
     
   );
