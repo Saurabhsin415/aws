@@ -15,6 +15,7 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 .header{
+    z-index: 9999;
     font-family: 'Kalam', cursive!important;
     background-image: linear-gradient(179deg, #e3edf7 0%, white 100%);
     -webkit-box-shadow: -5.657px -5.657px 10px 0px rgb(245 249 252 / 0%), 4.096px 2.868px 15px 0px rgb(127 163 199 / 30%);
@@ -62,12 +63,14 @@ body{
     right: 0;
     top: 0;
     height: 100%;
+   
 }
-.live-update{
+.live-update,.result-update{
     font-size: 30px!important;
     font-weight: 700;
     line-height: 1.2;
     color:#08203a;
+    text-shadow: 2px 6px #c4c4ed;
 }
 .img2{
     position: absolute;
@@ -158,3 +161,55 @@ body{
 .mr-2{
     margin-right: 5px;
 }
+.result-update{
+    color: #e70280;
+    font-size: 24px!important;
+}
+.result-div {
+    padding: 8px;
+}
+.result-div h2{
+    margin: 0px;
+}
+.result-div h3{
+    margin: 0px;
+}
+
+.result-div p{
+    font-size: 22px;
+    font-weight: 700;
+    padding: 0px;
+    margin: 0px;
+    color: #08203a;
+}
+ table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+ }
+ table tr th,table tr td{
+    border: 1px solid #e1e1e1;
+    padding: 8px;
+    font-family: 'Roboto', sans-serif;
+ }
+ .p-0{
+    padding: 0!important;
+ }
+ table tr:nth-child(even){
+    background-color: #e70280;
+    color: #ffff;
+ }
+ table tr:nth-child(odd){
+ 
+    color: #08203a;
+ }
+ .link
+ {
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+  color: #08203a;
+    text-decoration: none;
+    font-weight:700;
+    font-size: 20px;
+ }
+ 

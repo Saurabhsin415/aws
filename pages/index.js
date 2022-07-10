@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import Typed from "react-typed"
+import Typed from "react-typed";
+import TimeTable from "./timetable";
 export default function Home() {
   return (
     <>
@@ -45,6 +46,147 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
           backSpeed={30}
           loop
         /></div></div>
+      
+  <div className="text-center py-3 text-family1 result-update">
+<h3 style={{'marginBottom':'0px'}}>MATKA LIVE RESULTS</h3>  <div className='text-color1'>Date:10/07/2022</div>
+ </div> 
+ <div className='content-wrap1 text-center text-family result-div'>
+<h2 className='text-color2'>SRIDEVI</h2>
+<p className=''>222-66-178</p>
+ </div>
+ <div className='content-wrap1 text-center text-family result-div'>
+<h2 className='text-color2'>TIME BAZAR</h2>
+<p className=''>222-66-178</p>
+ </div>
+ <div className='content-wrap1 text-center text-family result-div'>
+<h2 className='text-color2'>MADHUR DAY</h2>
+<p className=''>222-66-178</p>
+ </div>
+ <div className='content-wrap1 text-center text-family result-div'>
+<h2 className='text-color2'>RAJDHANI DAY</h2>
+<p className=''>222-66-178</p>
+ </div>
+ <div className='content-wrap1 text-center text-family result-div'>
+<h2 className='text-color2'>MILAN DAY</h2>
+<p className=''>222-66-178</p>
+ </div>
+
+ <TimeTable/>
+{/* 
+ <div className="text-center py-3 text-family1 result-update">
+<h3 style={{'marginBottom':'0px'}}>TimeTable</h3>
+ </div>
+<div className='content-wrap1 p-0' >
+<table>
+  <tr>
+    <th>Market</th>
+    <th>Open</th>
+    <th>Close</th>
+  </tr>
+  <tr>
+    <td>SRIDEVI</td>
+    <td>111</td>
+    <td>112</td>
+
+  </tr>
+  <tr>
+    <td>TIME BAZAR</td>
+    <td>111</td>
+    <td>112</td>
+
+  </tr>
+  <tr>
+    <td>RAJDHANI DAY</td>
+    <td>111</td>
+    <td>112</td>
+
+  </tr>
+  <tr>
+    <td>SRRAJDHANI DAYIDEVI</td>
+    <td>111</td>
+    <td>112</td>
+
+  </tr>
+</table>
+</div> */}
+ <div className="text-center py-3 text-family1 result-update">
+<h3 style={{'marginBottom':'0px'}}>DAILY GAME ZONE</h3>
+ </div>
+ <div className='content-wrap1 text-center text-family result-div'>
+ <Link href="/GUESSING FORUM">
+  <a className='link'>GUESSING FORUM</a>
+ </Link>
+ </div>
+ <div className='content-wrap1 text-center text-family result-div div_link'>
+ <Link href="/GUESSING FORUM">
+  <a className='link'>EXPERTS FORUM</a>
+ </Link>
+ </div>
+ <div className='content-wrap1 text-center text-family result-div div_link'>
+ <Link href="/GUESSING FORUM">
+  <a className='link'>CHAT FORUM</a>
+ </Link>
+ </div>
+ <div className='content-wrap1 text-center text-family result-div div_link'>
+ <Link href="/GUESSING FORUM">
+  <a className='link'>TRICKS FORUM</a>
+ </Link>
+ </div>
+ <div className='content-wrap1 text-center text-family result-div div_link'>
+ <Link href="/GUESSING FORUM">
+  <a className='link'>FREE OPEN TO CLOSE ON PUBLIC DEMAND</a>
+ </Link>
+ </div>
+ <div className='content-wrap1 text-center text-family result-div div_link' >
+ <Link href="/GUESSING FORUM">
+  <a className='link'>WEEKLY JODI AND PANNA</a>
+ </Link>
+ </div>
+ <div className='content-wrap1 text-center text-family result-div div_link'>
+ <Link href="/GUESSING FORUM">
+  <a className='link'>100% FIX FREE GAME OPEN TO CLOSE AND LIFE TIME LOSS COVER GOLDEN CHART</a>
+ </Link>
+ </div>
+
+ <div className="text-center py-3 text-family1 result-update">
+<h3 style={{'marginBottom':'0px'}}>143 SPECIAL ZONE</h3>
+ </div>
+ <div className='content-wrap1 text-center text-family result-div div_link'>
+ <Link href="/GUESSING FORUM">
+  <a className='link'>ADMIN SIR EVERGREEN TRICK ZONE</a>
+ </Link>
+ </div>
+ <div className='content-wrap1 text-center text-family result-div div_link'>
+ <Link href="/GUESSING FORUM">
+  <a className='link'>KALYAN AND MUMBAI OLD 1974 TO 2012 GOLDEN CHART</a>
+ </Link>
+ </div>
+ <div className='content-wrap1 text-center text-family result-div div_link'>
+ <Link href="/GUESSING FORUM">
+  <a className='link'>KHATRI FAVOURITE PANNA CHART</a>
+ </Link>
+ </div>
+
+ <div className="text-center py-3 text-family1 result-update">
+<h3 style={{'marginBottom':'0px'}}>Jodi Chart</h3>
+ </div>
+ <div className='content-wrap1 text-center text-family result-div div_link'>
+ <Link href="/GUESSING FORUM">
+  <a className='link'>Sridevi</a>
+ </Link>
+ </div>
+ <div className='content-wrap1 text-center text-family result-div div_link'>
+ <Link href="/GUESSING FORUM">
+  <a className='link'>Time bazar</a>
+ </Link>
+ </div>
+ <div className='content-wrap1 text-center text-family result-div div_link'>
+ <Link href="/GUESSING FORUM">
+  <a className='link'>Madhur day</a>
+ </Link>
+ </div>
+
+
         <div className='text-center' style={{'margin':'200px 0px'}}>
 comming soon
         </div>
