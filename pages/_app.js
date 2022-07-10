@@ -1,4 +1,4 @@
-import '../styles/index.css';
+ 
 import '../styles/custom.css';
 import Layout from '../components/layout/main.js';
  
