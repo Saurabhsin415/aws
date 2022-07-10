@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Poppins:wght@700;900&family=Roboto:wght@400;700&display=swap');
+body{
+    background-color: #e3edf7;
+}
+*{
+    
+    box-sizing: border-box;
+ 
+}
+.text-family{
+    font-family: 'Kalam', cursive!important;
+}
+.header{
+    font-family: 'Kalam', cursive!important;
+    background-image: linear-gradient(179deg, #e3edf7 0%, white 100%);
+    -webkit-box-shadow: -5.657px -5.657px 10px 0px rgb(245 249 252 / 0%), 4.096px 2.868px 15px 0px rgb(127 163 199 / 30%);
+    box-shadow: -5.657px -5.657px 10px 0px rgb(245 249 252 / 0%), 4.096px 2.868px 15px 0px rgb(127 163 199 / 30%);
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    /* font-size: 25px; */
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+    line-height: 1.2;
+}
+.text-color1{
+    color:#08203a;
+}
+.text-color2{
+    color:#e70280;
+}
+.content-wrap{
+    background: linear-gradient(103deg, #e3edf7, #ffffff);
+    -webkit-box-shadow: -6px -6px 10px 0px #f5f9fc, 4px 3px 15px 0px rgb(127 163 199 / 30%);
+    box-shadow: -6px -6px 10px 0px #f5f9fc, 4px 3px 15px 0px rgb(127 163 199 / 30%);
+    border-radius: 5px;
+    padding: 0 40px;
+    position: relative;
+    margin-top: 77px;
+}
+.img1{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
