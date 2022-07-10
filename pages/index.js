@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import Typed from "react-typed"
 export default function Home() {
   return (
     <>
@@ -31,7 +31,20 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
 </div>
 </div>
 
-.
+<div className='content-wrap1'>
+<img src="http://localhost:3000/img/portfolio-shape.png"  className='img2'/>
+<span className='bedage'>New</span>
+  <div className="text-center py-3 text-family1 live-update">
+<Typed
+      strings={[
+            "Live Update",
+            "Sabse Tezz",
+             
+          ]}
+          typeSpeed={150}
+          backSpeed={30}
+          loop
+        /></div></div>
     </>
     
   );

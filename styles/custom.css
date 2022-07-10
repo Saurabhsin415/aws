@@ -11,6 +11,9 @@ body{
 .text-family{
     font-family: 'Kalam', cursive!important;
 }
+.text-family1{
+    font-family: 'Poppins', sans-serif;
+}
 .header{
     font-family: 'Kalam', cursive!important;
     background-image: linear-gradient(179deg, #e3edf7 0%, white 100%);
@@ -57,4 +60,92 @@ body{
     position: absolute;
     bottom: 0;
     right: 0;
+    top: 0;
+    height: 100%;
+}
+.live-update{
+    font-size: 30px!important;
+    font-weight: 700;
+    line-height: 1.2;
+    color:#08203a;
+}
+.img2{
+    position: absolute;
+    left: 15%;
+    top: 44px;
+    -webkit-animation: apihuPortUpsDown 5s infinite linear alternate;
+    animation: apihuPortUpsDown 5s infinite linear alternate;
+}
+
+@keyframes apihuPortUpsDown {
+    
+ 
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+.bedage{
+    position: absolute;
+    right: 47%;
+    top: 25%;
+    transform: translate(288%, -48%);
+    font-weight: 700;
+    font-family: 'Kalam', cursive!important;
+
+    width: 34px;
+    height: 30px;
+    border-radius: 10px;
+  
+    text-align: center;
+    margin-bottom: 22px;
+    /* -webkit-box-shadow: inset -3px -2px 5px 0px rgb(255 255 255 / 66%), inset -1px -1px 0px 0px rgb(255 255 255 / 18%), inset 2px 2px 7px 0px rgb(49 69 106 / 18%);
+    box-shadow: inset -3px -2px 5px 0px rgb(255 255 255 / 66%), inset -1px -1px 0px 0px rgb(255 255 255 / 18%), inset 2px 2px 7px 0px rgb(49 69 106 / 18%); */
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-animation: ani1 3s infinite linear alternate;
+    animation: ani1 3s infinite linear alternate;
+}
+
+@keyframes ani1 {
+    
+ 
+    0% {
+        /* -webkit-transform: translateY(0); */
+        /* transform: translateY(0); */
+         color: #e70280;
+    }
+    25% {
+        /* -webkit-transform: translateY(0); */
+        /* transform: translateY(0); */
+         color: pink;
+    }
+    50% {
+        color: green;
+        /* -webkit-transform: translateY(20px); */
+        /* transform: translateY(20px); */
+    }
+    75% {
+        color: darkblue;
+        /* -webkit-transform: translateY(20px); */
+        /* transform: translateY(20px); */
+    }
+    85% {
+        color: yellow;
+        /* -webkit-transform: translateY(20px); */
+        /* transform: translateY(20px); */
+    }
+   100% {
+    color:#08203a;
+        /* -webkit-transform: translateY(0);  */
+        /* transform: translateY(0); */
+    }
 }
