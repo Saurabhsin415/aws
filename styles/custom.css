@@ -103,6 +103,7 @@ body{
     right: 0;
     top: 0;
     height: 100%;
+    opacity: .4;
    
 }
 .live-update,.result-update{
