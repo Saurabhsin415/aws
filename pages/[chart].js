@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router'
 import JodiChart from "./charts/jodichart";
 import PanelChart from "./charts/PanelChart";
-export default function chart() {
+export default function ChartSlug() {
    
     const router = useRouter();
     const id = router.query.chart;
