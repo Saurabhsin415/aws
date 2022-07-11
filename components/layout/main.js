@@ -20,10 +20,7 @@ const CommonLayout = ({ children, title, parent, subTitle }) => {
                 <meta charSet="utf-8" />
                 <title>Sattamatka.rocks</title>
                 <link rel="canonical" href="http://mysite.com/example" />
-          
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
  
-<link rel="stylesheet" href="owl-carousel/owl.theme.css"></link>
             </Helmet>
     <div className="header text-color1 ">SattMatka.<span className="text-color2">Rocks</span></div>
   <main>{children}</main>
