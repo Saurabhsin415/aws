@@ -3,7 +3,7 @@ import axios from "axios";
 import { getToken } from "./get-token";
 
 const http = axios.create({
-  baseURL:'https://backend.nutracharm.in/api',
+  baseURL:'http://matka.gyaniarticle.com/api/',
   timeout: 30000,
   headers: {
     Accept: "application/json",

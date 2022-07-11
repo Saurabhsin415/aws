@@ -193,7 +193,7 @@ body{
     }
 }
 .text-center{
-    text-align: center;
+    text-align: center!important;
 }
 .py-3{
     padding: 8px
@@ -264,7 +264,7 @@ body{
  }
  .aspan{
     display: block;
-    font-size: 15px;
+    font-size: 11px;
  }
  .foot{
     margin-top: 10px;
@@ -277,6 +277,10 @@ body{
     padding: 18px;
     border-top: 1px solid #08203a21;
     font-family: 'Roboto', sans-serif;
+   
+ }
+ .foot p{
+    text-align: justify;
  }
  .foot img{
     width: 100%;
@@ -291,4 +295,13 @@ body{
  }
  .accordion div{
     background: linear-gradient(103deg, #e3edf7, #ffffff);
+ }
+ .text-justify{
+    text-align: justify;
+ }
+ .px-3{
+    padding: 15px ;
+ }
+ .relative{
+    position: relative;
  }

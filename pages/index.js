@@ -3,6 +3,7 @@ import Typed from "react-typed";
 import TimeTable from "./timetable";
 import SlidePost from "./slidepost";
 import Accordion from "./accordion";
+import Charts from './charts';
 export default function Home() {
   return (
     <>
@@ -23,10 +24,10 @@ export default function Home() {
 </div>
 
 <div className='content-wrap1'>
-  <img src="https://html.themexriver.com/Saasio/assets/img/port-img-31/cta-bg-shape.png"  className='img1' style={{'height':'120px'}}/>
+  <img src="https://html.themexriver.com/Saasio/assets/img/port-img-31/cta-bg-shape.png"  className='img1'/>
   {/* <div></div> */}
  
-  <div className="text-center py-3 text-family">
+  <div className="text-center text-family text-justify">
   Satta Matka Kalyan Main Mumbai Fastest Results
 Get Kalyan Matka Main Mumbai Satta Matka Market Results Fastest Live Update. Get All Kalyan,Main Mumbai,Madhur Matka,Rajdhani,Milan,Madhur Matka And Time Bazar Jodi Penal Panel Patti Panna Charts For Free . All Matka Guessing.With Best Guessers , Online Old Charts , Satta Matka Number Software Links, Online Charts List Pdf Download And Top Matka Guessing Free Number Provided By Sattamatka143 Professor And Master Dr Admin Sir.
 Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Direct Access To Guessing Form Of Experts Tricks Access Via Website
@@ -34,8 +35,8 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
 </div>
 </div>
 
-<div className='content-wrap1'>
-<img src="https://matka-one.vercel.app/img/portfolio-shape.png"  className='img2'/>
+<div className='px-3 relative'>
+{/* <img src="https://matka-one.vercel.app/img/portfolio-shape.png"  className='img2'/> */}
 <span className='bedage'>New</span>
   <div className="text-center py-3 text-family1 live-update">
 <Typed
@@ -170,25 +171,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
  </Link>
  </div>
 
- <div className="text-center py-3 text-family1 result-update">
-<h3 style={{'marginBottom':'0px'}}>Jodi Chart</h3>
- </div>
- <div className='content-wrap1 text-center text-family result-div div_link'>
- <Link href="/GUESSING FORUM">
-  <a className='link'>Sridevi</a>
- </Link>
- </div>
- <div className='content-wrap1 text-center text-family result-div div_link'>
- <Link href="/GUESSING FORUM">
-  <a className='link'>Time bazar</a>
- </Link>
- </div>
- <div className='content-wrap1 text-center text-family result-div div_link'>
- <Link href="/GUESSING FORUM">
-  <a className='link'>Madhur day</a>
- </Link>
- </div>
-
+<Charts/>
  <Accordion/>
     </>
     
