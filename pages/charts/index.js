@@ -21,7 +21,7 @@ export default function ChartIndex() {
         {data &&
           data.data.map((item,index) => (
             <div className='content-wrap1 text-center text-family result-div div_link' key={index}>
-            <Link href='/'>
+            <Link href={`${item.chart_slug.toLowerCase()}'-jodi-chart'`}>
   <a className='link'>{`${item.chartname.toLowerCase()}`}</a>
  </Link>
  </div>
@@ -35,7 +35,7 @@ export default function ChartIndex() {
           data.data.map((item,index) => (
 
             <div className='content-wrap1 text-center text-family result-div div_link' key={index}>
- <Link href='/'>
+ <Link href={`${item.chart_slug.toLowerCase()}'-panel-chart'`}>
   <a className='link'>{`${item.chartname.toLowerCase()}`}</a>
  </Link>
  </div>
