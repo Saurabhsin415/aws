@@ -305,3 +305,19 @@ body{
  .relative{
     position: relative;
  }
+ .m-auto{
+    margin: auto;
+
+ }
+ .mt-5{
+    margin-top: 5px;
+ } 
+ .mt-10{
+    margin-top: 5px;
+ }
+ .mt-15{
+    margin-top: 5px;
+ }
+ .mt-20{
+    margin-top: 5px;
+ }
