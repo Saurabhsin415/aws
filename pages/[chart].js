@@ -2,8 +2,8 @@ import axios from "../components/lib/axios";
 import useSWR from "swr";
 import Link from 'next/link';
 import { useRouter } from 'next/router'
-import JodiChart from "./charts/jodichart";
-import PanelChart from "./charts/PanelChart";
+// import JodiChart from "./charts/jodichart";
+// import PanelChart from "./charts/PanelChart";
 export default function Chats() {
    
     const router = useRouter();
@@ -20,7 +20,7 @@ export default function Chats() {
     <div>
    {/* {console.log(data && data.data.result)} */}
     {/* //jodichart */}
-{data && data.chart=='panel'?<PanelChart name={id} data={data.data.result}/>:<JodiChart/>}
+{/* {data && data.chart=='panel'?<PanelChart name={id} data={data.data.result}/>:<JodiChart/>} */}
  
  
       </div>
