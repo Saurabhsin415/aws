@@ -2,7 +2,7 @@ import axios from "../../components/lib/axios";
 import useSWR from "swr";
 import Link from 'next/link';
 
-export default function chart() {
+export default function ChartIndex() {
   const address = `chart`;
   const fetcher = async (url) => await axios.get(url).then((res) => res.data);
   const { data, error } = useSWR(address, fetcher);
