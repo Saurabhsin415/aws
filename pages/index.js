@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Typed from "react-typed";
 import TimeTable from "./timetable";
+import SlidePost from "./slidepost";
+import Accordion from "./accordion";
 export default function Home() {
   return (
     <>
@@ -109,6 +111,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
   </tr>
 </table>
 </div> */}
+<SlidePost/>
  <div className="text-center py-3 text-family1 result-update">
 <h3 style={{'marginBottom':'0px'}}>DAILY GAME ZONE</h3>
  </div>
@@ -186,10 +189,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
  </Link>
  </div>
 
-
-        <div className='text-center' style={{'margin':'200px 0px'}}>
-comming soon
-        </div>
+ <Accordion/>
     </>
     
   );

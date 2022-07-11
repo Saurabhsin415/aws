@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 import Router from 'next/router'
 import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faHome,faRefresh, } from '@fortawesome/free-solid-svg-icons'
- 
+import {faHome,faRefresh,faUser,faUserCheck,faUserFriends } from '@fortawesome/free-solid-svg-icons'
+import {Helmet} from "react-helmet";
+
 const CommonLayout = ({ children, title, parent, subTitle }) => {
   const [link,setLink]=useState('');
  const [verified,setverified]=useState(1);
@@ -15,7 +16,15 @@ const CommonLayout = ({ children, title, parent, subTitle }) => {
 
   return (
     <>
-
+ <Helmet>
+                <meta charSet="utf-8" />
+                <title>Sattamatka.rocks</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+          
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+ 
+<link rel="stylesheet" href="owl-carousel/owl.theme.css"></link>
+            </Helmet>
     <div className="header text-color1 ">SattMatka.<span className="text-color2">Rocks</span></div>
   <main>{children}</main>
   <div className='foot'>
@@ -23,11 +32,12 @@ const CommonLayout = ({ children, title, parent, subTitle }) => {
   {/* <div></div> */}
  
   <div className="text-center py-3 text-family">
-  Satta Matka Kalyan Main Mumbai Fastest Results
-Get Kalyan Matka Main Mumbai Satta Matka Market Results Fastest Live Update. Get All Kalyan,Main Mumbai,Madhur Matka,Rajdhani,Milan,Madhur Matka And Time Bazar Jodi Penal Panel Patti Panna Charts For Free . All Matka Guessing.With Best Guessers , Online Old Charts , Satta Matka Number Software Links, Online Charts List Pdf Download And Top Matka Guessing Free Number Provided By Sattamatka143 Professor And Master Dr Admin Sir.
-Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Direct Access To Guessing Form Of Experts Tricks Access Via Website
-
+  <h2>SattMatka.<span className="text-color2">Rocks</span></h2>
+  <p>We strictly recommend you to please visit and browse this site on your own risk. All the information available here is strictly for informational purposes and based on astrology and numerology calculations. We are no way associated or affiliated with any illegal Matka or gambling business. We abide by rules and regulations of the regions where you are accessing the website. May be it is illegal or banned in your region. If you are using our website despite ban, you will be solely responsible for the damage or loss occurred or legal action taken. Please leave our website immediately if you dont like our disclaimer. Copying any information / content posted on the website is strictly prohibited and against the law.</p>
 </div>
+ 
+<p>Copyright © 2022-23 <span className="text-color2">SS</span>. All Rights Reserved.</p>
+
 </div>
   <div className="footer text-color1">
 <div className="active">
@@ -38,20 +48,20 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
 </div>
 <div className="">
   <Link href={'/'}>
-    <a><FontAwesomeIcon icon={faHome} /><span className="aspan">Guessing Form</span></a>
+    <a><FontAwesomeIcon icon={faUser} /><span className="aspan">Guessing Form</span></a>
   </Link>
 
 </div>
 
 <div className="">
   <Link href={'/'}>
-    <a><FontAwesomeIcon icon={faHome} /><span className="aspan">Chat Form</span></a>
+    <a><FontAwesomeIcon icon={faUserFriends} /><span className="aspan">Chat Form</span></a>
   </Link>
 
 </div>
 <div className="">
   <Link href={'/'}>
-    <a><FontAwesomeIcon icon={faHome} /><span className="aspan">Expert Form</span></a>
+    <a><FontAwesomeIcon icon={faUserCheck} /><span className="aspan">Expert Form</span></a>
   </Link>
 
 </div>
