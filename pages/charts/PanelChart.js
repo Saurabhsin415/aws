@@ -62,19 +62,7 @@ export default function CustomizedTables({name,data}) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.map((row) => (
-            <StyledTableRow key={row.name}>
-              <StyledTableCell component="th" scope="row" align='center'>
-                {row.fromdate} <br></br> to   <br></br>  {row.todate}
-              </StyledTableCell>
-              <StyledTableCell align="center">{row.mon1}</StyledTableCell>
-              <StyledTableCell align="center">{row.mon2}</StyledTableCell>
-              <StyledTableCell align="center">{row.mon3}</StyledTableCell>
-              <StyledTableCell align="center">{row.fat}</StyledTableCell>
-              <StyledTableCell align="center">{row.carbs}</StyledTableCell>
-              <StyledTableCell align="center">{row.protein}</StyledTableCell>
-            </StyledTableRow>
-          ))}
+         
         </TableBody>
       </Table>
     </TableContainer>
