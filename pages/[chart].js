@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router'
 import JodiChart from "./charts/jodichart";
 import PanelChart from "./charts/PanelChart";
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 export default function ChartSlug() {
    
     const router = useRouter();
@@ -20,7 +22,12 @@ export default function ChartSlug() {
     <div>
    {console.log(data && data.data.week_day)}
     {/* //jodichart */}
-{data && data.chart=='panel'?<PanelChart name={id} data={data.data.result}/>:''}
+{!data? <Box sx={{ display: 'flex' }}>
+      <CircularProgress className="m-auto mt-20" style={{'margin':'92px auto 35px auto'}}/>
+    </Box>:data && data.chart=='panel'?<PanelChart name={id} data={data.data.result}/>:''}
+
+
+
 {data && data.chart=='jodi'?<JodiChart name={id} data={data.data.result} week={data.data.week_day}/>:''}
 
  

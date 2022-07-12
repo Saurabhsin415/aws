@@ -270,7 +270,7 @@ body{
  .foot{
     margin-top: 10px;
     position: relative;
-    padding-top: 34px;
+    padding-top: 10px;
     margin-bottom: 86px;
  }
  .foot > p{
@@ -328,4 +328,7 @@ body{
     background-image: linear-gradient(179deg, #e3edf7 0%, white 100%);
     box-shadow: -5.657px -5.657px 10px 0px rgb(245 249 252 / 0%), 4.096px 2.868px 15px 0px rgb(127 163 199 / 30%)!important;
     margin:20px 0px;
+ }
+ .jodi_number{
+    font-size: 18px!important;
  }

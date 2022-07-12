@@ -12,6 +12,10 @@ const CommonLayout = ({ children, title, parent, subTitle }) => {
  const [token,settoken]=useState('');
  const [checkverify,setCheckverified]=useState();
   
+
+ const reload=()=>{
+  window.location.reload();
+ }
  
 
   return (
@@ -63,9 +67,9 @@ const CommonLayout = ({ children, title, parent, subTitle }) => {
 
 </div>
 <div className="">
-  <Link href={'/'}>
-    <a> <FontAwesomeIcon icon={faRefresh} /><span className="aspan">Refresh</span></a>
-  </Link>
+  
+    <a onClick={reload}> <FontAwesomeIcon icon={faRefresh} /><span className="aspan">Refresh</span></a>
+ 
 </div>
   </div>
  
