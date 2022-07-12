@@ -10,7 +10,7 @@ export default function ChartSlug() {
    
     const router = useRouter();
     const id = router.query.chart;
-    console.log(id)
+    // console.log(id)
   const address = id;
   const fetcher = async (url) => await axios.get(url).then((res) => res.data);
   const { data, error } = useSWR(address, fetcher);
