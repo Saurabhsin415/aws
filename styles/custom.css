@@ -332,3 +332,8 @@ body{
  .jodi_number{
     font-size: 18px!important;
  }
+ .time{
+    color: #e70280!important;
+    font-size: 16px!important;
+    margin-top: 5px!important;
+ }

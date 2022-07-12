@@ -4,6 +4,7 @@ import TimeTable from "./timetable";
 import SlidePost from "./slidepost";
 import Accordion from "./accordion";
 import Charts from './charts';
+import Result from './result';
 export default function Home() {
   return (
     <>
@@ -50,7 +51,8 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
           loop
         /></div></div>
       
-  <div className="text-center py-3 text-family1 result-update">
+      <Result/>
+  {/* <div className="text-center py-3 text-family1 result-update">
 <h3 style={{'marginBottom':'0px'}}>MATKA LIVE RESULTS</h3>  <div className='text-color1'>Date:10/07/2022</div>
  </div> 
  <div className='content-wrap1 text-center result-div text-family2'>
@@ -72,7 +74,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
  <div className='content-wrap1 text-center text-family2 result-div'>
 <h2 className='text-color2'>MILAN DAY</h2>
 <p className=''>222-66-178</p>
- </div>
+ </div> */}
 
  {/* <TimeTable/> */}
 {/* 
