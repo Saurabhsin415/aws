@@ -51,7 +51,7 @@ export default function CustomizedTables({name,data}) {
   return (
 <>
     <div className="text-center py-3 text-family1 result-update" style={{'marginTop':'60px'}}>
-    <h3 style={{'marginBottom':'0px','textTransform':'capitalize'}}>{name.replaceAll('-',' ')}</h3>
+    <h3 style={{'marginBottom':'0px','textTransform':'capitalize'}}>{name && name.replaceAll('-',' ')}</h3>
  </div>
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -74,7 +74,7 @@ export default function CustomizedTables({name,data}) {
               <StyledTableCell component="th" scope="row" align='center'>
                 {row.fromdate} <br></br> to   <br></br>  {row.todate}
               </StyledTableCell>
-              <StyledTableCell align="center">{row.mon1.replaceAll('',' ')}</StyledTableCell>
+        
               <StyledTableCell align="center">{row.mon2}</StyledTableCell>
               <StyledTableCell align="center">{row.mon3}</StyledTableCell>
               <StyledTableCell align="center">{row.fat}</StyledTableCell>

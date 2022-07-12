@@ -52,7 +52,7 @@ export default function CustomizedTables({name,data,week}) {
   return (
 <>
     <div className="text-center py-3 text-family1 result-update" style={{'marginTop':'60px'}}>
-<h3 style={{'marginBottom':'0px','textTransform':'capitalize'}}>{name.replaceAll('-',' ')}</h3>
+<h3 style={{'marginBottom':'0px','textTransform':'capitalize'}}>{name && name.replaceAll('-',' ')}</h3>
  </div>
     <TableContainer component={Paper}>
       <Table aria-label="customized table">
