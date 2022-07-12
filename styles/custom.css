@@ -298,7 +298,10 @@ body{
     background: linear-gradient(103deg, #e3edf7, #ffffff);
  }
  .text-justify{
-    text-align: justify;
+    text-align: justify!important;
+ }
+ .content-wrap1 div{
+    padding:15px 0px!important;
  }
  .px-3{
     padding: 15px ;
