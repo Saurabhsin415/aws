@@ -25,7 +25,7 @@ export default function LiveResult() {
       <CircularProgress className="m-auto mt-20"/>
     </Box>:data &&
           data.data.map((item,index) => (
-            <div className='content-wrap1 text-center result-div text-family2'>
+            <div className='content-wrap1 text-center result-div text-family2' key={index}>
 <h2 className='text-color2'>{item.chartname}</h2>
 <p className=''>{item && item.number && item.number.left_patti}-{item && item.number && item.number.jodi}-{item && item.number && item.number.right_patti}</p>
 <p className='time text-family'>{item && item.open && item.open} to {item && item.close && item.close}</p>
