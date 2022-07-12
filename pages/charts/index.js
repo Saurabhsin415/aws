@@ -18,7 +18,7 @@ export default function ChartIndex() {
 <h3 style={{'marginBottom':'0px'}}>Jodi Chart</h3>
  </div>
  
-      {console.log(data)}
+      {/* {console.log(data)} */}
         {!data? <Box sx={{ display: 'flex' }}>
       <CircularProgress className="m-auto mt-20"/>
     </Box>:data &&
