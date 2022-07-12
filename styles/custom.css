@@ -224,7 +224,7 @@ body{
     margin: 0px;
     color: #08203a;
 }
- table{
+ /* table{
     width: 100%;
     text-align: center;
     border-collapse: collapse;
@@ -244,7 +244,7 @@ body{
  table tr:nth-child(odd){
  
     color: #08203a;
- }
+ } */
  .link
  {
     font-family: 'Roboto', sans-serif;
@@ -321,4 +321,11 @@ body{
  }
  .mt-20{
     margin-top: 5px;
+ }
+
+ .css-11xur9t-MuiPaper-root-MuiTableContainer-root
+ {
+    background-image: linear-gradient(179deg, #e3edf7 0%, white 100%);
+    box-shadow: -5.657px -5.657px 10px 0px rgb(245 249 252 / 0%), 4.096px 2.868px 15px 0px rgb(127 163 199 / 30%)!important;
+    margin:20px 0px;
  }

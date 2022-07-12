@@ -10,11 +10,18 @@ import Paper from '@mui/material/Paper';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
+    backgroundColor: '#e70280;',
     color: theme.palette.common.white,
+    fontSize:18,
+    padding:'12px 0px',
+    fontWeight:600,
+    textTransform:'uppercase',
   },
   [`&.${tableCellClasses.body}`]: {
-    fontSize: 14,
+    fontSize: 22,
+    fontWeight:600,
+    padding:'12px 0px',
+    fontFamily:'Kalam',
   },
 }));
 
@@ -44,7 +51,7 @@ export default function CustomizedTables({name,data}) {
   return (
 <>
     <div className="text-center py-3 text-family1 result-update" style={{'marginTop':'60px'}}>
-<h3 style={{'marginBottom':'0px'}}>{name}</h3>
+    <h3 style={{'marginBottom':'0px','textTransform':'capitalize'}}>{name.replaceAll('-',' ')}</h3>
  </div>
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -67,7 +74,7 @@ export default function CustomizedTables({name,data}) {
               <StyledTableCell component="th" scope="row" align='center'>
                 {row.fromdate} <br></br> to   <br></br>  {row.todate}
               </StyledTableCell>
-              <StyledTableCell align="center">{row.mon1}</StyledTableCell>
+              <StyledTableCell align="center">{row.mon1.replaceAll('',' ')}</StyledTableCell>
               <StyledTableCell align="center">{row.mon2}</StyledTableCell>
               <StyledTableCell align="center">{row.mon3}</StyledTableCell>
               <StyledTableCell align="center">{row.fat}</StyledTableCell>

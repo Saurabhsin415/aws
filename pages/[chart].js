@@ -18,9 +18,11 @@ export default function ChartSlug() {
 
   return (
     <div>
-   {console.log(data && data.data.result)}
+   {console.log(data && data.data.week_day)}
     {/* //jodichart */}
-{data && data.chart=='panel'?<PanelChart name={id} data={data.data.result}/>:<JodiChart/>}
+{data && data.chart=='panel'?<PanelChart name={id} data={data.data.result}/>:''}
+{data && data.chart=='jodi'?<JodiChart name={id} data={data.data.result} week={data.data.week_day}/>:''}
+
  
  
       </div>

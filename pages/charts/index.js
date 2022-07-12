@@ -18,13 +18,13 @@ export default function ChartIndex() {
 <h3 style={{'marginBottom':'0px'}}>Jodi Chart</h3>
  </div>
  
-      {/* {console.log(data)} */}
+      {console.log(data)}
         {!data? <Box sx={{ display: 'flex' }}>
       <CircularProgress className="m-auto mt-20"/>
     </Box>:data &&
           data.data.map((item,index) => (
             <div className='content-wrap1 text-center text-family result-div div_link' key={index}>
-            <Link href={`${item.chart_slug.toLowerCase()}'-jodi-chart'`}>
+            <Link href={`${item.chart_slug.toLowerCase()}-jodi-chart`}>
   <a className='link'>{`${item.chartname.toLowerCase()}`}</a>
  </Link>
  </div>
@@ -40,7 +40,7 @@ export default function ChartIndex() {
           data.data.map((item,index) => (
 
             <div className='content-wrap1 text-center text-family result-div div_link' key={index}>
- <Link href={`${item.chart_slug.toLowerCase()}'-panel-chart'`}>
+ <Link href={`${item.chart_slug.toLowerCase()}-panel-chart`}>
   <a className='link'>{`${item.chartname.toLowerCase()}`}</a>
  </Link>
  </div>
