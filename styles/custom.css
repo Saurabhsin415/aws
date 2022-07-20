@@ -325,7 +325,9 @@ body{
  .mt-20{
     margin-top: 5px;
  }
-
+.py-20{
+  padding: 20px;
+}
  .css-11xur9t-MuiPaper-root-MuiTableContainer-root
  {
     background-image: linear-gradient(179deg, #e3edf7 0%, white 100%);
@@ -339,4 +341,85 @@ body{
     color: #e70280!important;
     font-size: 16px!important;
     margin-top: 5px!important;
+ }
+
+ .guessing-forum{
+    margin-top: 50px;
+    color: #e70280;
+    font-size: 24px!important;
+    font-family: 'Kalam', cursive!important;
+ }
+ .container,.container-fluid,.container-lg,.container-md,.container-sm,.container-xl{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:576px){.container,.container-sm{max-width:540px}}@media (min-width:768px){.container,.container-md,.container-sm{max-width:720px}}@media (min-width:992px){.container,.container-lg,.container-md,.container-sm{max-width:960px}}@media (min-width:1200px){.container,.container-lg,.container-md,.container-sm,.container-xl{max-width:1140px}}
+
+ .button{
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5;
+    color: #ffffff;
+    background: linear-gradient(-141deg, #590fb7, #ff0076);
+    width: 150px;
+    height: 50px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 5px;
+    position: relative;
+    z-index: 0;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+ }
+ .button::before{
+    background: -webkit-gradient(linear, left bottom, right top, from(#ff0076), to(#590fb7));
+    background: linear-gradient(to top right, #ff0076, #590fb7);
+    -webkit-box-shadow: -4px -3px 8px 0px rgb(122 247 169 / 25%), 5px 5px 15px 0px rgb(100 14 179 / 30%);
+    box-shadow: -4px -3px 8px 0px rgb(122 247 169 / 25%), 5px 5px 15px 0px rgb(100 14 179 / 30%);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: -1;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  
+ }
+ .button:hover
+ {
+    background: linear-gradient(103deg, #e3edf7, #ffffff);
+    box-shadow: -6px -6px 10px 0px #f5f9fc, 4px 3px 15px 0px rgb(127 163 199 / 30%);
+ }
+ a{
+    color: inherit;
+    text-decoration: none;
+    -webkit-transition: .3s all ease-in-out;
+    transition: .3s all ease-in-out;
+ }
+
+
+ .emoji_img{
+    cursor: pointer;
+        margin: 0px 5px;
+    /* border: 1px solid #dbcece; */
+    padding: 5px;
+    border-radius: 3px;
+    -webkit-box-shadow: inset -3px -2px 5px 0px rgb(255 255 255 / 66%), inset -1px -1px 0px 0px rgb(255 255 255 / 18%), inset 2px 2px 7px 0px rgb(49 69 106 / 18%);
+    box-shadow: inset -3px -2px 5px 0px rgb(255 255 255 / 66%), inset -1px -1px 0px 0px rgb(255 255 255 / 18%), inset 2px 2px 7px 0px rgb(49 69 106 / 18%);
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    color: #08203a;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 22px;
+    display: inline-block;
  }

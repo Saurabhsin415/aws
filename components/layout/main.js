@@ -5,14 +5,11 @@ import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faHome,faRefresh,faUser,faUserCheck,faUserFriends } from '@fortawesome/free-solid-svg-icons'
 import {Helmet} from "react-helmet";
-
-const CommonLayout = ({ children, title, parent, subTitle }) => {
-  const [link,setLink]=useState('');
- const [verified,setverified]=useState(1);
- const [token,settoken]=useState('');
- const [checkverify,setCheckverified]=useState();
-  
-
+import { useRouter } from 'next/router'
+const CommonLayout = ({ children}) => {
+  const router = useRouter();
+  const id = router.query;
+  console.log(id);
  const reload=()=>{
   window.location.reload();
  }
@@ -48,7 +45,7 @@ const CommonLayout = ({ children, title, parent, subTitle }) => {
 
 </div>
 <div className="">
-  <Link href={'/'}>
+  <Link href={'/guessing-form'}>
     <a><FontAwesomeIcon icon={faUser} /><span className="aspan">Guessing Form</span></a>
   </Link>
 
