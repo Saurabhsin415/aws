@@ -103,7 +103,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
           <div className="">
             {emoji && emoji.map((item,index)=>{
  return(
-<img className="emoji_img" src={item.src} alt="df"  onClick={() => addemoji(item)}/> 
+<img key={index} className="emoji_img" src={item.src} alt="df"  onClick={() => addemoji(item)}/> 
             )
             })}
           </div>
