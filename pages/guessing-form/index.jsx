@@ -13,20 +13,17 @@ import Typography from '@mui/material/Typography';
 import { toast } from "react-toastify";
 import {GuessingFormGet,GuessingFormPost} from "../api/app"; 
 import ForumList from "./forumlist"; 
- 
-const Edtitor  = dynamic(() => import("../Editor"), { ssr: true });
- 
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+const Quill = dynamic(() => import("react-quill"), { ssr: false });
+
 import 'react-quill/dist/quill.snow.css';
   
 export default function Guessingforum() {
  
- 
   const [data, setData] = useState('');
- 
+  const [editor, setEditor] = useState();
 
- // console.log(result);
- 
- const [value, setValue] =useState('<p>f</p><img src="https://dpboss.rocks/emoji/angry.gif">');
+ const [value, setValue] =useState('');
  const style = {
    position: 'absolute',
    top: '40%',
@@ -48,11 +45,13 @@ export default function Guessingforum() {
 {'src':'https://dpboss.rocks/emoji/angry.gif','icon':'name'},
 ]
 
+ 
+
 const addemoji=(item)=>{
  // console.log(item);
  toast("Emoji Added Succefully.")
  {console.log(value)}
- let img='<div class="d-flex "> '+`${value}`+'<img src='+`${item.src}` +' className="img1"/></div>';
+ let img=`${value}`+'<img src='+`${item.src}` +' className="img1"/>';
  // console.log(img);
  setValue(img);
 
@@ -76,7 +75,7 @@ result.then(response=>{
 }) 
 }
 
-
+const editorRef = useRef()
 
   return (
     <>
@@ -123,10 +122,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
       </Modal>
        
        {console.log(value)}
-      {/* <ReactQuill value={value} onChange={setValue}/> */}
-
-      <Edtitor />
-
+      <ReactQuill value={value} onChange={setValue}/>
 
       {/* <TextField
           id="outlined-multiline-static fullWidth"

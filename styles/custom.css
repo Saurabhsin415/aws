@@ -470,10 +470,12 @@ body{
     font-size: 14px;
   }
 
-  
-  /* .ql-toolbar{
+  .ck-reset{
+    /* display: none!important; */
+  }
+  .ql-toolbar{
     display: none;
-  } */
+  }
   .ql-container.ql-snow{
     border: 1px solid #ccc!important;
     border-radius: 5px;

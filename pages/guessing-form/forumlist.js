@@ -13,7 +13,7 @@ const fetcher = (url) => axios.get(url).then((res) => res.data);
 export default function ForumList() {
   const [loading,setLoading]=useState(false);
   const [cnt, setCnt] = useState(1)
-  console.log(cnt);
+  
   // const [page, setPage] = useState(1);
   // const { data, error } = useSWR(
   //   `guessing-forum?page=${cnt}`,
@@ -24,16 +24,15 @@ export default function ForumList() {
   // for (let i = 0; i < cnt; i++) {
     // 🚨 This is wrong! Commonly, you can't use hooks inside a loop.
     const { data } = useSWR(`guessing-forum?page=${cnt}`,fetcher);
-    console.log(data && data.data);
-    console.log(list);
+ 
     list.push(data && data.data);
-console.log(list);
+ 
   // }
   useEffect(() => {
-    console.log(list);
+ 
   if(typeof list[0] == 'undefined')
   {
-   console.log('dd');
+ 
   
   }
   else{
@@ -46,7 +45,7 @@ console.log(list);
 
   return (
     <>
-    {console.log(list)}
+ 
  
  { loading && list &&   typeof list[0] != 'undefined' && list[0].map((item,index)=>
  (
