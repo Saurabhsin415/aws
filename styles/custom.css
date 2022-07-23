@@ -432,14 +432,12 @@ body{
  }
  .guessing-heading{
     text-transform: capitalize;
-    padding: 10px;
- 
+    padding: 5px 10px;
     font-family: "Roboto", sans-serif;
     line-height: 1.5;
     color: #ffffff;
-    background: linear-gradient(-141deg, #590fb7, #ff0076);
- 
-    border-radius: 5px;
+    background: linear-gradient(-141deg, #07bc0c, #008a00);
+    border-radius: 3px;
     transition: all 0.3s ease-in;
      
 }
@@ -465,9 +463,10 @@ body{
     text-transform: capitalize;
   }
   .guessing-footer{
-    background: #e3e3e3;
+    background: #06ad0630;
     padding: 5px;
     font-size: 14px;
+    color: black;
   }
 
   .ck-reset{
