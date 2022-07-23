@@ -423,3 +423,53 @@ body{
     margin-bottom: 22px;
     display: inline-block;
  }
+ .guessing-content{
+    background: linear-gradient(103deg, #e3edf7, #ffffff);
+    -webkit-box-shadow: -6px -6px 10px 0px #f5f9fc, 4px 3px 15px 0px rgb(127 163 199 / 30%);
+    box-shadow: -6px -6px 10px 0px #f5f9fc, 4px 3px 15px 0px rgb(127 163 199 / 30%);
+    border-radius: 5px;
+     margin: 15px 5px;
+ }
+ .guessing-heading{
+    text-transform: capitalize;
+    padding: 10px;
+ 
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    color: #ffffff;
+    background: linear-gradient(-141deg, #590fb7, #ff0076);
+ 
+    border-radius: 5px;
+    transition: all 0.3s ease-in;
+     
+}
+.clearfix::after{display:block;clear:both;content:""}
+
+ .float-left{
+    float: left;
+ }
+ .float-right{
+    
+    float: right;
+  }
+  .guessing-content .date{
+    font-size: 14px;
+    font-weight: 400!important;
+  }
+  .bold{
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffff;
+  }
+  .text-capitalize{
+    text-transform: capitalize;
+  }
+  .guessing-footer{
+    background: #e3e3e3;
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .ck-reset{
+    /* display: none!important; */
+  }
