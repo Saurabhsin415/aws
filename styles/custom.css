@@ -473,3 +473,6 @@ body{
   .ck-reset{
     /* display: none!important; */
   }
+  .ql-toolbar{
+    display: none;
+  }
