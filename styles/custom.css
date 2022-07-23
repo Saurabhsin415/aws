@@ -358,8 +358,8 @@ body{
     line-height: 1.5;
     color: #ffffff;
     background: linear-gradient(-141deg, #590fb7, #ff0076);
-    width: 150px;
-    height: 50px;
+    width: 120px;
+    height: 40px;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;

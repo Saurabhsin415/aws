@@ -6,6 +6,7 @@ import axios from "../../components/lib/axios";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import { ContrastOutlined } from "@mui/icons-material";
 import 'react-loading-skeleton/dist/skeleton.css'
+import { Button } from "@mui/material";
 
  
 const fetcher = (url) => axios.get(url).then((res) => res.data);
@@ -65,7 +66,7 @@ export default function ForumList() {
  </div>
  )
  )}
- <button onClick={() => setCnt(cnt + 1)}>Load More</button>
+ <div className="text-center mt-2"><Button className="btn button" onClick={() => setCnt(cnt + 1)}>Load More</Button></div>
     </>
     
   );
