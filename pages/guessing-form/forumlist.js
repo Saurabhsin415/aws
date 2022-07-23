@@ -50,7 +50,7 @@ console.log(list);
  
  { loading && list &&   typeof list[0] != 'undefined' && list[0].map((item,index)=>
  (
- <div className='guessing-content'>
+ <div className='guessing-content' key={index}>
 <div className='guessing-heading clearfix'>
     <div className='float-left bold'><FontAwesomeIcon icon={faUser} /> {item.username}</div>
     <div className='float-right date'>{item.time}</div>

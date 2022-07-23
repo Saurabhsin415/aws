@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import React, { useState, useEffect } from "react";
 const Editorss = dynamic(()=>import("../Editor"),{ssr:false});
 
-export default function vvvv(props) {
+export default function Guessingforum() {
     console.log('asdfasdf');
  
   const [data, setData] = useState("");
