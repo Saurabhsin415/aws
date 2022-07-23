@@ -56,7 +56,8 @@ console.log(list);
     <div className='float-right date'>{item.time}</div>
 
 </div>
-<div className='text-center py-3 text-capitalize'>{item.comment} </div>
+ 
+<div className="text-center py-3 text-capitalize" dangerouslySetInnerHTML={{__html: item.comment}}></div>  
 
 <div className="clearfix guessing-footer">
   <div className="float-left">(Quote)</div>

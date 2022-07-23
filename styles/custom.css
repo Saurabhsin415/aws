@@ -470,9 +470,21 @@ body{
     font-size: 14px;
   }
 
-  .ck-reset{
-    /* display: none!important; */
-  }
-  .ql-toolbar{
+  
+  /* .ql-toolbar{
     display: none;
+  } */
+  .ql-container.ql-snow{
+    border: 1px solid #ccc!important;
+    border-radius: 5px;
+    text-align: center;
+  }
+  p{
+    margin: 0!important;
+    padding:0;
+  }
+  .ql-editor{
+text-align: center!important;
+white-space:normal!important;
+ 
   }

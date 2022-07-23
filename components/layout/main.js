@@ -23,7 +23,7 @@ const CommonLayout = ({ children}) => {
                 <link rel="canonical" href="http://mysite.com/example" />
  
             </Helmet>
-    {/* <div className="header text-color1 ">SattMatka.<span className="text-color2">Rocks</span></div> */}
+    <div className="header text-color1 ">SattMatka.<span className="text-color2">Rocks</span></div>
   <main>{children}</main>
   <div className='foot'>
   <img src="https://html.themexriver.com/Saasio/assets/img/port-img-31/footer-bg.jpg"  className='img1'/>
