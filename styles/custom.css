@@ -88,7 +88,7 @@ body{
     position: relative;
     margin-top: 77px;
 }
-.content-wrap1{
+.content-wrap1,.content-wrap2{
     background: linear-gradient(103deg, #e3edf7, #ffffff);
     -webkit-box-shadow: -6px -6px 10px 0px #f5f9fc, 4px 3px 15px 0px rgb(127 163 199 / 30%);
     box-shadow: -6px -6px 10px 0px #f5f9fc, 4px 3px 15px 0px rgb(127 163 199 / 30%);
@@ -97,6 +97,8 @@ body{
     position: relative;
     margin-top: 15px;
 }
+
+
 .img1{
     position: absolute;
     bottom: 0;
@@ -352,9 +354,10 @@ body{
  .container,.container-fluid,.container-lg,.container-md,.container-sm,.container-xl{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:576px){.container,.container-sm{max-width:540px}}@media (min-width:768px){.container,.container-md,.container-sm{max-width:720px}}@media (min-width:992px){.container,.container-lg,.container-md,.container-sm{max-width:960px}}@media (min-width:1200px){.container,.container-lg,.container-md,.container-sm,.container-xl{max-width:1140px}}
 
  .button{
+    cursor: pointer;
     font-size: 16px;
     font-weight: 700;
-    font-family: "Poppins", sans-serif;
+ 
     line-height: 1.5;
     color: #ffffff;
     background: linear-gradient(-141deg, #590fb7, #ff0076);
@@ -405,14 +408,14 @@ body{
  }
 
 
- .emoji_img{
+ .emoji_img,.guessing-button{
     cursor: pointer;
         margin: 0px 5px;
     /* border: 1px solid #dbcece; */
     padding: 5px;
     border-radius: 3px;
     -webkit-box-shadow: inset -3px -2px 5px 0px rgb(255 255 255 / 66%), inset -1px -1px 0px 0px rgb(255 255 255 / 18%), inset 2px 2px 7px 0px rgb(49 69 106 / 18%);
-    box-shadow: inset -3px -2px 5px 0px rgb(255 255 255 / 66%), inset -1px -1px 0px 0px rgb(255 255 255 / 18%), inset 2px 2px 7px 0px rgb(49 69 106 / 18%);
+    box-shadow: inset -3px -2px 5px 0px rgb(255 255 255 / 66%), inset -1px -1px 0px 0px #30a2ef8a, inset 2px 2px 7px 0px rgb(98 143 225 / 18%);
     font-size: 15px;
     line-height: 1;
     font-weight: 500;
@@ -489,3 +492,13 @@ text-align: center!important;
 white-space:normal!important;
  
   }
+
+  .text-uppercase{
+    text-transform: uppercase;
+  }
+ .m-0{
+    margin:0px;
+ }
+ .mt-10{
+    margin-top: 10px;
+ }

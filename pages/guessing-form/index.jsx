@@ -1,6 +1,5 @@
 import dynamic from "next/dynamic";
 import React, { useEffect, useState,Component,useRef } from "react";
-import Link from 'next/link';
 import { useRouter } from 'next/router'
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
@@ -11,19 +10,35 @@ import Modal from '@mui/material/Modal'
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { toast } from "react-toastify";
-import {GuessingFormGet,GuessingFormPost} from "../api/app"; 
-import ForumList from "./forumlist"; 
+import {GuessingFormGet,GuessingFormPost,Like,Dislike} from "../api/app"; 
+import Login from "./login"; 
+import Cookies from 'js-cookie'
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 const Quill = dynamic(() => import("react-quill"), { ssr: false });
-
+import { usePagination } from "../../components/lib/hooks";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faHome,faRefresh,faUser,faUserCheck,faUserFriends,faThumbsDown,faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 import 'react-quill/dist/quill.snow.css';
   
 export default function Guessingforum() {
  
+   
+//  console.log(token);
+const [token,settoken]=useState();
   const [data, setData] = useState('');
   const [editor, setEditor] = useState();
-
  const [value, setValue] =useState('');
+ const [user,setUser]=useState('');
+
+
+ useEffect(()=>{
+      
+  if(Cookies.get('auth_token'))
+  {
+    settoken(Cookies.get('auth_token'));
+    setUser(JSON.parse(Cookies.get('user_info')));
+  }
+},[])
  const style = {
    position: 'absolute',
    top: '40%',
@@ -46,19 +61,13 @@ export default function Guessingforum() {
 ]
 
  
-
+//add emoji
 const addemoji=(item)=>{
- // console.log(item);
  toast("Emoji Added Succefully.")
- {console.log(value)}
  let img=`${value}`+'<img src='+`${item.src}` +' className="img1"/>';
- // console.log(img);
  setValue(img);
-
  setOpen(false);
 }
-
- 
 
 //submit
 const submit =()=>{
@@ -75,8 +84,36 @@ result.then(response=>{
 }) 
 }
 
-const editorRef = useRef()
+ //like
+ const like=(item)=>
+ {
+   console.log(item);
+   let fd={id:item.id}
+   let result=Like(fd);
+   result.then(response=>{
+ if(response.data.status==true)
+ {
+   toast(response.data.message);
+ }
+   });
 
+ }
+ //dislike
+ const dislike=(item)=>
+ {
+   console.log(item);
+   let fd={id:item.id}
+   let result=Dislike(fd);
+   result.then(response=>{
+ if(response.data.status==true)
+ {
+   toast(response.data.message);
+ }
+   });
+
+ }
+
+const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination('guessing-forum');
   return (
     <>
  
@@ -98,7 +135,8 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
 </div>
  
       <CssBaseline />
-      <Container maxWidth="lg" className="content-wrap1 py-20 text-center">
+<Login token={token} user={user}/>
+      {!token?'': <Container maxWidth="lg" className="content-wrap1 py-20 text-center">
       <Button onClick={handleOpen} className="emoji_img">Add Emoji</Button>
       <Modal
         keepMounted
@@ -108,6 +146,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
         aria-describedby="keep-mounted-modal-description"
       >
         <Box sx={style}>
+   
           <Typography id="keep-mounted-modal-title" variant="h6" component="h2">
   
           </Typography>
@@ -124,39 +163,51 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
        {console.log(value)}
       <ReactQuill value={value} onChange={setValue}/>
 
-      {/* <TextField
-          id="outlined-multiline-static fullWidth"
-          onChange={handleChange}
-          multiline
-          rows={4}
-          fullWidth label="COMMENTS"
-          className="text-center"
-        /> */}
- 
-   
 <div className="text-center">   <a href="#" className="btn button" onClick={submit}>Submit</a></div>
       </Container>
+      }
  
-{/* <div className="container">
-    <div className="content-wrap1">
-        <textarea rows={10} className="form-control"></textarea>
-    </div>
-</div> */}
- {/* {!data? <Box sx={{ display: 'flex' }}>
-      <CircularProgress className="m-auto mt-20"/>
-    </Box>:data &&
-          data.data.map((item,index) => (
-            <div className='content-wrap1 text-center result-div text-family2' key={index}>
-<h2 className='text-color2'>{item.chartname}</h2>
-<p className=''>{item && item.number && item.number.left_patti}-{item && item.number && item.number.jodi}-{item && item.number && item.number.right_patti}</p>
-<p className='time text-family'>{item && item.open && item.open} to {item && item.close && item.close}</p>
- </div>
-          ))} */}
-        
-     
-      {/* <CircularProgress className="m-auto mt-20" style={{'margin':'92px auto 35px auto'}}/> */}
+<div className="content-wrap2 text-center">
+ <div className="guessing-button">Top 10 Users</div>
+ <div className="guessing-button">Show Original Post</div>
 
-    <ForumList/> 
+</div>
+ 
+  {/* form list */}
+      {/* {console.log(paginatedPost)} */}
+ {error && <p>something went wrong</p>}
+ {!paginatedPost && <Box sx={{ display: 'flex' }}>
+      <CircularProgress className="m-auto mt-20"/>
+    </Box>}
+ {paginatedPost?.map((item,index)=>
+ (
+
+  <div className='guessing-content' key={index}>
+
+<div className='guessing-heading clearfix'>
+    <div className='float-left bold'><FontAwesomeIcon icon={faUser} /> {item.username}</div>
+    <div className='float-right date'>{item.time}</div>
+
+</div>
+ 
+<div className="text-center py-3 text-capitalize" dangerouslySetInnerHTML={{__html: item.comment}}></div>  
+
+<div className="clearfix guessing-footer">
+  <div className="float-left" onclick={()=>setValue('kk')}>(Quote)</div>
+ 
+  <div className="float-right"><span style={{'margin':'0px 8px 0px 0px','color':'#ec017d','cursor':'pointer'}}  onClick={() => like(item)}><FontAwesomeIcon icon={faThumbsUp} /> {item.like}</span>
+  <span style={{'margin':'0px 15px 0px 0px','color':'rgb(138 10 164)','cursor':'pointer'}} onClick={() => dislike(item)}><FontAwesomeIcon icon={faThumbsDown} /><span style={{'margin':'0px 0px 0px 5px','color':'rgb(138 10 164)'}}>{item.dislike}</span></span> </div>
+</div>
+ </div>
+  
+ )
+ )}
+  
+ 
+  {loadingMore && <Box sx={{ display: 'flex' }}>
+      <CircularProgress className="m-auto mt-20"/>
+    </Box>}
+  {!isReachedEnd  && <div className="text-center "><a class="btn button mt-10" onClick={()=>setSize(size+1)}>Load More</a></div>}
     </>
   );
 }
