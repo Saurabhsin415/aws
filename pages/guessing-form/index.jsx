@@ -193,7 +193,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
 <div className="text-center py-3 text-capitalize" dangerouslySetInnerHTML={{__html: item.comment}}></div>  
 
 <div className="clearfix guessing-footer">
-  <div className="float-left" onclick={()=>setValue('kk')}>(Quote)</div>
+  <div className="float-left">(Quote)</div>
  
   <div className="float-right"><span style={{'margin':'0px 8px 0px 0px','color':'#ec017d','cursor':'pointer'}}  onClick={() => like(item)}><FontAwesomeIcon icon={faThumbsUp} /> {item.like}</span>
   <span style={{'margin':'0px 15px 0px 0px','color':'rgb(138 10 164)','cursor':'pointer'}} onClick={() => dislike(item)}><FontAwesomeIcon icon={faThumbsDown} /><span style={{'margin':'0px 0px 0px 5px','color':'rgb(138 10 164)'}}>{item.dislike}</span></span> </div>
@@ -207,7 +207,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
   {loadingMore && <Box sx={{ display: 'flex' }}>
       <CircularProgress className="m-auto mt-20"/>
     </Box>}
-  {!isReachedEnd  && <div className="text-center "><a class="btn button mt-10" onClick={()=>setSize(size+1)}>Load More</a></div>}
+  {!isReachedEnd  && <div className="text-center "><a className="btn button mt-10" onClick={()=>setSize(size+1)}>Load More</a></div>}
     </>
   );
 }
