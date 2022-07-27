@@ -8,7 +8,7 @@ export const usePagination=(url)=>{
     const getKey=(pageIndex, previousPageData)=>{
         pageIndex=pageIndex+1;
         if(previousPageData && !previousPageData.length) return null;
-        return `${url}?page=${pageIndex}`;
+        return `${url}&page=${pageIndex}`;
 
       };
     

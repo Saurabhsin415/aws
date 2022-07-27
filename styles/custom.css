@@ -502,3 +502,33 @@ white-space:normal!important;
  .mt-10{
     margin-top: 10px;
  }
+ .d-flex{
+    display: flex;
+ }
+ .justify-content-around{
+    justify-content: space-around;
+ }
+ .top-users{
+    font-size: 16px;
+    justify-content: space-between;
+    padding: 8px 0px;
+    border-bottom: 1px solid #dfdfdf7a;
+    text-transform: capitalize;  
+      font-family: "Roboto", sans-serif;
+    
+}
+ 
+.search{
+    width: 70%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    /* margin: 0px 0px 12px; */
+    box-shadow: inset -3px -2px 5px 0px #c8dcf100, inset -1px -1px 0px 0px rgb(0 135 227 / 72%), inset 2px 2px 7px 0px #79aee3;
+    border: white;
+    border-radius: 4px;
+}
+.search:focus{
+ 
+    outline:none!important;
+}

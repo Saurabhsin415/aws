@@ -19,7 +19,7 @@ import { usePagination } from "../../components/lib/hooks";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faHome,faRefresh,faUser,faUserCheck,faUserFriends,faThumbsDown,faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 import 'react-quill/dist/quill.snow.css';
-  
+import Link from 'next/link';
 export default function Guessingforum() {
  
    
@@ -29,8 +29,9 @@ const [token,settoken]=useState();
   const [editor, setEditor] = useState();
  const [value, setValue] =useState('');
  const [user,setUser]=useState('');
-
-
+ const [orginal,setOrginal]=useState(0);
+const [orgin,setOrgin]=useState(0);
+const [search,setSearch]=useState('');
  useEffect(()=>{
       
   if(Cookies.get('auth_token'))
@@ -71,7 +72,7 @@ const addemoji=(item)=>{
 
 //submit
 const submit =()=>{
- let fd={'comment':value}
+ let fd={'comment':value,orginal}
 let result=GuessingFormPost(fd);
 result.then(response=>{
  
@@ -110,10 +111,32 @@ result.then(response=>{
    toast(response.data.message);
  }
    });
-
+   setSize(2);
  }
 
-const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination('guessing-forum');
+ const quote=(item)=>{
+  console.log(item.comment);
+  setOrginal(1);
+  console.log('check');
+  let add='Orignally posted by:'+item.username;
+  setValue('<div style="color:green">'+add+item.comment+'</div>');
+ }
+
+ const orginpost=()=>
+ {
+  if(orgin==0)
+  {
+    setOrgin(1);
+  }
+  if(orgin==1)
+  {
+ 
+    setOrgin(0);
+  }
+ 
+ }
+
+const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(`guessing-forum?orginal=${orgin}&search=${search}`);
   return (
     <>
  
@@ -135,6 +158,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
 </div>
  
       <CssBaseline />
+ 
 <Login token={token} user={user}/>
       {!token?'': <Container maxWidth="lg" className="content-wrap1 py-20 text-center">
       <Button onClick={handleOpen} className="emoji_img">Add Emoji</Button>
@@ -167,10 +191,12 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
       </Container>
       }
  
-<div className="content-wrap2 text-center">
- <div className="guessing-button">Top 10 Users</div>
- <div className="guessing-button">Show Original Post</div>
-
+<div className="content-wrap2 text-center" style={{'padding':'25px'}}>
+ <div className="guessing-button"><Link href={`top-10-users`}><a>Top 10 Users</a></Link></div>
+ {orgin==0?<div className="guessing-button" onClick={orginpost}>Show Original Post</div>:<div className="guessing-button" onClick={orginpost}>Show All Post</div>}
+  
+  <input onChange={(e)=>setSearch(e.target.value)} className="search"/>
+        {/* <div className="guessing-button"> Serach</div> */}
 </div>
  
   {/* form list */}
@@ -193,7 +219,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
 <div className="text-center py-3 text-capitalize" dangerouslySetInnerHTML={{__html: item.comment}}></div>  
 
 <div className="clearfix guessing-footer">
-  <div className="float-left">(Quote)</div>
+  <div className="float-left" onClick={()=>quote(item)} style={{'margin':'0px 8px 0px 0px','color':'#ec017d','cursor':'pointer','fontWeight':'600'}}>(Quote)</div>
  
   <div className="float-right"><span style={{'margin':'0px 8px 0px 0px','color':'#ec017d','cursor':'pointer'}}  onClick={() => like(item)}><FontAwesomeIcon icon={faThumbsUp} /> {item.like}</span>
   <span style={{'margin':'0px 15px 0px 0px','color':'rgb(138 10 164)','cursor':'pointer'}} onClick={() => dislike(item)}><FontAwesomeIcon icon={faThumbsDown} /><span style={{'margin':'0px 0px 0px 5px','color':'rgb(138 10 164)'}}>{item.dislike}</span></span> </div>
@@ -202,6 +228,8 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
   
  )
  )}
+
+ {paginatedPost && paginatedPost.length>0?'':<h2 class="text-center">Not Found</h2>}
   
  
   {loadingMore && <Box sx={{ display: 'flex' }}>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import {Logout} from "../api/app"; 
 export default function Login({token,user}) {
  //logout
+ {console.log(user)}
 const logout=()=>{
     let result=Logout();
   
@@ -13,7 +14,9 @@ const logout=()=>{
       settoken('');
       Cookies.remove('auth_token');
       Cookies.remove('user_info');
-    }).catch(console.error())
+    }).catch(error=>{
+     console.log(error);
+    })
   
   }
 

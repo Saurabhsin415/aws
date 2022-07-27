@@ -45,6 +45,14 @@ export const GuessingFormPost = (data) => {
     return result
   }
 
+  //top 10 users
+  export const TopUsers = () => {
+    const address = 'top-users';
+    const fetcher = async (url) => await axios.get(url).then((res) => res.data);
+    const { data:result, error } = useSWR(address, fetcher);
+    return { result, error }
+  }
+
   // export const getUser = (username) => axios.get({
   //   baseUrl: `https://api.github.com/users/`,
   //   responseType: 'json',
