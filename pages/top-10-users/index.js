@@ -23,7 +23,7 @@ const [loading,setLoading]=useState(false);
 <h3 style={{'marginBottom':'0px'}}>Top 10 Users</h3> </div>
 <Container maxWidth="lg" className="content-wrap2 py-20 text-center">
  {result && result.data.map((item,index)=>{
-    return(<div className='d-flex justify-content-around top-users'>
+    return(<div className='d-flex justify-content-around top-users' key={index}>
    <div>{item.username}</div>
     <div>{item.count}</div>
     </div>

@@ -229,7 +229,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
  )
  )}
 
- {paginatedPost && paginatedPost.length>0?'':<h2 class="text-center">Not Found</h2>}
+ {paginatedPost && paginatedPost.length>0?'':<h2 className="text-center">Not Found</h2>}
   
  
   {loadingMore && <Box sx={{ display: 'flex' }}>
