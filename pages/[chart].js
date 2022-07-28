@@ -14,17 +14,17 @@ export default function ChartSlug() {
   const address = id;
   const fetcher = async (url) => await axios.get(url).then((res) => res.data);
   const { data, error } = useSWR(address, fetcher);
-
+{console.log(data)}
   if (error) <p>Loading failed...</p>;
   if (!data) <h1>Loading...</h1>;
 
   return (
     <div>
-   {console.log(data && data.data.week_day)}
+   {/* {console.log(data && data.data.week_day)} */}
     {/* //jodichart */}
 {!data? <Box sx={{ display: 'flex' }}>
       <CircularProgress className="m-auto mt-20" style={{'margin':'92px auto 35px auto'}}/>
-    </Box>:data && data.chart=='panel'?<PanelChart name={id} data={data.data.result}/>:''}
+    </Box>:data && data.chart=='panel'?<PanelChart name={id} data={data.data.result} week={data.data.week_day}/>:''}
 
 
 

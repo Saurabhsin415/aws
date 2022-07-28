@@ -340,10 +340,11 @@ body{
     font-size: 18px!important;
  }
  .time{
-    color: #e70280!important;
-    font-size: 16px!important;
+    color: #035605!important;
+    font-size: 12px!important;
     margin-top: 5px!important;
- }
+}
+ 
 
  .guessing-forum{
     margin-top: 50px;
@@ -532,3 +533,15 @@ white-space:normal!important;
  
     outline:none!important;
 }
+
+/* Basic editor styles */
+.ProseMirror {
+    border: 1px solid #bdbdbdb5;
+    border-radius: 5px;
+  
+    overflow: hidden;
+    scroll-behavior: auto;
+  }
+  .ProseMirror:focus-visible {
+outline: none!important;
+  }

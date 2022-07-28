@@ -72,9 +72,9 @@ export default function CustomizedTables({name,data,week}) {
           {data && data.map((row) => (
             <StyledTableRow key={row.name}>
               <StyledTableCell component="th" scope="row" align='center'>
-                {row.fromdate} <br></br> to   <br></br>  {row.todate}
+                {row.fromdate} <br></br> to  <br></br>  {row.todate}
               </StyledTableCell>
-              {console.log(row)}
+ 
               <StyledTableCell align="center">{row.mon1[0]}<br></br>{row.mon1[1]}<br></br>{row.mon1[2]}</StyledTableCell>
               <StyledTableCell align="center" className='jodi_number'>{row.mon2}</StyledTableCell>
               <StyledTableCell align="center">{row.mon3[0]}<br></br>{row.mon3[1]}<br></br>{row.mon3[2]}</StyledTableCell>

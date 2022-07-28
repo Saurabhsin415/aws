@@ -8,13 +8,11 @@ import {Helmet} from "react-helmet";
 import { useRouter } from 'next/router'
 const CommonLayout = ({ children}) => {
   const router = useRouter();
-  const id = router.query;
-  console.log(id);
+ const pathname=router.pathname;
+ console.log(pathname)
  const reload=()=>{
   window.location.reload();
  }
- 
-
   return (
     <>
  <Helmet>
@@ -38,26 +36,26 @@ const CommonLayout = ({ children}) => {
 
 </div>
   <div className="footer text-color1">
-<div className="active">
+<div className={pathname=='/'?'active':''}>
   <Link href={'/'}>
     <a><FontAwesomeIcon icon={faHome} /><span className="aspan">Home</span></a>
   </Link>
 
 </div>
-<div className="">
+<div className={pathname=='/guessing-form'?'active':''}>
   <Link href={'/guessing-form'}>
     <a><FontAwesomeIcon icon={faUser} /><span className="aspan">Guessing Form</span></a>
   </Link>
 
 </div>
 
-<div className="">
+<div className={pathname=='/chat-form'?'active':''}>
   <Link href={'/'}>
     <a><FontAwesomeIcon icon={faUserFriends} /><span className="aspan">Chat Form</span></a>
   </Link>
 
 </div>
-<div className="">
+<div className={pathname=='/expert-form'?'active':''}>
   <Link href={'/'}>
     <a><FontAwesomeIcon icon={faUserCheck} /><span className="aspan">Expert Form</span></a>
   </Link>

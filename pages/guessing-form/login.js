@@ -3,12 +3,12 @@ import Link from 'next/link';
 import {Logout} from "../api/app"; 
 export default function Login({token,user}) {
  //logout
- {console.log(user)}
+//  {console.log(user)}
 const logout=()=>{
     let result=Logout();
   
     result.then(response=>{
-  console.log(response);
+  // console.log(response);
       toast(response.data.message); 
       setUser('');
       settoken('');

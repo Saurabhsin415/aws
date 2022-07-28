@@ -20,13 +20,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faHome,faRefresh,faUser,faUserCheck,faUserFriends,faThumbsDown,faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 import 'react-quill/dist/quill.snow.css';
 import Link from 'next/link';
+import Document from '@tiptap/extension-document'
+import Dropcursor from '@tiptap/extension-dropcursor'
+import Image from '@tiptap/extension-image'
+import Paragraph from '@tiptap/extension-paragraph'
+import Text from '@tiptap/extension-text'
+import TextStyle from '@tiptap/extension-text-style'
+import { EditorContent, useEditor } from '@tiptap/react'
 export default function Guessingforum() {
  
    
 //  console.log(token);
 const [token,settoken]=useState();
-  const [data, setData] = useState('');
-  const [editor, setEditor] = useState();
+ 
+ 
  const [value, setValue] =useState('');
  const [user,setUser]=useState('');
  const [orginal,setOrginal]=useState(0);
@@ -67,11 +74,21 @@ const addemoji=(item)=>{
  toast("Emoji Added Succefully.")
  let img=`${value}`+'<img src='+`${item.src}` +' className="img1"/>';
  setValue(img);
+
+ editor.chain().focus().setImage({ src: item.src }).run()
+
+
  setOpen(false);
 }
 
 //submit
 const submit =()=>{
+  if(!value)
+  {
+    toast.error('Comment Required.');
+    return
+  }
+  
  let fd={'comment':value,orginal}
 let result=GuessingFormPost(fd);
 result.then(response=>{
@@ -115,11 +132,12 @@ result.then(response=>{
  }
 
  const quote=(item)=>{
-  console.log(item.comment);
   setOrginal(1);
   console.log('check');
   let add='Orignally posted by:'+item.username;
-  setValue('<div style="color:green">'+add+item.comment+'</div>');
+ 
+  editor.chain().focus().setContent('<div class="d-flex">'+add+item.comment+'</div>').run()
+ 
  }
 
  const orginpost=()=>
@@ -135,6 +153,22 @@ result.then(response=>{
   }
  
  }
+
+ const editor = useEditor({
+  extensions: [
+    Document,
+    Paragraph,
+    Text,
+    Image.configure({ inline: true }),
+    Dropcursor,
+    TextStyle
+  ],
+  content: ``,
+  onUpdate({ editor }) {
+    setValue(editor.getHTML());
+  },
+})
+ 
 
 const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(`guessing-forum?orginal=${orgin}&search=${search}`);
   return (
@@ -158,7 +192,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
 </div>
  
       <CssBaseline />
- 
+     
 <Login token={token} user={user}/>
       {!token?'': <Container maxWidth="lg" className="content-wrap1 py-20 text-center">
       <Button onClick={handleOpen} className="emoji_img">Add Emoji</Button>
@@ -185,7 +219,8 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
       </Modal>
        
        {console.log(value)}
-      <ReactQuill value={value} onChange={setValue}/>
+      {/* <ReactQuill value={value} onChange={setValue}/> */}
+      <EditorContent editor={editor} />
 
 <div className="text-center">   <a href="#" className="btn button" onClick={submit}>Submit</a></div>
       </Container>
