@@ -28,18 +28,16 @@ import Text from '@tiptap/extension-text'
 import TextStyle from '@tiptap/extension-text-style'
 import { EditorContent, useEditor } from '@tiptap/react'
 export default function Guessingforum() {
- 
-   
 //  console.log(token);
+ 
 const [token,settoken]=useState();
- 
- 
- const [value, setValue] =useState('');
- const [user,setUser]=useState('');
- const [orginal,setOrginal]=useState(0);
+const [value, setValue] =useState('');
+const [user,setUser]=useState('');
+const [orginal,setOrginal]=useState(0);
 const [orgin,setOrgin]=useState(0);
 const [search,setSearch]=useState('');
- useEffect(()=>{
+const [quotevalue,setQuoteValue]=useState('');
+useEffect(()=>{
       
   if(Cookies.get('auth_token'))
   {
@@ -74,10 +72,7 @@ const addemoji=(item)=>{
  toast("Emoji Added Succefully.")
  let img=`${value}`+'<img src='+`${item.src}` +' className="img1"/>';
  setValue(img);
-
  editor.chain().focus().setImage({ src: item.src }).run()
-
-
  setOpen(false);
 }
 
@@ -88,7 +83,7 @@ const submit =()=>{
     toast.error('Comment Required.');
     return
   }
-  
+  value=quotevalue+value;
  let fd={'comment':value,orginal}
 let result=GuessingFormPost(fd);
 result.then(response=>{
@@ -97,6 +92,7 @@ result.then(response=>{
  {
    setValue('');
    toast(response.data.message);
+   window.location.reload();
  }
 
 }) 
@@ -112,6 +108,7 @@ result.then(response=>{
  if(response.data.status==true)
  {
    toast(response.data.message);
+   window.location.reload();
  }
    });
 
@@ -126,6 +123,7 @@ result.then(response=>{
  if(response.data.status==true)
  {
    toast(response.data.message);
+   window.location.reload();
  }
    });
    setSize(2);
@@ -135,8 +133,8 @@ result.then(response=>{
   setOrginal(1);
   console.log('check');
   let add='Orignally posted by:'+item.username;
- 
-  editor.chain().focus().setContent('<div class="d-flex">'+add+item.comment+'</div>').run()
+ setQuoteValue('<div style="background:#82e38524;color:red">'+add+item.comment+'</div>');
+  // editor.chain().focus().setContent('<div class="d-flex">'+add+item.comment+'</div>').run()
  
  }
 
@@ -218,7 +216,9 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
         </Box>
       </Modal>
        
-       {console.log(value)}
+       {console.log(quotevalue)}
+     
+      {quotevalue?<div className="text-center py-3 text-capitalize" dangerouslySetInnerHTML={{__html: quotevalue}}></div>:''} 
       {/* <ReactQuill value={value} onChange={setValue}/> */}
       <EditorContent editor={editor} />
 
