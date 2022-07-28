@@ -59,7 +59,7 @@ const scrollToBottom = () => {
 <p className="text-center">Copyright © 2022-23 <span className="text-color2">SS</span>. All Rights Reserved.</p>
 
 </div>
-<div class="topdown">{showTopBtn?<FontAwesomeIcon icon={faArrowUp}  onClick={goToTop}/>:<FontAwesomeIcon icon={faArrowDown}  onClick={scrollToBottom}/>}</div>
+<div className="topdown">{showTopBtn?<FontAwesomeIcon icon={faArrowUp}  onClick={goToTop}/>:<FontAwesomeIcon icon={faArrowDown}  onClick={scrollToBottom}/>}</div>
   <div className="footer text-color1">
 <div className={pathname=='/'?'active':''}>
   <Link href={'/'}>
