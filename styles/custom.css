@@ -545,3 +545,6 @@ white-space:normal!important;
   .ProseMirror:focus-visible {
 outline: none!important;
   }
+.red-00,.red-05,.red-11,.red-16,.red-22,.red-27,.red-33,.red-38,.red-44,.red-49,.red-55,.red-50,.red-66,.red-61,.red-77,.red-72,.red-88,.red-83,.red-99,.red-94{
+    color: red;
+}

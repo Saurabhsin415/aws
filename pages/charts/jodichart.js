@@ -74,13 +74,13 @@ export default function CustomizedTables({name,data,week}) {
           { data && data.map((row) => (
             <StyledTableRow key={row.name}>
              
-              <StyledTableCell align="center">{row.mon2}</StyledTableCell>
-              <StyledTableCell align="center">{row.tue2}</StyledTableCell>
-              <StyledTableCell align="center">{row.wed2}</StyledTableCell>
-              <StyledTableCell align="center">{row.thu2}</StyledTableCell>
-              <StyledTableCell align="center">{row.fri2}</StyledTableCell>
-              <StyledTableCell align="center">{row.sat2}</StyledTableCell>
-              <StyledTableCell align="center">{row.sun2}</StyledTableCell>
+              <StyledTableCell align="center" className={`red-${row.mon2}`}>{row.mon2}</StyledTableCell>
+              <StyledTableCell align="center" className={`red-${row.tue2}`}>{row.tue2}</StyledTableCell>
+              <StyledTableCell align="center" className={`red-${row.wed2}`}>{row.wed2}</StyledTableCell>
+              <StyledTableCell align="center" className={`red-${row.thu2}`}>{row.thu2}</StyledTableCell>
+              <StyledTableCell align="center" className={`red-${row.fri2}`}>{row.fri2}</StyledTableCell>
+              <StyledTableCell align="center" className={`red-${row.sat2}`}>{row.sat2}</StyledTableCell>
+              <StyledTableCell align="center" className={`red-${row.sun2}`}>{row.sun2}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
