@@ -3,16 +3,40 @@ import React, { useEffect, useState } from "react";
 import Router from 'next/router'
 import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faHome,faRefresh,faUser,faUserCheck,faUserFriends } from '@fortawesome/free-solid-svg-icons'
+import {faHome,faRefresh,faUser,faUserCheck,faUserFriends,faArrowDown,faArrowTop,faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import {Helmet} from "react-helmet";
 import { useRouter } from 'next/router'
 const CommonLayout = ({ children}) => {
   const router = useRouter();
  const pathname=router.pathname;
- console.log(pathname)
  const reload=()=>{
   window.location.reload();
  }
+ const [showTopBtn, setShowTopBtn] = useState(false);
+ useEffect(() => {
+  window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+          setShowTopBtn(true);
+      } else {
+          setShowTopBtn(false);
+      }
+  });
+}, []);
+const goToTop = () => {
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+  });
+};
+
+const scrollToBottom = () => {
+  window.scrollTo({
+    top: document.documentElement.scrollHeight,
+    behavior: 'smooth',
+  });
+};
+
+ 
   return (
     <>
  <Helmet>
@@ -35,6 +59,7 @@ const CommonLayout = ({ children}) => {
 <p className="text-center">Copyright © 2022-23 <span className="text-color2">SS</span>. All Rights Reserved.</p>
 
 </div>
+<div class="topdown">{showTopBtn?<FontAwesomeIcon icon={faArrowUp}  onClick={goToTop}/>:<FontAwesomeIcon icon={faArrowDown}  onClick={scrollToBottom}/>}</div>
   <div className="footer text-color1">
 <div className={pathname=='/'?'active':''}>
   <Link href={'/'}>
