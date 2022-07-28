@@ -61,9 +61,9 @@ useEffect(()=>{
  const handleOpen = () => setOpen(true);
  const handleClose = () => setOpen(false);
  const emoji=[
-{'src':'https://dpboss.rocks/emoji/congrats.gif','icon':'name'},
-{'src':'https://dpboss.rocks/emoji/Thanks.gif','icon':'name'},
-{'src':'https://dpboss.rocks/emoji/angry.gif','icon':'name'},
+{'src':'https://dpboss.rocks/emoji/congrats.gif'},
+{'src':'https://dpboss.rocks/emoji/Thanks.gif'},
+{'src':'https://dpboss.rocks/emoji/angry.gif'},
 ]
 
  
