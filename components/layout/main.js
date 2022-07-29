@@ -75,7 +75,7 @@ const scrollToBottom = () => {
 </div>
 
 <div className={pathname=='/chat-form'?'active':''}>
-  <Link href={'/'}>
+  <Link href={'/chat-form'}>
     <a><FontAwesomeIcon icon={faUserFriends} /><span className="aspan">Chat Form</span></a>
   </Link>
 

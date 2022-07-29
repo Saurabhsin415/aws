@@ -571,4 +571,12 @@ outline: none!important;
  .topdown svg{
     font-weight: 900;
  }
-  
+  .emoji{
+    height: 400px;
+    overflow: hidden;
+    overflow-y: scroll;
+ 
+  }
+  .MuiBox-root{
+    padding: 5px !important;
+  }
