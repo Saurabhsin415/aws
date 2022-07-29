@@ -10,7 +10,7 @@ import Modal from '@mui/material/Modal'
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { toast } from "react-toastify";
-import {GuessingFormGet,GuessingFormPost,Like,Dislike} from "../api/app"; 
+import {ChatFormPost,ChatLike,ChatDislike} from "../api/app"; 
 import Login from "./login"; 
 import Cookies from 'js-cookie'
 import { usePagination } from "../../components/lib/hooks";
@@ -167,7 +167,7 @@ const submit =()=>{
   }
   value=quotevalue+value;
  let fd={'comment':value,orginal}
-let result=GuessingFormPost(fd);
+let result=ChatFormPost(fd);
 result.then(response=>{
  
  if(response.data.status==true)
@@ -183,9 +183,9 @@ result.then(response=>{
  //like
  const like=(item)=>
  {
-   console.log(item);
+  //  console.log(item);
    let fd={id:item.id}
-   let result=Like(fd);
+   let result=ChatLike(fd);
    result.then(response=>{
  if(response.data.status==true)
  {
@@ -200,7 +200,7 @@ result.then(response=>{
  {
    console.log(item);
    let fd={id:item.id}
-   let result=Dislike(fd);
+   let result=ChatDislike(fd);
    result.then(response=>{
  if(response.data.status==true)
  {
@@ -250,7 +250,7 @@ result.then(response=>{
 })
  
 
-const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(`guessing-forum?orginal=${orgin}&search=${search}`);
+const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(`chat-forum?orginal=${orgin}&search=${search}`);
   return (
     <>
  

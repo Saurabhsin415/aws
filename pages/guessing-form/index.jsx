@@ -289,7 +289,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
           <Typography id="keep-mounted-modal-title" variant="h6" component="h2">
   
           </Typography>
-          <div className="">
+          <div className="emoji">
             {emoji && emoji.map((item,index)=>{
  return(
 <img key={index} className="emoji_img" src={item.src} alt="df"  onClick={() => addemoji(item)}/> 

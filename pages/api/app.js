@@ -14,6 +14,14 @@ export const GuessingFormPost = (data) => {
     const result =axios.post(address,data);
     return result
   }
+  export const ChatFormPost = (data) => {
+    const address = 'chat-forum';
+    const result =axios.post(address,data);
+    return result
+  }
+
+  
+
   export const UserRegistation = (data) => {
     const address = 'registration';
     const result =axios.post(address,data);
@@ -44,6 +52,21 @@ export const GuessingFormPost = (data) => {
     const result =axios.post(address,data);
     return result
   }
+
+    //chatlike 
+    export const ChatLike = (data) => {
+      const address = 'chatlike';
+      const result =axios.post(address,data);
+      return result
+    }
+  
+    //chatDislike
+    export const ChatDislike = (data) => {
+      const address = 'chatdislike';
+      const result =axios.post(address,data);
+      return result
+    }
+
 
   //top 10 users
   export const TopUsers = () => {
