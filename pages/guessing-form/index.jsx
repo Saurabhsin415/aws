@@ -13,12 +13,11 @@ import { toast } from "react-toastify";
 import {GuessingFormGet,GuessingFormPost,Like,Dislike} from "../api/app"; 
 import Login from "./login"; 
 import Cookies from 'js-cookie'
-const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
-const Quill = dynamic(() => import("react-quill"), { ssr: false });
 import { usePagination } from "../../components/lib/hooks";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faHome,faRefresh,faUser,faUserCheck,faUserFriends,faThumbsDown,faThumbsUp } from '@fortawesome/free-solid-svg-icons'
-import 'react-quill/dist/quill.snow.css';
+import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+ 
 import Link from 'next/link';
 import Document from '@tiptap/extension-document'
 import Dropcursor from '@tiptap/extension-dropcursor'
@@ -329,7 +328,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
   <div className='guessing-content' key={index}>
 
 <div className='guessing-heading clearfix'>
-    <div className='float-left bold'><FontAwesomeIcon icon={faUser} /> {item.username}</div>
+    <div className='float-left bold'><div className="d-flex"><AccountCircleIcon /> <span style={{'margin':'2px 5px 0px 5px'}}>{item.username}</span></div></div>
     <div className='float-right date'>{item.time}</div>
 
 </div>
@@ -339,8 +338,8 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
 <div className="clearfix guessing-footer">
   <div className="float-left" onClick={()=>quote(item)} style={{'margin':'0px 8px 0px 0px','color':'#ec017d','cursor':'pointer','fontWeight':'600'}}>(Quote)</div>
  
-  <div className="float-right"><span style={{'margin':'0px 8px 0px 0px','color':'#ec017d','cursor':'pointer'}}  onClick={() => like(item)}><FontAwesomeIcon icon={faThumbsUp} /> {item.like}</span>
-  <span style={{'margin':'0px 15px 0px 0px','color':'rgb(138 10 164)','cursor':'pointer'}} onClick={() => dislike(item)}><FontAwesomeIcon icon={faThumbsDown} /><span style={{'margin':'0px 0px 0px 5px','color':'rgb(138 10 164)'}}>{item.dislike}</span></span> </div>
+  <div className="float-right"><span style={{'margin':'0px 8px 0px 0px','color':'#ec017d','cursor':'pointer'}}  onClick={() => like(item)}><ThumbUpIcon fontSize="small"/> {item.like}</span>
+  <span style={{'margin':'0px 15px 0px 0px','color':'rgb(138 10 164)','cursor':'pointer'}} onClick={() => dislike(item)}><ThumbDownAltIcon fontSize="small"/><span style={{'margin':'0px 0px 0px 5px','color':'rgb(138 10 164)'}}>{item.dislike}</span></span> </div>
 </div>
  </div>
   

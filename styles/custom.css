@@ -264,10 +264,12 @@ body{
     -webkit-transform: scale(1.01);
     transform: scale(1.01);
     border-radius: 5px;
+    padding: 6px;
  }
  .aspan{
     display: block;
-    font-size: 11px;
+    font-size: 12px;
+    margin: -5px;
  }
  .foot{
     margin-top: 10px;
@@ -564,7 +566,7 @@ outline: none!important;
     justify-content: center;
     align-items: center;
     margin: auto;
-    padding: 14px;
+    padding: 13px;
     font-weight: 900;
     cursor: pointer;
 }

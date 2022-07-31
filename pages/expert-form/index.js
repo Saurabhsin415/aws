@@ -10,7 +10,7 @@ import Modal from '@mui/material/Modal'
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { toast } from "react-toastify";
-import {ChatFormPost,ChatLike,ChatDislike} from "../api/app"; 
+import {GuessingFormGet,GuessingFormPost,Like,Dislike} from "../api/app"; 
 import Login from "./login"; 
 import Cookies from 'js-cookie'
 import { usePagination } from "../../components/lib/hooks";
@@ -60,95 +60,94 @@ useEffect(()=>{
  const handleOpen = () => setOpen(true);
  const handleClose = () => setOpen(false);
  const emoji=[
-{'src':  process.env.API_URL2 +'emoji/adore.gif'},
-{'src':process.env.API_URL2 +'emoji/aetsch.gif'},
-{'src':process.env.API_URL2 +'emoji/angry.gif'},
-{'src':process.env.API_URL2 +'emoji/angrywife.gif'},
-{'src':process.env.API_URL2 +'emoji/announce.gif'},
-{'src':process.env.API_URL2 +'emoji/avatar224.gif'},
-{'src':process.env.API_URL2 +'emoji/b0201.gif'},
-{'src':process.env.API_URL2 +'emoji/b0225.gif'},
-{'src':process.env.API_URL2 +'emoji/balle balle.gif'},
-{'src':process.env.API_URL2 +'emoji/banghead.gif'},
-{'src':process.env.API_URL2 +'emoji/banned 3.gif'},
-{'src':process.env.API_URL2 +'emoji/bath.gif'},
-{'src':process.env.API_URL2 +'emoji/bawl.gif'},
-{'src':process.env.API_URL2 +'emoji/bebored.gif'},
-{'src':process.env.API_URL2 +'emoji/beee.gif'},
-{'src':process.env.API_URL2 +'emoji/beer.gif'},
-{'src':process.env.API_URL2 +'emoji/bigboss.gif'},
-{'src':process.env.API_URL2 +'emoji/biggrin.gif'},
-{'src':process.env.API_URL2 +'emoji/biggrinangel.gif'},
-{'src':process.env.API_URL2 +'emoji/birthday.gif'},
-{'src':process.env.API_URL2 +'emoji/boxing.gif'},
-{'src':process.env.API_URL2 +'emoji/brushing.gif'},
-{'src':process.env.API_URL2 +'emoji/bsanta.gif'},
-{'src':process.env.API_URL2 +'emoji/bye.gif'},
-{'src':process.env.API_URL2 +'emoji/call.gif'},
-{'src':process.env.API_URL2 +'emoji/chat.gif'},
-{'src':process.env.API_URL2 +'emoji/ciao.gif'},
-{'src':process.env.API_URL2 +'emoji/confuse.gif'},
-{'src':process.env.API_URL2 +'emoji/congrats.gif'},
-{'src':process.env.API_URL2 +'emoji/congratulations.gif'},
-{'src':process.env.API_URL2 +'emoji/dancing.gif'},
-{'src':process.env.API_URL2 +'emoji/devil2.gif'},
-{'src':process.env.API_URL2 +'emoji/dj.gif'},
-{'src':process.env.API_URL2 +'emoji/dj2.gif'},
-{'src':process.env.API_URL2 +'emoji/don.gif'},
-{'src':process.env.API_URL2 +'emoji/fight.gif'},
-{'src':process.env.API_URL2 +'emoji/flamethrower.gif'},
-{'src':process.env.API_URL2 +'emoji/gm.gif'},
-{'src':process.env.API_URL2 +'emoji/gn.gif'},
-{'src':process.env.API_URL2 +'emoji/hahaha.gif'},
-{'src':process.env.API_URL2 +'emoji/hammer.gif'},
-{'src':process.env.API_URL2 +'emoji/happy.gif'},
-{'src':process.env.API_URL2 +'emoji/hehe.gif'},
-{'src':process.env.API_URL2 +'emoji/hello.gif'},
-{'src':process.env.API_URL2 +'emoji/horseride.gif'},
-{'src':process.env.API_URL2 +'emoji/hot.gif'},
-{'src':process.env.API_URL2 +'emoji/injail.gif'},
-{'src':process.env.API_URL2 +'emoji/INR.png'},
-{'src':process.env.API_URL2 +'emoji/jetli.gif'},
-{'src':process.env.API_URL2 +'emoji/kiss.gif'},
-{'src':process.env.API_URL2 +'emoji/kngt.gif'},
-{'src':process.env.API_URL2 +'emoji/lift.gif'},
-{'src':process.env.API_URL2 +'emoji/locked.gif'},
-{'src':process.env.API_URL2 +'emoji/lol (1).gif'},
-{'src':process.env.API_URL2 +'emoji/lol.gif'},
-{'src':process.env.API_URL2 +'emoji/lotpot.gif'},
-{'src':process.env.API_URL2 +'emoji/matrix.gif'},
-{'src':process.env.API_URL2 +'emoji/musicus.gif'},
-{'src':process.env.API_URL2 +'emoji/nana.gif'},
-{'src':process.env.API_URL2 +'emoji/nope.gif'},
-{'src':process.env.API_URL2 +'emoji/s0817.gif'},
-{'src':process.env.API_URL2 +'emoji/s0818.gif'},
-{'src':process.env.API_URL2 +'emoji/s0819.gif'},
-{'src':process.env.API_URL2 +'emoji/sorry.gif'},
-{'src':process.env.API_URL2 +'emoji/t0126.gif'},
-{'src':process.env.API_URL2 +'emoji/t0127.gif'},
-{'src':process.env.API_URL2 +'emoji/t0130.gif'},
-{'src':process.env.API_URL2 +'emoji/t2002.gif'},
-{'src':process.env.API_URL2 +'emoji/t0131.gif'},
-{'src':process.env.API_URL2 +'emoji/t2015.gif'},
-{'src':process.env.API_URL2 +'emoji/t2019.gif'},
-{'src':process.env.API_URL2 +'emoji/t2022.gif'},
-{'src':process.env.API_URL2 +'emoji/t2027.gif'},
-{'src':process.env.API_URL2 +'emoji/t2215.gif'},
-{'src':process.env.API_URL2 +'emoji/t2224.gif'}, 
-{'src':process.env.API_URL2 +'emoji/t2622.gif'},
-{'src':process.env.API_URL2 +'emoji/t2629.gif'},
-{'src':process.env.API_URL2 +'emoji/t2636.gif'},
-{'src':process.env.API_URL2 +'emoji/t2637.gif'},
-{'src':process.env.API_URL2 +'emoji/t3902.gif'},
-{'src':process.env.API_URL2 +'emoji/t3905.gif'},
-{'src':process.env.API_URL2 +'emoji/t4402.gif'},
-{'src':process.env.API_URL2 +'emoji/t4414.gif'},
-{'src':process.env.API_URL2 +'emoji/t4427.gif'},
-{'src':process.env.API_URL2 +'emoji/Thanks.gif'},
-{'src':process.env.API_URL2 +'emoji/welcome.gif'},
-
-]
-
+  {'src':  process.env.API_URL2 +'emoji/adore.gif'},
+  {'src':process.env.API_URL2 +'emoji/aetsch.gif'},
+  {'src':process.env.API_URL2 +'emoji/angry.gif'},
+  {'src':process.env.API_URL2 +'emoji/angrywife.gif'},
+  {'src':process.env.API_URL2 +'emoji/announce.gif'},
+  {'src':process.env.API_URL2 +'emoji/avatar224.gif'},
+  {'src':process.env.API_URL2 +'emoji/b0201.gif'},
+  {'src':process.env.API_URL2 +'emoji/b0225.gif'},
+  {'src':process.env.API_URL2 +'emoji/balle balle.gif'},
+  {'src':process.env.API_URL2 +'emoji/banghead.gif'},
+  {'src':process.env.API_URL2 +'emoji/banned 3.gif'},
+  {'src':process.env.API_URL2 +'emoji/bath.gif'},
+  {'src':process.env.API_URL2 +'emoji/bawl.gif'},
+  {'src':process.env.API_URL2 +'emoji/bebored.gif'},
+  {'src':process.env.API_URL2 +'emoji/beee.gif'},
+  {'src':process.env.API_URL2 +'emoji/beer.gif'},
+  {'src':process.env.API_URL2 +'emoji/bigboss.gif'},
+  {'src':process.env.API_URL2 +'emoji/biggrin.gif'},
+  {'src':process.env.API_URL2 +'emoji/biggrinangel.gif'},
+  {'src':process.env.API_URL2 +'emoji/birthday.gif'},
+  {'src':process.env.API_URL2 +'emoji/boxing.gif'},
+  {'src':process.env.API_URL2 +'emoji/brushing.gif'},
+  {'src':process.env.API_URL2 +'emoji/bsanta.gif'},
+  {'src':process.env.API_URL2 +'emoji/bye.gif'},
+  {'src':process.env.API_URL2 +'emoji/call.gif'},
+  {'src':process.env.API_URL2 +'emoji/chat.gif'},
+  {'src':process.env.API_URL2 +'emoji/ciao.gif'},
+  {'src':process.env.API_URL2 +'emoji/confuse.gif'},
+  {'src':process.env.API_URL2 +'emoji/congrats.gif'},
+  {'src':process.env.API_URL2 +'emoji/congratulations.gif'},
+  {'src':process.env.API_URL2 +'emoji/dancing.gif'},
+  {'src':process.env.API_URL2 +'emoji/devil2.gif'},
+  {'src':process.env.API_URL2 +'emoji/dj.gif'},
+  {'src':process.env.API_URL2 +'emoji/dj2.gif'},
+  {'src':process.env.API_URL2 +'emoji/don.gif'},
+  {'src':process.env.API_URL2 +'emoji/fight.gif'},
+  {'src':process.env.API_URL2 +'emoji/flamethrower.gif'},
+  {'src':process.env.API_URL2 +'emoji/gm.gif'},
+  {'src':process.env.API_URL2 +'emoji/gn.gif'},
+  {'src':process.env.API_URL2 +'emoji/hahaha.gif'},
+  {'src':process.env.API_URL2 +'emoji/hammer.gif'},
+  {'src':process.env.API_URL2 +'emoji/happy.gif'},
+  {'src':process.env.API_URL2 +'emoji/hehe.gif'},
+  {'src':process.env.API_URL2 +'emoji/hello.gif'},
+  {'src':process.env.API_URL2 +'emoji/horseride.gif'},
+  {'src':process.env.API_URL2 +'emoji/hot.gif'},
+  {'src':process.env.API_URL2 +'emoji/injail.gif'},
+  {'src':process.env.API_URL2 +'emoji/INR.png'},
+  {'src':process.env.API_URL2 +'emoji/jetli.gif'},
+  {'src':process.env.API_URL2 +'emoji/kiss.gif'},
+  {'src':process.env.API_URL2 +'emoji/kngt.gif'},
+  {'src':process.env.API_URL2 +'emoji/lift.gif'},
+  {'src':process.env.API_URL2 +'emoji/locked.gif'},
+  {'src':process.env.API_URL2 +'emoji/lol (1).gif'},
+  {'src':process.env.API_URL2 +'emoji/lol.gif'},
+  {'src':process.env.API_URL2 +'emoji/lotpot.gif'},
+  {'src':process.env.API_URL2 +'emoji/matrix.gif'},
+  {'src':process.env.API_URL2 +'emoji/musicus.gif'},
+  {'src':process.env.API_URL2 +'emoji/nana.gif'},
+  {'src':process.env.API_URL2 +'emoji/nope.gif'},
+  {'src':process.env.API_URL2 +'emoji/s0817.gif'},
+  {'src':process.env.API_URL2 +'emoji/s0818.gif'},
+  {'src':process.env.API_URL2 +'emoji/s0819.gif'},
+  {'src':process.env.API_URL2 +'emoji/sorry.gif'},
+  {'src':process.env.API_URL2 +'emoji/t0126.gif'},
+  {'src':process.env.API_URL2 +'emoji/t0127.gif'},
+  {'src':process.env.API_URL2 +'emoji/t0130.gif'},
+  {'src':process.env.API_URL2 +'emoji/t2002.gif'},
+  {'src':process.env.API_URL2 +'emoji/t0131.gif'},
+  {'src':process.env.API_URL2 +'emoji/t2015.gif'},
+  {'src':process.env.API_URL2 +'emoji/t2019.gif'},
+  {'src':process.env.API_URL2 +'emoji/t2022.gif'},
+  {'src':process.env.API_URL2 +'emoji/t2027.gif'},
+  {'src':process.env.API_URL2 +'emoji/t2215.gif'},
+  {'src':process.env.API_URL2 +'emoji/t2224.gif'}, 
+  {'src':process.env.API_URL2 +'emoji/t2622.gif'},
+  {'src':process.env.API_URL2 +'emoji/t2629.gif'},
+  {'src':process.env.API_URL2 +'emoji/t2636.gif'},
+  {'src':process.env.API_URL2 +'emoji/t2637.gif'},
+  {'src':process.env.API_URL2 +'emoji/t3902.gif'},
+  {'src':process.env.API_URL2 +'emoji/t3905.gif'},
+  {'src':process.env.API_URL2 +'emoji/t4402.gif'},
+  {'src':process.env.API_URL2 +'emoji/t4414.gif'},
+  {'src':process.env.API_URL2 +'emoji/t4427.gif'},
+  {'src':process.env.API_URL2 +'emoji/Thanks.gif'},
+  {'src':process.env.API_URL2 +'emoji/welcome.gif'},
+  
+  ]
  
 //add emoji
 const addemoji=(item)=>{
@@ -168,7 +167,7 @@ const submit =()=>{
   }
   value=quotevalue+value;
  let fd={'comment':value,orginal}
-let result=ChatFormPost(fd);
+let result=GuessingFormPost(fd);
 result.then(response=>{
  
  if(response.data.status==true)
@@ -184,9 +183,9 @@ result.then(response=>{
  //like
  const like=(item)=>
  {
-  //  console.log(item);
+   console.log(item);
    let fd={id:item.id}
-   let result=ChatLike(fd);
+   let result=Like(fd);
    result.then(response=>{
  if(response.data.status==true)
  {
@@ -201,7 +200,7 @@ result.then(response=>{
  {
    console.log(item);
    let fd={id:item.id}
-   let result=ChatDislike(fd);
+   let result=Dislike(fd);
    result.then(response=>{
  if(response.data.status==true)
  {
@@ -251,12 +250,12 @@ result.then(response=>{
 })
  
 
-const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(`chat-forum?orginal=${orgin}&search=${search}`);
+const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(`guessing-forum?orginal=${orgin}&search=${search}`);
   return (
     <>
  
 <div className="text-center py-3 text-family1 guessing-forum">
-<h3 style={{'marginBottom':'0px'}}>Chat Forum</h3> 
+<h3 style={{'marginBottom':'0px'}}>Expert Forum</h3> 
  {/* <div className='text-color1'>Date:10/07/2022</div> */}
  </div> 
  
@@ -329,7 +328,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
   <div className='guessing-content' key={index}>
 
 <div className='guessing-heading clearfix'>
-<div className='float-left bold'><div className="d-flex"><AccountCircleIcon /> <span style={{'margin':'2px 5px 0px 5px'}}>{item.username}</span></div></div>
+    <div className='float-left bold'><div className="d-flex"><AccountCircleIcon /> <span style={{'margin':'2px 5px 0px 5px'}}>{item.username}</span></div></div>
     <div className='float-right date'>{item.time}</div>
 
 </div>
@@ -339,8 +338,8 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
 <div className="clearfix guessing-footer">
   <div className="float-left" onClick={()=>quote(item)} style={{'margin':'0px 8px 0px 0px','color':'#ec017d','cursor':'pointer','fontWeight':'600'}}>(Quote)</div>
  
-  <div className="float-right"><span style={{'margin':'0px 8px 0px 0px','color':'#ec017d','cursor':'pointer'}}  onClick={() => like(item)}><ThumbUpIcon fontSize="small"/>  {item.like}</span>
-  <span style={{'margin':'0px 15px 0px 0px','color':'rgb(138 10 164)','cursor':'pointer'}} onClick={() => dislike(item)}><ThumbDownAltIcon fontSize="small"/> <span style={{'margin':'0px 0px 0px 5px','color':'rgb(138 10 164)'}}>{item.dislike}</span></span> </div>
+  <div className="float-right"><span style={{'margin':'0px 8px 0px 0px','color':'#ec017d','cursor':'pointer'}}  onClick={() => like(item)}><ThumbUpIcon fontSize="small"/> {item.like}</span>
+  <span style={{'margin':'0px 15px 0px 0px','color':'rgb(138 10 164)','cursor':'pointer'}} onClick={() => dislike(item)}><ThumbDownAltIcon fontSize="small"/><span style={{'margin':'0px 0px 0px 5px','color':'rgb(138 10 164)'}}>{item.dislike}</span></span> </div>
 </div>
  </div>
   
