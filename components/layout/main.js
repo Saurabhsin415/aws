@@ -76,20 +76,20 @@ const scrollToBottom = () => {
 </div>
 <div className={pathname=='/guessing-form'?'active':''}>
   <Link href={'/guessing-form'}>
-    <a> <ForumIcon/><span className="aspan">Guessing Form</span></a>
+    <a> <ForumIcon/><span className="aspan">Guessing Forum</span></a>
   </Link>
 
 </div>
 
 <div className={pathname=='/chat-form'?'active':''}>
   <Link href={'/chat-form'}>
-    <a>  <ForumIcon/> <span className="aspan">Chat Form</span></a>
+    <a>  <ForumIcon/> <span className="aspan">Chat Forum</span></a>
   </Link>
 
 </div>
 <div className={pathname=='/expert-form'?'active':''}>
   <Link href={'/expert-form'}>
-    <a><HowToRegIcon/><span className="aspan">Expert Form</span></a>
+    <a><HowToRegIcon/><span className="aspan">Expert Forum</span></a>
   </Link>
 
 </div>
