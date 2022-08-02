@@ -10,7 +10,7 @@ import Modal from '@mui/material/Modal'
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { toast } from "react-toastify";
-import {GuessingFormGet,GuessingFormPost,Like,Dislike} from "../api/app"; 
+import {GuessingFormGet,GuessingFormPost,Like,Dislike,UserInfo} from "../api/app"; 
 import Login from "./login"; 
 import Cookies from 'js-cookie'
 import { usePagination } from "../../components/lib/hooks";
@@ -28,7 +28,7 @@ import TextStyle from '@tiptap/extension-text-style'
 import { EditorContent, useEditor } from '@tiptap/react'
 export default function Guessingforum() {
 //  console.log(token);
- 
+const { result, errors } =UserInfo();
 const [token,settoken]=useState();
 const [value, setValue] =useState('');
 const [user,setUser]=useState('');
@@ -39,11 +39,14 @@ const [quotevalue,setQuoteValue]=useState('');
 useEffect(()=>{
       
   if(Cookies.get('auth_token'))
-  {
+  {  
+    //  console.log(errors);   console.log(result);
+
+    setUser(result?result.data:'');
     settoken(Cookies.get('auth_token'));
-    setUser(JSON.parse(Cookies.get('user_info')));
+    // setUser(JSON.parse(Cookies.get('user_info')));
   }
-},[])
+},[result])
  const style = {
    position: 'absolute',
    top: '40%',
@@ -272,9 +275,9 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
 </div>
  
       <CssBaseline />
-     
+ 
 <Login token={token} user={user}/>
-      {!token?'': <Container maxWidth="lg" className="content-wrap1 py-20 text-center">
+      {token && user && user.type==3?<Container maxWidth="lg" className="content-wrap1 py-20 text-center">
       <Button onClick={handleOpen} className="emoji_img">Add Emoji</Button>
       <Modal
         keepMounted
@@ -302,10 +305,11 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
      
       {quotevalue?<div className="text-center py-3 text-capitalize" dangerouslySetInnerHTML={{__html: quotevalue}}></div>:''} 
       {/* <ReactQuill value={value} onChange={setValue}/> */}
+
       <EditorContent editor={editor} />
 
 <div className="text-center">   <a href="#" className="btn button" onClick={submit}>Submit</a></div>
-      </Container>
+      </Container>:<div className="text-center py-3">This forum is not allowed.</div>
       }
  
 <div className="content-wrap2 text-center" style={{'padding':'25px'}}>

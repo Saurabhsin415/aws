@@ -10,7 +10,7 @@ import Modal from '@mui/material/Modal'
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { toast } from "react-toastify";
-import {GuessingFormGet,GuessingFormPost,Like,Dislike} from "../api/app"; 
+import {GuessingFormGet,ExpertFormPost,Like,Dislike,UserInfo} from "../api/app"; 
 import Login from "./login"; 
 import Cookies from 'js-cookie'
 import { usePagination } from "../../components/lib/hooks";
@@ -28,7 +28,7 @@ import TextStyle from '@tiptap/extension-text-style'
 import { EditorContent, useEditor } from '@tiptap/react'
 export default function Guessingforum() {
 //  console.log(token);
- 
+const { result, errors } =UserInfo();
 const [token,settoken]=useState();
 const [value, setValue] =useState('');
 const [user,setUser]=useState('');
@@ -41,9 +41,9 @@ useEffect(()=>{
   if(Cookies.get('auth_token'))
   {
     settoken(Cookies.get('auth_token'));
-    setUser(JSON.parse(Cookies.get('user_info')));
+    setUser(result?result.data:'')
   }
-},[])
+},[result])
  const style = {
    position: 'absolute',
    top: '40%',
@@ -167,7 +167,7 @@ const submit =()=>{
   }
   value=quotevalue+value;
  let fd={'comment':value,orginal}
-let result=GuessingFormPost(fd);
+let result=ExpertFormPost(fd);
 result.then(response=>{
  
  if(response.data.status==true)
@@ -250,7 +250,7 @@ result.then(response=>{
 })
  
 
-const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(`guessing-forum?orginal=${orgin}&search=${search}`);
+const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(`expert-forum?orginal=${orgin}&search=${search}`);
   return (
     <>
  
@@ -274,7 +274,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
       <CssBaseline />
      
 <Login token={token} user={user}/>
-      {!token?'': <Container maxWidth="lg" className="content-wrap1 py-20 text-center">
+      {token && user && user.type==4?<Container maxWidth="lg" className="content-wrap1 py-20 text-center">
       <Button onClick={handleOpen} className="emoji_img">Add Emoji</Button>
       <Modal
         keepMounted
@@ -305,7 +305,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
       <EditorContent editor={editor} />
 
 <div className="text-center">   <a href="#" className="btn button" onClick={submit}>Submit</a></div>
-      </Container>
+      </Container>:<div className="text-center py-3">This forum is not allowed.</div>
       }
  
 <div className="content-wrap2 text-center" style={{'padding':'25px'}}>

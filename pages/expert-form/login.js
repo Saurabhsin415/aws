@@ -1,6 +1,7 @@
 import React, { useEffect, useState,Component,useRef } from "react";
 import Link from 'next/link';
 import {Logout} from "../api/app"; 
+import { toast } from "react-toastify";
 export default function Login({token,user}) {
  //logout
 //  {console.log(user)}

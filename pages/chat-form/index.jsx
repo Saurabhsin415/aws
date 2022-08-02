@@ -10,7 +10,7 @@ import Modal from '@mui/material/Modal'
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { toast } from "react-toastify";
-import {ChatFormPost,ChatLike,ChatDislike} from "../api/app"; 
+import {ChatFormPost,ChatLike,ChatDislike,UserInfo} from "../api/app"; 
 import Login from "./login"; 
 import Cookies from 'js-cookie'
 import { usePagination } from "../../components/lib/hooks";
@@ -28,7 +28,7 @@ import TextStyle from '@tiptap/extension-text-style'
 import { EditorContent, useEditor } from '@tiptap/react'
 export default function Guessingforum() {
 //  console.log(token);
- 
+const { result, errors } =UserInfo();
 const [token,settoken]=useState();
 const [value, setValue] =useState('');
 const [user,setUser]=useState('');
@@ -41,9 +41,9 @@ useEffect(()=>{
   if(Cookies.get('auth_token'))
   {
     settoken(Cookies.get('auth_token'));
-    setUser(JSON.parse(Cookies.get('user_info')));
+    setUser(result.data)
   }
-},[])
+},[result])
  const style = {
    position: 'absolute',
    top: '40%',

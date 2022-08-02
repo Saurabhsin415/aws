@@ -20,6 +20,13 @@ export const GuessingFormPost = (data) => {
     return result
   }
 
+  export const ExpertFormPost = (data) => {
+    const address = 'expert-forum';
+    const result =axios.post(address,data);
+    return result
+  }
+
+  
   
 
   export const UserRegistation = (data) => {
@@ -75,7 +82,13 @@ export const GuessingFormPost = (data) => {
     const { data:result, error } = useSWR(address, fetcher);
     return { result, error }
   }
-
+  export const UserInfo = () => {
+    const address = 'userinfo';
+    const fetcher = async (url) => await axios.get(url).then((res) => res.data);
+    const { data:result, errors } = useSWR(address, fetcher);
+    return { result, errors }
+  }
+  
   // export const getUser = (username) => axios.get({
   //   baseUrl: `https://api.github.com/users/`,
   //   responseType: 'json',
