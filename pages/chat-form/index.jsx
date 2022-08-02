@@ -41,7 +41,7 @@ useEffect(()=>{
   if(Cookies.get('auth_token'))
   {
     settoken(Cookies.get('auth_token'));
-    setUser(result.data)
+    setUser(result?result.data:'');
   }
 },[result])
  const style = {
