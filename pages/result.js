@@ -18,15 +18,15 @@ export default function LiveResult() {
 
 <div className="text-center py-3 text-family1 result-update">
 <h3 style={{'marginBottom':'0px'}}>MATKA LIVE RESULTS</h3> 
- {/* <div className='text-color1'>Date:10/07/2022</div> */}
+ 
  </div> 
 
  {!data? <Box sx={{ display: 'flex' }}>
       <CircularProgress className="m-auto mt-20"/>
     </Box>:data &&
           data.data.map((item,index) => (
-            <div className='content-wrap1 text-center result-div text-family2' key={index}>
-        
+            <div className={`content-wrap1 text-center result-div text-family2 ${item.highlight}`} key={index}>
+        {console.log(item.highlight)}
 <h2 className='text-color2'>{item.chartname}</h2>
 <p className=''>{item && item.number && item.number.left_patti}-{item && item.number && item.number.jodi}-{item && item.number && item.number.right_patti}</p>
 <p className='time'>[ {item && item.opentime && item.opentime} ] To [ {item && item.closetime && item.closetime} ]</p>

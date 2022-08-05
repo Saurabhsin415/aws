@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Typed from "react-typed";
-import TimeTable from "./timetable";
 import SlidePost from "./slidepost";
 import Accordion from "./accordion";
 import Charts from './charts';
@@ -41,7 +40,6 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
       strings={[
             "Live Update",
             "Sabse Tezz",
-             
           ]}
           typeSpeed={150}
           backSpeed={30}
