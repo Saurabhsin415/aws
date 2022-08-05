@@ -339,10 +339,10 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
 <div className='guessing-heading clearfix'>
     <div className='float-left bold'><div className="d-flex"><AccountCircleIcon /> <span style={{'margin':'2px 5px 0px 5px'}}>{item.username}</span></div></div>
     <div className='float-right date'>{item.time}</div>
-
+{console.log(item)}
 </div>
- 
-<div className="text-center py-3 text-capitalize" dangerouslySetInnerHTML={{__html: item.comment}}></div>  
+ {item.status==1?<div className="text-center py-3 text-capitalize" dangerouslySetInnerHTML={{__html: item.comment}}></div> :<div className="text-center py-3"><p class="text-red">Your Account Has Been Blocked.</p><p>{item.username}</p></div>}
+
 
 <div className="clearfix guessing-footer">
   <div className="float-left" onClick={()=>quote(item)} style={{'margin':'0px 8px 0px 0px','color':'#ec017d','cursor':'pointer','fontWeight':'600'}}>(Quote)</div>

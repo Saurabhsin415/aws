@@ -293,6 +293,9 @@ body{
     object-fit: cover;
     z-index: -99;
  }
+ .text-red{
+    color: red;
+ }
  .accordion{
     margin-top: 15px;
  
