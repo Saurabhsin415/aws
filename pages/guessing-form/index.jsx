@@ -27,7 +27,6 @@ import Text from '@tiptap/extension-text'
 import TextStyle from '@tiptap/extension-text-style'
 import { EditorContent, useEditor } from '@tiptap/react'
 export default function Guessingforum() {
-//  console.log(token);
 const { result, errors } =UserInfo();
 const [token,settoken]=useState();
 const [value, setValue] =useState('');
@@ -216,7 +215,7 @@ result.then(response=>{
 
  const quote=(item)=>{
   setOrginal(1);
-  console.log('check');
+  // console.log('check');
   let add='Orignally posted by:'+item.username;
  setQuoteValue('<div style="background:#82e38524;color:red">'+add+item.comment+'</div>');
   // editor.chain().focus().setContent('<div class="d-flex">'+add+item.comment+'</div>').run()
