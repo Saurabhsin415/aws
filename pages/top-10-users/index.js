@@ -5,7 +5,7 @@ import * as API from "../api/app";
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import { toast } from "react-toastify";
-import { INTERNALS } from 'next/dist/server/web/spec-extension/request';
+ 
 const Users = () => {
 const [loading,setLoading]=useState(false);
 // TopUsers
@@ -17,7 +17,7 @@ const [loading,setLoading]=useState(false);
  
     return (
       <>
-      {console.log(result)}
+     
         <div className=" py-20 text-center">
 <div className="text-center py-3 text-family1 guessing-forum">
 <h3 style={{'marginBottom':'0px'}}>Top 10 Users</h3> </div>

@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Poppins:wght@700;900&family=Roboto:wght@400;700&display=swap');
 body{
     background-color: #e3edf7;
+    font-family: 'Roboto', sans-serif;
 }
 *{
     
@@ -279,7 +280,7 @@ body{
  }
  .foot > p{
     text-align: center;
-    padding: 18px;
+    padding: 10px;
     border-top: 1px solid #08203a21;
     font-family: 'Roboto', sans-serif;
    
@@ -563,13 +564,13 @@ outline: none!important;
     color: #fff;
     border-radius: 50%;
     /* padding: 18px 8px; */
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     text-align: center;
     justify-content: center;
     align-items: center;
     margin: auto;
-    padding: 13px;
+    padding: 11px;
     font-weight: 900;
     cursor: pointer;
 }
@@ -584,4 +585,7 @@ outline: none!important;
   }
   .MuiBox-root{
     padding: 5px !important;
+  }
+  .footlink a{
+    color: #135ee7;
   }

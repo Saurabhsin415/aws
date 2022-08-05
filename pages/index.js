@@ -28,7 +28,7 @@ export default function Home() {
   <img src="https://html.themexriver.com/Saasio/assets/img/port-img-31/cta-bg-shape.png"  className='img1'/>
   {/* <div></div> */}
  
-  <div className="text-center text-family text-justify">
+  <div className="text-center text-family text-justify" style={{'lineHeight':'1.2'}}>
   Satta Matka Kalyan Main Mumbai Fastest Results
 Get Kalyan Matka Main Mumbai Satta Matka Market Results Fastest Live Update. Get All Kalyan,Main Mumbai,Madhur Matka,Rajdhani,Milan,Madhur Matka And Time Bazar Jodi Penal Panel Patti Panna Charts For Free . All Matka Guessing.With Best Guessers , Online Old Charts , Satta Matka Number Software Links, Online Charts List Pdf Download And Top Matka Guessing Free Number Provided By Sattamatka143 Professor And Master Dr Admin Sir.
 Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Direct Access To Guessing Form Of Experts Tricks Access Via Website
@@ -119,17 +119,17 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
 <h3 style={{'marginBottom':'0px'}}>DAILY GAME ZONE</h3>
  </div>
  <div className='content-wrap1 text-center text-family result-div'>
- <Link href="/GUESSING FORUM">
+ <Link href="/guessing-form">
   <a className='link'>GUESSING FORUM</a>
  </Link>
  </div>
  <div className='content-wrap1 text-center text-family result-div div_link'>
- <Link href="/GUESSING FORUM">
+ <Link href="/expert-form">
   <a className='link'>EXPERTS FORUM</a>
  </Link>
  </div>
  <div className='content-wrap1 text-center text-family result-div div_link'>
- <Link href="/GUESSING FORUM">
+ <Link href="/chat-form">
   <a className='link'>CHAT FORUM</a>
  </Link>
  </div>
