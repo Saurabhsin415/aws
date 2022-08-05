@@ -178,6 +178,12 @@ result.then(response=>{
    toast(response.data.message);
    window.location.reload();
  }
+ if(response.data.status==false)
+ {
+  
+   toast(response.data.message);
+   window.location.reload();
+ }
 
 }) 
 }

@@ -40,7 +40,7 @@ const   submit=()=>{
         if(resp.data.status==false)
         {
            
-            toast.success(resp.data.message);
+            toast.error(resp.data.message);
             // Cookies.set('auth_token',resp.data.token);
             // Router.push('guessing-form');
          

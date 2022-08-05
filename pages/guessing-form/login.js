@@ -8,7 +8,7 @@ export default function Login({token,user}) {
  {console.log(user)}
  if(user.status==2)
  {
-  toast("Your account has been blocked"); 
+  toast.error("Your account has been blocked.please contact admin."); 
   Cookies.remove('auth_token');
   Cookies.remove('user_info');
   window.location.reload();
