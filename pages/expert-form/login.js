@@ -2,6 +2,7 @@ import React, { useEffect, useState,Component,useRef } from "react";
 import Link from 'next/link';
 import {Logout} from "../api/app"; 
 import { toast } from "react-toastify";
+import Cookies from 'js-cookie'
 export default function Login({token,user}) {
  //logout
 //  {console.log(user)}
@@ -11,10 +12,10 @@ const logout=()=>{
     result.then(response=>{
   // console.log(response);
       toast(response.data.message); 
-      setUser('');
-      settoken('');
+    
       Cookies.remove('auth_token');
       Cookies.remove('user_info');
+      window.location.reload();
     }).catch(error=>{
      console.log(error);
     })

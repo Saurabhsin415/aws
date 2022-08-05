@@ -2,19 +2,27 @@ import React, { useEffect, useState,Component,useRef } from "react";
 import Link from 'next/link';
 import {Logout} from "../api/app"; 
 import { toast } from "react-toastify";
+import Cookies from 'js-cookie'
 export default function Login({token,user}) {
  //logout
-//  {console.log(user)}
+ {console.log(user)}
+ if(user.status==2)
+ {
+  toast("Your account has been blocked"); 
+  Cookies.remove('auth_token');
+  Cookies.remove('user_info');
+  window.location.reload();
+ }
 const logout=()=>{
     let result=Logout();
-  
     result.then(response=>{
   // console.log(response);
       toast(response.data.message); 
-      setUser('');
-      settoken('');
+      // setUser('');
+      // settoken('');
       Cookies.remove('auth_token');
       Cookies.remove('user_info');
+      window.location.reload();
     }).catch(error=>{
      console.log(error);
     })
