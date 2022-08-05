@@ -4,13 +4,18 @@ import SlidePost from "./slidepost";
 import Accordion from "./accordion";
 import Charts from './charts';
 import Result from './result';
+import Live from "./live.js";
+import Head from 'next/head'
 export default function Home() {
   return (
     <>
+       <Head>
+       <title>KalyanMatka.site:matka result | live result | guessing forum | expert forum | chat forum</title>
+       <meta name="description" content="Test your website with the free SEO check from Seobility and get tips for a better search engine optimization."></meta>
 
+       
+      </Head>
 <div className='content-wrap'>
- 
- 
   <div className="text-center py-3 text-family">
   <span className='text-color1'>|</span>  <Link href={'https://sattamatka.rocks/'}><a className='text-color2 font-semibold mr-2'>Sattamatka</a></Link>
    <span className='text-color1'>| </span>  <Link href={'https://sattamatka.rocks/'}><a className='text-color2 font-semibold mr-2'>Dpboss</a></Link>
@@ -45,6 +50,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
           backSpeed={30}
           loop
         /></div></div>
+        <Live/>
       
       <Result/>
   {/* <div className="text-center py-3 text-family1 result-update">

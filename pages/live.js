@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 export default function LiveResult() {
-  const address = 'liveupddate';
+  const address = 'liveresult';
   const fetcher = async (url) => await axios.get(url).then((res) => res.data);
   const { data, error } = useSWR(address, fetcher);
 
@@ -14,11 +14,8 @@ export default function LiveResult() {
 
   return (
 <>
+<div className="text-center  text-family1 result-update m-0">
 
-
-<div className="text-center py-3 text-family1 result-update">
-<h3 style={{'marginBottom':'0px'}}>SATTA MATKA RESULTS</h3> 
- 
  </div> 
 
  {!data? <Box sx={{ display: 'flex' }}>
@@ -26,10 +23,12 @@ export default function LiveResult() {
     </Box>:data &&
           data.data.map((item,index) => (
             <div className={`content-wrap1 text-center result-div text-family2 ${item.highlight}`} key={index}>
-        {console.log(item.highlight)}
+   
 <h2 className='text-color2'>{item.chartname}</h2>
-<p className=''>{item && item.number && item.number.left_patti}-{item && item.number && item.number.jodi}-{item && item.number && item.number.right_patti}</p>
-<p className='time'>[ {item && item.opentime && item.opentime} ] To [ {item && item.closetime && item.closetime} ]</p>
+{item.liveersult?<p style={{'padding':'5px'}}>{item && item.liveersult && item.liveersult.left_patti}-{item && item.liveersult && item.liveersult.jodi}-{item && item.liveersult && item.liveersult.right_patti}</p>:<p>Loading...</p>}
+  
+ <p style={{'borderTop':'1px solid #d7d7d785','padding':'5px','fontSize':'18px'}}>{item && item.liveersult && item.liveersult.text?item.liveersult.text:''}</p>
+ <a className="btn button" style={{'fontSize':'14px','width':'90px','height':'28px','fontWeight':'inherit'}} onClick={()=> window.location.reload()}>Refresh</a> 
  </div>
           ))}
 
