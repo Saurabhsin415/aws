@@ -260,8 +260,7 @@ const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(
  </div> 
  
  <div className='content-wrap1'>
-  <img src="https://html.themexriver.com/Saasio/assets/img/port-img-31/cta-bg-shape.png"  className='img1'/>
-  {/* <div></div> */}
+ 
  
   <div className="text-center text-family text-justify">
   Satta Matka Kalyan Main Mumbai Fastest Results

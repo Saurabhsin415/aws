@@ -52,7 +52,7 @@ const scrollToBottom = () => {
     <div className="header text-color1 ">SattMatka.<span className="text-color2">Rocks</span></div>
   <main>{children}</main>
   <div className='foot'>
-  <img src="https://html.themexriver.com/Saasio/assets/img/port-img-31/footer-bg.jpg"  className='img1'/>
+  <img src="/img/footer-bg.jpg"  className='img1'/>
   {/* <div></div> */}
  
   <div className="text-center py-3 text-family" style={{'lineHeight':'1.2'}}>

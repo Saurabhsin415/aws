@@ -75,9 +75,9 @@ export default function CustomizedTables({name,data,week}) {
                 {row.fromdate} <br></br> to  <br></br>  {row.todate}
               </StyledTableCell>
  
-              <StyledTableCell align="center" className={`red-${row.mon2}`}>{row.mon1[0]}<br></br>{row.mon1[1]}<br></br>{row.mon1[2]}</StyledTableCell>
+              <StyledTableCell align="center" className={`red-${row.mon2}`}>{row.mon1?row.mon1[0]:''}<br></br>{row.mon1?row.mon1[1]:''}<br></br>{row.mon1?row.mon1[2]:''}</StyledTableCell>
               <StyledTableCell align="center" className={`jodi_number red-${row.mon2}`}>{row.mon2}</StyledTableCell>
-              <StyledTableCell align="center" className={`red-${row.mon2}`}>{row.mon3[0]}<br></br>{row.mon3[1]}<br></br>{row.mon3[2]}</StyledTableCell>
+              <StyledTableCell align="center" className={`red-${row.mon2}`}>{row.mon3?row.mon3[0]:''}<br></br>{row.mon3?row.mon3[1]:''}<br></br>{row.mon3?row.mon3[2]:''}</StyledTableCell>
 
 
               <StyledTableCell align="center" className={`red-${row.tue2}`}> {row.tue1?row.tue1[0]:''}<br></br>{row.tue1?row.tue1[1]:''}<br></br>{row.tue1?row.tue1[2]:''}</StyledTableCell>
