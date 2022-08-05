@@ -4,8 +4,13 @@ import {Logout} from "../api/app";
 import { toast } from "react-toastify";
 import Cookies from 'js-cookie'
 export default function Login({token,user}) {
- //logout
-//  {console.log(user)}
+  if(user && user.status==2)
+  {
+   toast.error("Your account has been blocked.please contact admin."); 
+   Cookies.remove('auth_token');
+   Cookies.remove('user_info');
+   window.location.reload();
+  }
 const logout=()=>{
     let result=Logout();
   
