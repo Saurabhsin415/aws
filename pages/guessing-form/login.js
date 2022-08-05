@@ -6,7 +6,7 @@ import Cookies from 'js-cookie'
 export default function Login({token,user}) {
  //logout
  {console.log(user)}
- if(user.status==2)
+ if(user && user.status==2)
  {
   toast.error("Your account has been blocked.please contact admin."); 
   Cookies.remove('auth_token');
