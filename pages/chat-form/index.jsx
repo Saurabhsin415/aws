@@ -299,7 +299,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
         </Box>
       </Modal>
        
-       {console.log(quotevalue)}
+   
      
       {quotevalue?<div className="text-center py-3 text-capitalize" dangerouslySetInnerHTML={{__html: quotevalue}}></div>:''} 
       {/* <ReactQuill value={value} onChange={setValue}/> */}
