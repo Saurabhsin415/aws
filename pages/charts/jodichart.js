@@ -7,7 +7,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-
+import Head from 'next/head'
+import {Helmet} from "react-helmet";
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: '#e70280;',
@@ -51,6 +52,11 @@ const rows = [
 export default function CustomizedTables({name,data,week}) {
   return (
 <>
+<Helmet>
+                <meta charSet="utf-8" />
+                <title>My Title</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
     <div className="text-center py-3 text-family1 result-update" style={{'marginTop':'60px'}}>
 <h3 style={{'marginBottom':'0px','textTransform':'capitalize'}}>{name && name.replaceAll('-',' ')}</h3>
  </div>
@@ -71,7 +77,7 @@ export default function CustomizedTables({name,data,week}) {
           </TableRow>
         </TableHead>
         <TableBody>
-          { data && data.map((row) => (
+          { data && data.result.map((row) => (
             <StyledTableRow key={row.name}>
              
               <StyledTableCell align="center" className={`red-${row.mon2}`}>{row.mon2}</StyledTableCell>

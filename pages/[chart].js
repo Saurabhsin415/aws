@@ -28,7 +28,7 @@ export default function ChartSlug() {
 
 
 
-{data && data.chart=='jodi'?<JodiChart name={id} data={data.data.result} week={data.data.week_day}/>:''}
+{data && data.chart=='jodi'?<JodiChart name={id} data={data.data} week={data.data.week_day}/>:''}
 
  
  

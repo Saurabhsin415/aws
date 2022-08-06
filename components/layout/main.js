@@ -44,12 +44,11 @@ const scrollToBottom = () => {
  
   return (
     <>
-<Head>
-    
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      </Head>
+  <Helmet>
+                <meta charSet="utf-8" />
+                <title>My Title</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
     <div className="header text-color1 ">KalyanMatka.<span className="text-color2">Site</span></div>
   <main>{children}</main>
   <div className='foot'>
