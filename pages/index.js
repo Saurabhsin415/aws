@@ -116,7 +116,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
 </table>
 </div> */}
 <SlidePost/>
- <div className="text-center py-3 text-family1 result-update">
+ <div className="gamezone">
 <h3 style={{'marginBottom':'0px'}}>DAILY GAME ZONE</h3>
  </div>
  <div className='content-wrap1 text-center text-family result-div'>

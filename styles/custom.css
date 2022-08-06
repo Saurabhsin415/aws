@@ -9,7 +9,7 @@ body{
     box-sizing: border-box;
  
 }
-.text-family{
+.text-family,.gamezone{
     font-family: 'Kalam', cursive!important;
 }
 .text-family1{
@@ -109,7 +109,7 @@ body{
     opacity: .4;
    
 }
-.live-update,.result-update{
+.live-update,.result-update,.gamezone{
     font-size: 30px!important;
     font-weight: 700;
     line-height: 1.2;
@@ -196,16 +196,16 @@ body{
         /* transform: translateY(0); */
     }
 }
-.text-center{
+.text-center,.gamezone{
     text-align: center!important;
 }
-.py-3{
+.py-3,.gamezone{
     padding: 8px
 }
 .mr-2{
     margin-right: 5px;
 }
-.result-update{
+.result-update,.gamezone{
     color: #e70280;
     font-size: 24px!important;
     font-family: 'Kalam', cursive!important;
