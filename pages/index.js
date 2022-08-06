@@ -66,7 +66,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
   <a className='link-zone'>EXPERTS FORUM</a>
  </Link>
  <Link href="/chat-form">
-  <a className='link-zone'>CHAT FORUM</a>
+  <a className='link-zone'>CHAT FORU M</a>
  </Link>
  </div>
 {/*  
