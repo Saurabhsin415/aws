@@ -6,7 +6,7 @@
 // module.exports = nextConfig
 
 module.exports =  {
- 
+  trailingSlash: true,
     env: {
     API_URL:"https://backend.nutracharm.in/api",
     URL:"https://nutracharm.com/",
