@@ -60,17 +60,13 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
  </div>
  <div className='zone-menu'>
  <Link href="/guessing-form">
-  <a className='link'>GUESSING FORUM</a>
+  <a className='link-zone'>GUESSING FORUM</a>
  </Link>
- </div>
- <div className='zone-menu'>
  <Link href="/expert-form">
-  <a className='link'>EXPERTS FORUM</a>
+  <a className='link-zone'>EXPERTS FORUM</a>
  </Link>
- </div>
- <div className='zone-menu'>
  <Link href="/chat-form">
-  <a className='link'>CHAT FORUM</a>
+  <a className='link-zone'>CHAT FORUM</a>
  </Link>
  </div>
 {/*  

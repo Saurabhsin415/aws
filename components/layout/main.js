@@ -94,7 +94,7 @@ const scrollToBottom = () => {
 </div>
 <div className="">
   
-    <a onClick={reload}> <RefreshIcon/> <span className="aspan">Refresh</span></a>
+    <a onClick={reload} href='#'> <RefreshIcon/> <span className="aspan">Refresh</span></a>
  
 </div>
   </div>

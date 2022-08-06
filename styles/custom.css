@@ -89,7 +89,7 @@ body{
     position: relative;
     margin-top: 77px;
 }
-.content-wrap1,.content-wrap2,.zone-menu{
+.content-wrap1,.content-wrap2,.link-zone{
     background: linear-gradient(103deg, #e3edf7, #ffffff);
     -webkit-box-shadow: -6px -6px 10px 0px #f5f9fc, 4px 3px 15px 0px rgb(127 163 199 / 30%);
     box-shadow: -6px -6px 10px 0px #f5f9fc, 4px 3px 15px 0px rgb(127 163 199 / 30%);
@@ -231,6 +231,9 @@ body{
     padding:8px;
     text-align: center;
 }
+.block{
+    display: block;
+}
  /* table{
     width: 100%;
     text-align: center;
@@ -252,7 +255,7 @@ body{
  
     color: #08203a;
  } */
- .link
+ .link,.link-zone
  {
     font-family: 'Roboto', sans-serif;
     text-transform: capitalize;
@@ -260,6 +263,10 @@ body{
     text-decoration: none;
     font-weight:700;
     font-size: 18px;
+    display: block;
+ }
+ .link-zone{
+    padding:8px;
  }
  
  .active{
