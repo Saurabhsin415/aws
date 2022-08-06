@@ -23,7 +23,7 @@ export default function SimpleAccordion() {
       <CircularProgress className="m-auto mt-20"/>
     </Box>:result &&
     result.data.map((item,index) => (
-            <Accordion>
+            <Accordion key={index}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
