@@ -29,7 +29,7 @@ export default function SimpleAccordion() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography><h1 style={{'fontSize':'16px','margin':'0px'}} >{item.title}</h1></Typography>
+ <h1 style={{'fontSize':'16px','margin':'0px'}} >{item.title}</h1> 
         </AccordionSummary>
         <AccordionDetails>
           <Typography>

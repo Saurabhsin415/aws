@@ -27,7 +27,7 @@ export default function LiveResult() {
 <h2 className='text-color2'>{item.chartname}</h2>
 {item.liveersult?<p style={{'padding':'5px'}}>{item && item.liveersult && item.liveersult.left_patti}-{item && item.liveersult && item.liveersult.jodi}-{item && item.liveersult && item.liveersult.right_patti}</p>:<p>Loading...</p>}
   
- <p style={{'borderTop':'1px solid #d7d7d785','padding':'5px','fontSize':'18px'}}>{item && item.liveersult && item.liveersult.text?item.liveersult.text:''}</p>
+ <p style={{'padding':'5px','fontSize':'18px'}}>{item && item.liveersult && item.liveersult.text?item.liveersult.text:''}</p>
  <a className="btn button" style={{'fontSize':'14px','width':'90px','height':'28px','fontWeight':'inherit'}} onClick={()=> window.location.reload()}>Refresh</a> 
  </div>
           ))}

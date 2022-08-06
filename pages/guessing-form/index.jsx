@@ -330,11 +330,11 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
       <CircularProgress className="m-auto mt-20"/>
     </Box>}
  {paginatedPost?.map((item,index)=>
- (
+ (   
 
-  <div className='guessing-content' key={index}>
+  <div className='guessing-content' key={index} style={{'border':'2px solid #e74c3c'}}>
 
-<div className='guessing-heading clearfix'>
+<div className='guessing-heading clearfix' style={{'background':'linear-gradient(-141deg, #ef4938, #f12a16)'}}>
     <div className='float-left bold'><div className="d-flex"><AccountCircleIcon /> <span style={{'margin':'2px 5px 0px 5px'}}>{item.username}</span></div></div>
     <div className='float-right date'>{item.time}</div>
  
@@ -342,7 +342,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
  {item.status==1?<div className="text-center py-3 text-capitalize" dangerouslySetInnerHTML={{__html: item.comment}}></div> :<div className="text-center py-3"><p className="text-red">Your Account Has Been Blocked.</p><p>{item.username}</p></div>}
 
 
-<div className="clearfix guessing-footer">
+<div className="clearfix guessing-footer" style={{'background':'#ff321d33'}}>
   <div className="float-left" onClick={()=>quote(item)} style={{'margin':'0px 8px 0px 0px','color':'#ec017d','cursor':'pointer','fontWeight':'600'}}>(Quote)</div>
  
   <div className="float-right"><span style={{'margin':'0px 8px 0px 0px','color':'#ec017d','cursor':'pointer'}}  onClick={() => like(item)}><ThumbUpIcon fontSize="small"/> {item.like}</span>
