@@ -1,8 +1,8 @@
 import axios from "../../components/lib/axios";
 import useSWR from "swr";
 import Link from 'next/link';
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 export default function ChartIndex() {
   const address = `chart`;
   const fetcher = async (url) => await axios.get(url).then((res) => res.data);
@@ -19,9 +19,7 @@ export default function ChartIndex() {
  </div>
  
       {/* {console.log(data)} */}
-        {!data? <Box sx={{ display: 'flex' }}>
-      <CircularProgress className="m-auto mt-20"/>
-    </Box>:data &&
+        {!data?  <Skeleton height={200}/>:data &&
           data.data.map((item,index) => (
             <div className='content-wrap1 text-center text-family result-div div_link' key={index}>
             <Link href={`${item.chart_slug.toLowerCase()}-jodi-chart`}>
@@ -34,9 +32,7 @@ export default function ChartIndex() {
 <h3 style={{'marginBottom':'0px'}}>Panel Chart</h3>
  </div>
       {/* {console.log(data)} */}
-        {!data? <Box sx={{ display: 'flex' }}>
-      <CircularProgress className="m-auto mt-20"/>
-    </Box>: data &&
+        {!data?  <Skeleton height={200}/>: data &&
           data.data.map((item,index) => (
 
             <div className='content-wrap1 text-center text-family result-div div_link' key={index}>

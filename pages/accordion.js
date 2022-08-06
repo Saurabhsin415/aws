@@ -5,23 +5,20 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import * as API from "./api/app"; 
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
 import { toast } from "react-toastify";
 export default function SimpleAccordion() {
   const { result, error } =API.Faq(); 
   if (error) return toast('Something went wrong!');
- if (!result) return <Box sx={{ display: 'flex' }}>
- <CircularProgress className="m-auto mt-20"/>
-</Box>;
+ if (!result) return <Skeleton height={200}/>;
 
   return (
     <div className='accordion'>
-    {console.log(result.data)}
+    {/* {console.log(result.data)} */}
     
- {!result? <Box sx={{ display: 'flex' }}>
-      <CircularProgress className="m-auto mt-20"/>
-    </Box>:result &&
+ {!result? <Skeleton height={200}/>:result &&
     result.data.map((item,index) => (
             <Accordion key={index}>
         <AccordionSummary

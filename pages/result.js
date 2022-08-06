@@ -1,9 +1,7 @@
 import axios from "../components/lib/axios";
 import useSWR from "swr";
-import Link from 'next/link';
-import { useRouter } from 'next/router'
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 export default function LiveResult() {
   const address = 'liveupddate';
   const fetcher = async (url) => await axios.get(url).then((res) => res.data);
@@ -21,9 +19,7 @@ export default function LiveResult() {
  
  </div> 
 
- {!data? <Box sx={{ display: 'flex' }}>
-      <CircularProgress className="m-auto mt-20"/>
-    </Box>:data &&
+ {!data? <Skeleton height={100}/>:data &&
           data.data.map((item,index) => (
             <div className={`content-wrap1 text-center result-div text-family2 ${item.highlight}`} key={index}>
         {console.log(item.highlight)}

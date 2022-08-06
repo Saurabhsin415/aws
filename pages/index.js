@@ -55,7 +55,7 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
  
 <SlidePost/>
 
- <div className='gamezone'>
+ {/* <div className='gamezone'>
 <h3 style={{'marginBottom':'0px'}}>DAILY GAME ZONE</h3>
  </div>
  <div className='zone-menu'>
@@ -66,9 +66,9 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
   <a className='link-zone'>EXPERTS FORUM</a>
  </Link>
  <Link href="/chat-form">
-  <a className='link-zone'>CHAT FORU M</a>
+  <a className='link-zone'>CHAT FORUM</a>
  </Link>
- </div>
+ </div> */}
 {/*  
  <div className='content-wrap1 text-center text-family result-div div_link'>
  <Link href="/GUESSING FORUM">
