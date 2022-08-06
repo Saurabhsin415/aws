@@ -38,7 +38,6 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
 </div>
 
 <div className='px-3 relative'>
-{/* <img src="https://matka-one.vercel.app/img/portfolio-shape.png"  className='img2'/> */}
 <span className='bedage'>New</span>
   <div className="text-center py-3 text-family1 live-update">
 <Typed
@@ -53,83 +52,23 @@ Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Dire
         <Live/>
       
       <Result/>
-  {/* <div className="text-center py-3 text-family1 result-update">
-<h3 style={{'marginBottom':'0px'}}>MATKA LIVE RESULTS</h3>  <div className='text-color1'>Date:10/07/2022</div>
- </div> 
- <div className='content-wrap1 text-center result-div text-family2'>
-<h2 className='text-color2'>SRIDEVI</h2>
-<p className=''>222-66-178</p>
- </div>
- <div className='content-wrap1 text-center text-family2 result-div'>
-<h2 className='text-color2'>TIME BAZAR</h2>
-<p className=''>222-66-178</p>
- </div>
- <div className='content-wrap1 text-center text-family2 result-div'>
-<h2 className='text-color2'>MADHUR DAY</h2>
-<p className=''>222-66-178</p>
- </div>
- <div className='content-wrap1 text-center text-family2 result-div'>
-<h2 className='text-color2'>RAJDHANI DAY</h2>
-<p className=''>222-66-178</p>
- </div>
- <div className='content-wrap1 text-center text-family2 result-div'>
-<h2 className='text-color2'>MILAN DAY</h2>
-<p className=''>222-66-178</p>
- </div> */}
-
- {/* <TimeTable/> */}
-{/* 
- <div className="text-center py-3 text-family1 result-update">
-<h3 style={{'marginBottom':'0px'}}>TimeTable</h3>
- </div>
-<div className='content-wrap1 p-0' >
-<table>
-  <tr>
-    <th>Market</th>
-    <th>Open</th>
-    <th>Close</th>
-  </tr>
-  <tr>
-    <td>SRIDEVI</td>
-    <td>111</td>
-    <td>112</td>
-
-  </tr>
-  <tr>
-    <td>TIME BAZAR</td>
-    <td>111</td>
-    <td>112</td>
-
-  </tr>
-  <tr>
-    <td>RAJDHANI DAY</td>
-    <td>111</td>
-    <td>112</td>
-
-  </tr>
-  <tr>
-    <td>SRRAJDHANI DAYIDEVI</td>
-    <td>111</td>
-    <td>112</td>
-
-  </tr>
-</table>
-</div> */}
+ 
 <SlidePost/>
- <div className="gamezone">
+
+ <div className='gamezone'>
 <h3 style={{'marginBottom':'0px'}}>DAILY GAME ZONE</h3>
  </div>
- <div className='content-wrap1 text-center text-family result-div'>
+ <div className='zone-menu'>
  <Link href="/guessing-form">
   <a className='link'>GUESSING FORUM</a>
  </Link>
  </div>
- <div className='content-wrap1 text-center text-family result-div div_link'>
+ <div className='zone-menu'>
  <Link href="/expert-form">
   <a className='link'>EXPERTS FORUM</a>
  </Link>
  </div>
- <div className='content-wrap1 text-center text-family result-div div_link'>
+ <div className='zone-menu'>
  <Link href="/chat-form">
   <a className='link'>CHAT FORUM</a>
  </Link>
