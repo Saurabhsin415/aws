@@ -18,9 +18,9 @@ export default function Home() {
        <meta name="keywords" content="satta ratan, kalyan matka, matka ratan, sattamatka, satta matta matka, kalyan satta, satta matka kalyan, satta matta, sata matka, sattamataka143, matka result, satka matka, satta matka result, satta batta, kalyan matka result"/>
        <link rel="canonical" href="https://kalyanmatka.site"/>
        <meta name="google" content="notranslate"/>
-       <meta http-equiv="pragma" content="no-cache"/>
+    
        <meta name="google-site-verification" content="liTFtCXWaQpqiHqow3KSnI-19QPhOb81RWjiOBo1-YE"/>
-       <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   
        <meta content="yes" name="apple-mobile-web-app-capable"/>
        <meta content="yes" name="apple-touch-fullscreen"/>
        <meta name="Robots" content="index, follow"/>
