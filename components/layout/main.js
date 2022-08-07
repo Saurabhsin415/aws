@@ -44,11 +44,7 @@ const scrollToBottom = () => {
  
   return (
     <>
-  <Helmet>
-                <meta charSet="utf-8" />
-                <title>My Title</title>
-                <link rel="canonical" href="http://mysite.com/example" />
-            </Helmet>
+
     <div className="header text-color1 ">KalyanMatka.<span className="text-color2">Site</span></div>
   <main>{children}</main>
   <div className='foot'>
