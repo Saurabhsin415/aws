@@ -255,58 +255,12 @@ const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(
     <>
   
  <div className="text-center py-3 text-family1 guessing-forum">
-<h1
-  style={{
-    fontSize: "23px!important",
-    textShadow: "1px 0px silver",
-    marginTop: "px",
-    fontWeight: "700!important",
-    fontFamily: "kalam,",
-    color: "blue"
-  }}
->
+<h1 className="heading-expert">
 143 Expert Guessing Forum</h1>  
  {/* <div className='text-color1'>Date:10/07/2022</div> */}
  </div> 
 
-<div
-  className="liveUpdate"
-  align="left-center"
-  style={{
-    borderColor: "#aa00c0",
-    fontSize: "15px!important",
-    textShadow: "1px 0px silver",
-    marginTop: "px",
-    fontWeight: "700!important",
-    fontFamily: "kalam,",
-    color: "black"
-  }}
->
 
-<div className='content-wrap1'>
-<h2
-  style={{
-    fontSize: "15px!important",
-    textShadow: "1px 0px silver",
-    marginTop: "px",
-    fontWeight: "700!important",
-    align: "center",
-    fontFamily: "kalam,",
-    color: "red",
-    wordSpacing:0
-  }}
->SATTAMATKA GUESSING FORUM RULES</h2>  
-  👉 DONT USE BAD WORDS IN FORUM <br />
-  👉DONT POST YOUR PHONE OR LINKS <br />
-  👉DONT POST AT RESULT TIME. <br />
-  👉DONT POST WRONG RESULT.<br />
-  👉FOLLOW RULES,OTHERWISE YOUR.<br />
-  👉*IP* WILL BE BLOCKED PERMENTLY.<br />
-  👉GAME PASS HONE PAR WISH KARE.<br />
-  👉LAST TIME RESULT SE 10 MIN PEHLE.<br />
-  👉MAXIMUM 2 OPEN 6 JODI 6 PANEL.<br />
-</div>
-</div>
  
 
  

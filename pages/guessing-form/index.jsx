@@ -267,15 +267,25 @@ const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(
  {/* <div className='text-color1'>Date:10/07/2022</div> */}
  </div> 
  
- <div className='content-wrap1'>
+ <div className="liveUpdate">
  
-  <div className="text-center text-family text-justify">
-  Satta Matka Kalyan Main Mumbai Fastest Results
-Get Kalyan Matka Main Mumbai Satta Matka Market Results Fastest Live Update. Get All Kalyan,Main Mumbai,Madhur Matka,Rajdhani,Milan,Madhur Matka And Time Bazar Jodi Penal Panel Patti Panna Charts For Free . All Matka Guessing.With Best Guessers , Online Old Charts , Satta Matka Number Software Links, Online Charts List Pdf Download And Top Matka Guessing Free Number Provided By Sattamatka143 Professor And Master Dr Admin Sir.
-Other Special Features Include 220 Patti Satta Weekly Matka Jodi Chart With Direct Access To Guessing Form Of Experts Tricks Access Via Website
-
+<div className='content-wrap1 py-3'>
+<h2
+className="expert-subheading"
+>SATTAMATKA GUESSING FORUM RULES</h2>  
+  👉 DONT USE BAD WORDS IN FORUM <br />
+  👉DONT POST YOUR PHONE OR LINKS <br />
+  👉DONT POST AT RESULT TIME. <br />
+  👉DONT POST WRONG RESULT.<br />
+  👉FOLLOW RULES,OTHERWISE YOUR.<br />
+  👉*IP* WILL BE BLOCKED PERMENTLY.<br />
+  👉GAME PASS HONE PAR WISH KARE.<br />
+  👉LAST TIME RESULT SE 10 MIN PEHLE.<br />
+  👉MAXIMUM 2 OPEN 6 JODI 6 PANEL.<br />
 </div>
+  
 </div>
+ 
  
       <CssBaseline />
  

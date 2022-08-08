@@ -603,3 +603,28 @@ outline: none!important;
   .yes{
     background: #f1c40f!important;
   }
+  .heading-expert{
+    font-size: 26px!important;
+    text-shadow: 1px 0px silver;
+    color: blue;
+  font-weight: 700px!important;
+  }
+  .expert-subheading{
+    font-size: 18px!important;
+    text-shadow: "1px 0px silver";
+    color: red;
+    font-weight:700px!important;
+    text-align: center;
+    word-spacing: 0;
+    text-align: center;
+    /* style={{
+        fontSize: "15px!important",
+        textShadow: "1px 0px silver",
+        marginTop: "px",
+        fontWeight: "700!important",
+        textAlign:"center",
+        fontFamily: "kalam,",
+        color: "red",
+        wordSpacing:0,
+      }} */
+  }
