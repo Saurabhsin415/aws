@@ -21,7 +21,8 @@ export default function LiveResult() {
             <div className={`content-wrap1 text-center result-div text-family2 ${item.highlight}`} key={index}>
    
 <h2 className='text-color2'>{item.chartname}</h2>
-{item.liveersult?<p style={{'padding':'5px'}}>{item && item.liveersult && item.liveersult.left_patti}-{item && item.liveersult && item.liveersult.jodi}-{item && item.liveersult && item.liveersult.right_patti}</p>:<p>Loading...</p>}
+{item.liveersult?<p style={{'padding':'5px'}}>{item && item.liveersult && item.liveersult.left_patti}-{item && item.liveersult && item.liveersult.jodi}
+{item && item.liveersult?-item.liveersult.right_patti:''}</p>:<p>Loading...</p>}
   
  <p style={{'padding':'5px','fontSize':'18px'}}>{item && item.liveersult && item.liveersult.text?item.liveersult.text:''}</p>
  <a className="btn button" style={{'fontSize':'14px','width':'90px','height':'28px','fontWeight':'inherit'}} onClick={()=> window.location.reload()}>Refresh</a> 
