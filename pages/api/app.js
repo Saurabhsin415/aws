@@ -101,6 +101,14 @@ export const GuessingFormPost = (data) => {
     return { result, errors }
   }
   
+  export const Notification = () => {
+    const address = 'notification';
+    const fetcher = async (url) => await axios.get(url).then((res) => res.data);
+    const { data:result, errors } = useSWR(address, fetcher);
+    return { result, errors }
+  }
+  
+
 
   // export const getUser = (username) => axios.get({
   //   baseUrl: `https://api.github.com/users/`,
