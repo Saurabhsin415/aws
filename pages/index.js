@@ -13,7 +13,7 @@ const Notification=dynamic(()=>import('./notification'))
 export default function Home() {
   return (
     <>
-       <Head>
+       <Head lang = "en">
   
                 <meta charSet="utf-8" />
                 <title>Dpboss | Satta Matka | Kalyan Market Result Site |</title>
