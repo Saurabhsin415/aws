@@ -260,7 +260,23 @@ const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(
  {/* <div className='text-color1'>Date:10/07/2022</div> */}
  </div> 
 
-
+<div className="liveUpdate">
+ 
+<div className='content-wrap1 py-3'>
+<h2
+className="expert-subheading"
+>SATTAMATKA GUESSING FORUM RULES</h2>  
+  👉 DONT USE BAD WORDS IN FORUM <br />
+  👉DONT POST YOUR PHONE OR LINKS <br />
+  👉DONT POST AT RESULT TIME. <br />
+  👉DONT POST WRONG RESULT.<br />
+  👉FOLLOW RULES,OTHERWISE YOUR.<br />
+  👉*IP* WILL BE BLOCKED PERMENTLY.<br />
+  👉GAME PASS HONE PAR WISH KARE.<br />
+  👉LAST TIME RESULT SE 10 MIN PEHLE.<br />
+  👉MAXIMUM 2 OPEN 6 JODI 6 PANEL.<br />
+</div>
+</div>
  
 
  
