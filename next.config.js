@@ -17,9 +17,9 @@ module.exports = {
   },
   
   env: {
-    API_URL:"https://backend.nutracharm.in/api",
-    URL:"https://nutracharm.com/",
-    API_URL2:"https://matka.gyaniarticle.com/",
+    API_URL:"https://api.xn--sattmatka-t1a.com/api/",
+    URL:"https://api.xn--sattmatka-t1a.com/api/",
+    API_URL2:"https://api.xn--sattmatka-t1a.com",
 
   },
  };

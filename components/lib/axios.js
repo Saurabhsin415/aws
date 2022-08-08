@@ -3,7 +3,7 @@ import axios from "axios";
 import { getToken } from "./get-token";
 
 const http = axios.create({
-  baseURL:'https://matka.gyaniarticle.com/api/',
+  baseURL:'https://api.xn--sattmatka-t1a.com/api/',
   timeout: 30000,
   headers: {
     Accept: "application/json",
