@@ -24,7 +24,7 @@ export default function LiveResult() {
 {item.liveersult?<p style={{'padding':'5px'}}>{item && item.liveersult && item.liveersult.left_patti}-{item && item.liveersult && item.liveersult.jodi}
 {item && item.liveersult && item.liveersult.right_patti?'-'+item.liveersult.right_patti:''}</p>:<p>Loading...</p>}
   
- <p style={{'padding':'5px','fontSize':'18px','color':'blue'}}>{item && item.liveersult && item.text?item.text:''}</p>
+ <p style={{'padding':'5px','fontSize':'18px','color':'blue'}}>{item && item.text?item.text:''}</p>
  <a className="btn button" style={{'fontSize':'14px','width':'90px','height':'28px','fontWeight':'inherit'}} onClick={()=> window.location.reload()}>Refresh</a> 
  </div>
           ))}
