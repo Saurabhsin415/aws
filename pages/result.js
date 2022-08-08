@@ -22,7 +22,7 @@ export default function LiveResult() {
  {!data? <Skeleton height={100}/>:data &&
           data.data.map((item,index) => (
             <div className={`content-wrap1 text-center result-div text-family2 ${item.highlight}`} key={index}>
-        {console.log(item.highlight)}
+            {console.log(item)}
 <h2 className='text-color2'>{item.chartname}</h2>
 <p className=''>{item && item.number && item.number.left_patti}-{item && item.number && item.number.jodi}-{item && item.number && item.number.right_patti}</p>
 <p className='time'>[ {item && item.opentime && item.opentime} ] To [ {item && item.closetime && item.closetime} ]</p>
