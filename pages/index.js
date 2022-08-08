@@ -128,8 +128,9 @@ export default function Home() {
   <a className='link'>KHATRI FAVOURITE PANNA CHART</a>
  </Link>
  </div> */}
+ <Charts/>
  <Notification/>
-<Charts/>
+
  <Accordion/>
     </>
     
