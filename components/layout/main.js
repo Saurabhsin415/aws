@@ -45,14 +45,14 @@ const scrollToBottom = () => {
   return (
     <>
  
-    <h1 className="header text-color1 ">KalyanMatka.<span className="text-color2">Site</span></h1>
+    <div className="header text-color1 ">KalyanMatka.<span className="text-color2">Site</span></div>
   <main>{children}</main>
   <div className='foot'>
   <img src="/img/footer-bg.jpg" alt="footer" className='img1'/>
   {/* <div></div> */}
  
   <div className="text-center py-3 text-family" style={{'lineHeight':'1.2'}}>
-  <h2>KalyanMatka.<span className="text-color2">Site</span></h2>
+  <h1 className="fs-20">KalyanMatka.<span className="text-color2">Site</span></h1>
  </div>
  <p className="text-center footlink "><Link href={`/`}><a> Home</a></Link> | <Link href={`/about-us`}><a>About us</a></Link> | <Link href={`/about-us`}><a>Facebook</a></Link> | <Link href={`/about-us`}><a>Twitter</a></Link> | <Link href={`/about-us`}><a>Whatsapp</a></Link></p>
 <p className="text-center">Copyright © 2022-23 <span className="text-color2">SS</span>. All Rights Reserved.</p>
