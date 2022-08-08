@@ -255,7 +255,7 @@ const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(
     <>
   
  <div className="text-center py-3 text-family1 guessing-forum">
-<h1 className="heading-expert">
+<h1 className="heading-expert mb-0">
 143 Expert Guessing Forum</h1>  
  {/* <div className='text-color1'>Date:10/07/2022</div> */}
  </div> 
@@ -267,7 +267,7 @@ const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(
       <CssBaseline />
      
 <Login token={token} user={user}/>
-      {token && user && user.type==4?<Container maxWidth="lg" className="content-wrap1 py-20 text-center">
+      {token && user && user.type==4?<Container maxWidth="lg" className="content-wrap1 py-3 text-center">
       <Button onClick={handleOpen} className="emoji_img">Add Emoji</Button>
       <Modal
         keepMounted
