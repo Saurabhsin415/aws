@@ -45,7 +45,7 @@ const scrollToBottom = () => {
   return (
     <>
 
-    <div className="header text-color1 ">KalyanMatka.<span className="text-color2">Site</span></div>
+    <h1 className="header text-color1 ">KalyanMatka.<span className="text-color2">Site</span></h1>
   <main>{children}</main>
   <div className='foot'>
   <img src="/img/footer-bg.jpg" alt="footer" className='img1'/>
