@@ -73,6 +73,18 @@ export const GuessingFormPost = (data) => {
       const result =axios.post(address,data);
       return result
     }
+        //chatlike 
+        export const ExpertLike = (data) => {
+          const address = 'expertlike';
+          const result =axios.post(address,data);
+          return result
+        }
+  //chatDislike
+  export const ExpertDislike = (data) => {
+    const address = 'expertdislike';
+    const result =axios.post(address,data);
+    return result
+  }
 
 
   //top 10 users

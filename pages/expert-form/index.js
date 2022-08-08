@@ -10,7 +10,7 @@ import Modal from '@mui/material/Modal'
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { toast } from "react-toastify";
-import {GuessingFormGet,ExpertFormPost,Like,Dislike,UserInfo} from "../api/app"; 
+import {GuessingFormGet,ExpertFormPost,ExpertLike,ExpertDislike,UserInfo} from "../api/app"; 
 import Login from "./login"; 
 import Cookies from 'js-cookie'
 import { usePagination } from "../../components/lib/hooks";
@@ -185,10 +185,11 @@ result.then(response=>{
  {
    console.log(item);
    let fd={id:item.id}
-   let result=Like(fd);
+   let result=ExpertLike(fd);
    result.then(response=>{
  if(response.data.status==true)
  {
+  
    toast(response.data.message);
    window.location.reload();
  }
@@ -200,7 +201,7 @@ result.then(response=>{
  {
    console.log(item);
    let fd={id:item.id}
-   let result=Dislike(fd);
+   let result=ExpertDislike(fd);
    result.then(response=>{
  if(response.data.status==true)
  {

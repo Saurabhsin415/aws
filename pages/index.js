@@ -7,7 +7,9 @@ import Result from './result';
 import Live from "./live.js";
 import Head from 'next/head'
 import {Helmet} from "react-helmet";
-import Notification from "./notification";
+// import Notification from "./notification";
+import dynamic from 'next/dynamic';
+const Notification=dynamic(()=>import('./notification'))
 export default function Home() {
   return (
     <>
@@ -19,9 +21,7 @@ export default function Home() {
        <meta name="keywords" content="satta ratan, kalyan matka, matka ratan, sattamatka, satta matta matka, kalyan satta, satta matka kalyan, satta matta, sata matka, sattamataka143, matka result, satka matka, satta matka result, satta batta, kalyan matka result"/>
        <link rel="canonical" href="https://kalyanmatka.site"/>
        <meta name="google" content="notranslate"/>
-    
        <meta name="google-site-verification" content="liTFtCXWaQpqiHqow3KSnI-19QPhOb81RWjiOBo1-YE"/>
-   
        <meta content="yes" name="apple-mobile-web-app-capable"/>
        <meta content="yes" name="apple-touch-fullscreen"/>
        <meta name="Robots" content="index, follow"/>
@@ -44,8 +44,7 @@ export default function Home() {
        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png"/>
        <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png"/>
        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"/>
-       <link rel="manifest" href="favicon/manifest.json"/>
-         
+       <link rel="manifest" href="favicon/manifest.json"/>  
       </Head>
 <div className='content-wrap'>
   <div className="text-center py-3 text-family">
@@ -128,9 +127,12 @@ export default function Home() {
   <a className='link'>KHATRI FAVOURITE PANNA CHART</a>
  </Link>
  </div> */}
- <Charts/>
- <Notification/>
+ 
 
+ 
+
+<Charts/>
+<Notification/>
  <Accordion/>
     </>
     
