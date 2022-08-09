@@ -634,3 +634,6 @@ outline: none!important;
   .fs-20{
     font-size: 22px!important;
   }
+  .guessing-content p{
+    line-height: 22px!important;
+  }
