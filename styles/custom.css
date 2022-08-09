@@ -505,7 +505,7 @@ body{
   }
   p{
     margin: 0!important;
-    padding:0;
+    padding:5px;
   }
   .ql-editor{
 text-align: center!important;
