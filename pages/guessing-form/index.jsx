@@ -349,7 +349,7 @@ className="expert-subheading"
     <div className='float-right date'>{item.time}</div>
  
 </div>
- {item.status==1?<div className="text-center py-3 text-capitalize" dangerouslySetInnerHTML={{__html: item.comment}}></div> :<div className="text-center py-3"><p className="text-red">Your Account Has Been Blocked.</p><p>{item.username}</p></div>}
+ {item.status==1?<div className="text-center py-15 text-capitalize" dangerouslySetInnerHTML={{__html: item.comment}}></div> :<div className="text-center py-3"><p className="text-red">Your Account Has Been Blocked.</p><p>{item.username}</p></div>}
 
 
 <div className="clearfix guessing-footer" style={{'background':'#ff321d33'}}>

@@ -255,7 +255,7 @@ const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(
   return (
     <>
   
- <div className="text-center py-3 text-family1 guessing-forum">
+ <div className="text-center py-15 text-family1 guessing-forum">
 <h1 className="heading-expert mb-0">
 143 Expert Guessing Forum</h1>  
  {/* <div className='text-color1'>Date:10/07/2022</div> */}
