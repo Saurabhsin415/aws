@@ -14,15 +14,16 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     backgroundColor: '#e70280;',
     color: theme.palette.common.white,
     fontSize:18,
-    padding:'12px 0px',
-    fontWeight:600,
-    textTransform:'uppercase',
+    padding:'00px 0px',
+    fontWeight:500,
+    border:'1px solid #030303!important',
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: 22,
-    fontWeight:600,
-    padding:'12px 0px',
-    fontFamily:'Kalam',
+    fontWeight:700,
+    padding:'02px 2px',
+    fontFamily:'normal',
+    border:'1px solid #030303!important',
   },
 }));
 
@@ -57,7 +58,7 @@ export default function CustomizedTables({name,data,week}) {
                 <title>My Title</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
-    <div className="text-center py-3 text-family1 result-update" style={{'marginTop':'60px'}}>
+    <div className="text-center py-3 text-family1 result-update" style={{'marginTop':'40px'}}>
 <h3 style={{'marginBottom':'0px','textTransform':'capitalize'}}>{name && name.replaceAll('-',' ')}</h3>
  </div>
     <TableContainer component={Paper}>
@@ -70,8 +71,12 @@ export default function CustomizedTables({name,data,week}) {
             <StyledTableCell align="center">Wed</StyledTableCell>
             <StyledTableCell align="center">Thu</StyledTableCell>
             <StyledTableCell align="center">Fri</StyledTableCell>
-            {week==5?'':<StyledTableCell align="center">Sat</StyledTableCell>}
-            {week==6 || week==5?'':<StyledTableCell align="center">Sun</StyledTableCell>}
+            {week==5?'':
+             <StyledTableCell align="center">Sat</StyledTableCell>
+            }
+             {week==6 || week==5?'':
+             <StyledTableCell align="center">Sun</StyledTableCell>
+             }
           
            
           </TableRow>

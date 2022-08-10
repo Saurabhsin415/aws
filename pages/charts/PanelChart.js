@@ -12,16 +12,17 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: '#e70280;',
     color: theme.palette.common.white,
-    fontSize:16,
-    padding:'12px 0px',
-    fontWeight:600,
-    textTransform:'uppercase',
+    fontSize:14,
+    padding:'0px 0px',
+    fontWeight:500,
+    border:'1px solid #030303!important',
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize:10,
     fontWeight:600,
-    padding:'12px 0px',
-    fontFamily:'Kalam',
+    padding:'0px 0px',
+    fontFamily:'normal',
+    
   },
 }));
 
@@ -50,7 +51,7 @@ const rows = [
 export default function CustomizedTables({name,data,week}) {
   return (
 <>
-    <div className="text-center py-3 text-family1 result-update" style={{'marginTop':'60px'}}>
+    <div className="text-center py-3 text-family1 result-update" style={{'marginTop':'40px'}}>
     <h3 style={{'marginBottom':'0px','textTransform':'capitalize'}}>{name && name.replaceAll('-',' ')}</h3>
  </div>
     <TableContainer component={Paper}>
