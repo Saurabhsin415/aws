@@ -505,7 +505,7 @@ body{
   }
   p{
     margin: 0!important;
-    padding:8px!important;
+    padding:5px!important;
   }
 .py-15{
  padding: 15px !important;
@@ -638,5 +638,5 @@ outline: none!important;
     font-size: 22px!important;
   }
   .guessing-content p{
-    line-height: 22px!important;
+    line-height: 12px!important;
   }
