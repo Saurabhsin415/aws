@@ -85,27 +85,27 @@ export default function CustomizedTables({name,data,week}) {
               <StyledTableCell align="center" className={`red-${row.tue2}`}> {row.tue3?row.tue3[0]:''}<br></br>{row.tue3?row.tue3[1]:''}<br></br>{row.tue3?row.tue3[2]:''}</StyledTableCell>
 
 
-              <StyledTableCell align="center" className={`red-${row.wed2}`}>{row.wed1?row.wed1[0]:''}<br></br>{row.wed1?row.wed1[1]:''}<br></br>{row.wed1?row.wed1[1]:''}</StyledTableCell>
+              <StyledTableCell align="center" className={`red-${row.wed2}`}>{row.wed1?row.wed1[0]:''}<br></br>{row.wed1?row.wed1[1]:''}<br></br>{row.wed1?row.wed1[2]:''}</StyledTableCell>
               <StyledTableCell align="center" className={`jodi_number red-${row.wed2}`}>{row.wed2}</StyledTableCell>
-              <StyledTableCell align="center" className={`red-${row.wed2}`}>{row.wed3?row.wed3[0]:''}<br></br>{row.wed3?row.wed3[1]:''}<br></br>{row.wed3?row.wed3[1]:''}</StyledTableCell>
+              <StyledTableCell align="center" className={`red-${row.wed2}`}>{row.wed3?row.wed3[0]:''}<br></br>{row.wed3?row.wed3[1]:''}<br></br>{row.wed3?row.wed3[2]:''}</StyledTableCell>
 
               
-              <StyledTableCell align="center" className={`red-${row.thu2}`}>{row.thu1?row.thu1[0]:''}<br></br>{row.thu1?row.thu1[1]:''}<br></br>{row.thu1?row.thu1[1]:''}</StyledTableCell>
+              <StyledTableCell align="center" className={`red-${row.thu2}`}>{row.thu1?row.thu1[0]:''}<br></br>{row.thu1?row.thu1[1]:''}<br></br>{row.thu1?row.thu1[2]:''}</StyledTableCell>
               <StyledTableCell align="center" className={`jodi_number red-${row.thu2}`}>{row.thu2}</StyledTableCell>
-              <StyledTableCell align="center" className={`red-${row.thu2}`}>{row.thu3?row.thu3[0]:''}<br></br>{row.thu3?row.thu3[1]:''}<br></br>{row.thu3?row.thu3[1]:''}</StyledTableCell>
+              <StyledTableCell align="center" className={`red-${row.thu2}`}>{row.thu3?row.thu3[0]:''}<br></br>{row.thu3?row.thu3[1]:''}<br></br>{row.thu3?row.thu3[2]:''}</StyledTableCell>
 
-              <StyledTableCell align="center" className={`red-${row.fri2}`}>{row.fri1?row.fri1[0]:''}<br></br>{row.fri1?row.fri1[1]:''}<br></br>{row.fri1?row.fri1[1]:''}</StyledTableCell>
+              <StyledTableCell align="center" className={`red-${row.fri2}`}>{row.fri1?row.fri1[0]:''}<br></br>{row.fri1?row.fri1[1]:''}<br></br>{row.fri1?row.fri1[2]:''}</StyledTableCell>
               <StyledTableCell align="center" className={`jodi_number red-${row.fri2}`}>{row.fri2}</StyledTableCell>
-              <StyledTableCell align="center" className={`red-${row.fri2}`} >{row.fri3?row.fri3[0]:''}<br></br>{row.fri3?row.fri3[1]:''}<br></br>{row.fri3?row.fri3[1]:''}</StyledTableCell>
+              <StyledTableCell align="center" className={`red-${row.fri2}`} >{row.fri3?row.fri3[0]:''}<br></br>{row.fri3?row.fri3[1]:''}<br></br>{row.fri3?row.fri3[2]:''}</StyledTableCell>
 
 
-              <StyledTableCell align="center" className={`red-${row.sat2}`}>{row.sat1?row.sat1[0]:''}<br></br>{row.sat1?row.sat1[1]:''}<br></br>{row.sat1?row.sat1[1]:''}</StyledTableCell>
+              <StyledTableCell align="center" className={`red-${row.sat2}`}>{row.sat1?row.sat1[0]:''}<br></br>{row.sat1?row.sat1[1]:''}<br></br>{row.sat1?row.sat1[2]:''}</StyledTableCell>
               <StyledTableCell align="center" className={`jodi_number red-${row.sat2}`}>{row.sat2}</StyledTableCell>
-              <StyledTableCell align="center" className={`red-${row.sat2}`}>{row.sat3?row.sat3[0]:''}<br></br>{row.sat3?row.sat3[1]:''}<br></br>{row.sat3?row.sat3[1]:''}</StyledTableCell>
+              <StyledTableCell align="center" className={`red-${row.sat2}`}>{row.sat3?row.sat3[0]:''}<br></br>{row.sat3?row.sat3[1]:''}<br></br>{row.sat3?row.sat3[2]:''}</StyledTableCell>
 
-             <StyledTableCell align="center" className={`red-${row.sun2}`}>{row.sun1?row.sun1[0]:''}<br></br>{row.sun1?row.sun1[1]:''}<br></br>{row.sun1?row.sun1[1]:''}</StyledTableCell>
+             <StyledTableCell align="center" className={`red-${row.sun2}`}>{row.sun1?row.sun1[0]:''}<br></br>{row.sun1?row.sun1[1]:''}<br></br>{row.sun1?row.sun1[2]:''}</StyledTableCell>
               <StyledTableCell align="center" className={`jodi_number red-${row.sun2}`}>{row.sun2}</StyledTableCell>
-              <StyledTableCell align="center" className={`red-${row.sun2}`}>{row.sun3?row.sun3[0]:''}<br></br>{row.sun3?row.sun3[1]:''}<br></br>{row.sun3?row.sun3[1]:''}</StyledTableCell>
+              <StyledTableCell align="center" className={`red-${row.sun2}`}>{row.sun3?row.sun3[0]:''}<br></br>{row.sun3?row.sun3[1]:''}<br></br>{row.sun3?row.sun3[2]:''}</StyledTableCell>
         
             </StyledTableRow>
           ))}
