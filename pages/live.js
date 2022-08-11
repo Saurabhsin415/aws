@@ -29,24 +29,9 @@ export default function LiveResult() {
  </div>
           ))}
 
-{/* 
+ 
 
- <div className='content-wrap1 text-center text-family2 result-div'>
-<h2 className='text-color2'>TIME BAZAR</h2>
-<p className=''>222-66-178</p>
- </div>
- <div className='content-wrap1 text-center text-family2 result-div'>
-<h2 className='text-color2'>MADHUR DAY</h2>
-<p className=''>222-66-178</p>
- </div>
- <div className='content-wrap1 text-center text-family2 result-div'>
-<h2 className='text-color2'>RAJDHANI DAY</h2>
-<p className=''>222-66-178</p>
- </div>
- <div className='content-wrap1 text-center text-family2 result-div'>
-<h2 className='text-color2'>MILAN DAY</h2>
-<p className=''>222-66-178</p>
- </div> */}
+ 
 </>
  
   );
