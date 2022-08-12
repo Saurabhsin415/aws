@@ -14,8 +14,10 @@ import { useRouter } from 'next/router'
 const CommonLayout = ({ children}) => {
   const router = useRouter();
  const pathname=router.pathname;
- const reload=()=>{
-  window.location.reload();
+ const reloadpage=()=>{
+console.log('asd');
+  // console.log(window.scrollY);
+  // Router.reload(window.location.pathname);
  }
  const [showTopBtn, setShowTopBtn] = useState(false);
  useEffect(() => {
@@ -89,9 +91,9 @@ const scrollToBottom = () => {
   </Link>
 
 </div>
-<div className="">
+<div style={{'cursor':'pointer','color':'#e70280'}} onClick={()=>window.location.reload()}>
   
-    <a onClick={()=>window.location.reload()} href='#'> <RefreshIcon/> <span className="aspan">Refresh</span></a>
+    <RefreshIcon/> <span className="aspan">Refresh</span>
  
 </div>
   </div>

@@ -19,7 +19,7 @@ export default function ChartIndex() {
  </div>
  
       {/* {console.log(data)} */}
-        {!data?  <Skeleton height={200}/>:data &&
+        {!data?  <Skeleton height={300}/>:data &&
           data.data.map((item,index) => (
             <div className='content-wrap1 text-center text-family result-div div_link' key={index}>
             <Link href={`${item.chart_slug.toLowerCase()}-jodi-chart`}>
@@ -32,7 +32,7 @@ export default function ChartIndex() {
 <h3 style={{'marginBottom':'0px'}}>Panel Chart</h3>
  </div>
       {/* {console.log(data)} */}
-        {!data?  <Skeleton height={200}/>: data &&
+        {!data?  <Skeleton height={300}/>: data &&
           data.data.map((item,index) => (
 
             <div className='content-wrap1 text-center text-family result-div div_link' key={index}>
