@@ -15,12 +15,14 @@ export default function SimpleAccordion() {
  if (!result) return <Skeleton height={200}/>;
 
   return (
+    <> 
+       <h3 style={{'marginBottom':'0px'}}>Jodi Chart</h3>
     <div className='accordion'>
     {/* {console.log(result.data)} */}
-    
+
  {!result? <Skeleton height={200}/>:result &&
-    result.data.map((item,index) => (
-            <Accordion key={index}>
+    result.data.map((item) => (
+            <Accordion key={item.id}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -41,5 +43,6 @@ export default function SimpleAccordion() {
    
  
     </div>
+    </>
   );
 }

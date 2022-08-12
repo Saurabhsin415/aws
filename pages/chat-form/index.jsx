@@ -216,7 +216,7 @@ result.then(response=>{
   setOrginal(1);
   console.log('check');
   let add='Orignally posted by:'+item.username;
- setQuoteValue('<div style="background:#82e38524;color:red">'+add+item.comment+'</div>');
+  setQuoteValue('<div style="background:#82e38524;color:red;padding:8px 0px 8px 0px">'+add+item.comment+'</div>');
   // editor.chain().focus().setContent('<div class="d-flex">'+add+item.comment+'</div>').run()
  
  }
@@ -346,7 +346,7 @@ className="expert-subheading"
 
 </div>
  
- {item.status==1?<div className="text-center py-15 text-capitalize" dangerouslySetInnerHTML={{__html: item.comment}}></div> :<div className="text-center py-3"><p className="text-red">Your Account Has Been Blocked.</p><p>{item.username}</p></div>} 
+ {item.status==1?<div className="text-center py-20 text-capitalize" dangerouslySetInnerHTML={{__html: item.comment}}></div> :<div className="text-center py-3"><p className="text-red">Your Account Has Been Blocked.</p><p>{item.username}</p></div>} 
 
 <div className="clearfix guessing-footer" style={{'background':'rgb(0 67 255 / 19%)'}}>
   <div className="float-left" onClick={()=>quote(item)} style={{'margin':'0px 8px 0px 0px','color':'#ec017d','cursor':'pointer','fontWeight':'600'}}>(Quote)</div>

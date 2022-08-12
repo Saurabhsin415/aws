@@ -638,5 +638,9 @@ outline: none!important;
     font-size: 22px!important;
   }
   .guessing-content p{
-    line-height: 12px!important;
+    line-height: 18px!important;
+  }
+
+  .py-20{
+    padding:20px!important;
   }
