@@ -10,9 +10,9 @@ import {Helmet} from "react-helmet";
 import Zone from "./zone";
 // import Notification from "./notification";
 import dynamic from 'next/dynamic';
-const Notification=dynamic(()=>import('./notification'),{
-  ssr: false,
-})
+// const Notification=dynamic(()=>import('./notification'),{
+//   ssr: false,
+// })
 export default function Home() {
   return (
     <>
@@ -82,7 +82,7 @@ export default function Home() {
 <SlidePost/>
 <Zone/>
 <Charts/>
-<Notification/>
+ 
  <Accordion/>
     </>
     
