@@ -591,6 +591,27 @@ outline: none!important;
  .topdown svg{
     font-weight: 900;
  }
+ .topdownload{
+  position: fixed;
+  right: 1px;
+ 
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 11px;
+  font-weight: 900;
+  cursor: pointer;
+  bottom: 120px;
+
+ }
+ .topdownload img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+ }
   .emoji{
     height: 400px;
     overflow: hidden;
@@ -638,7 +659,7 @@ outline: none!important;
     font-size: 22px!important;
   }
   .guessing-content p{
-    line-height: 18px!important;
+    line-height: 16px!important;
   }
 
   .py-20{

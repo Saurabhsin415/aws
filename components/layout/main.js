@@ -34,6 +34,7 @@ const goToTop = () => {
   });
 };
 
+
 const scrollToBottom = () => {
   window.scrollTo({
     top: document.documentElement.scrollHeight,
@@ -61,7 +62,7 @@ const scrollToBottom = () => {
 
 {/* <div className="topdown">{showTopBtn?<FontAwesomeIcon icon={faArrowUp}  onClick={goToTop}/>:<FontAwesomeIcon icon={faArrowDown}  onClick={scrollToBottom}/>}</div> */}
 <div className="topdown">{showTopBtn?<KeyboardDoubleArrowUpIcon  onClick={goToTop}/>:<KeyboardDoubleArrowDownIcon  onClick={scrollToBottom}/>}</div>
- 
+<div className="topdownload"><a href="base.apk"><img src="download.jpeg"/></a></div>
   <div className="footer text-color1">
 <div className={pathname=='/'?'active':''}>
   <Link href={'/'}>
