@@ -332,13 +332,11 @@ className="expert-subheading"
   <input onChange={(e)=>setSearch(e.target.value)} className="search"/>
         {/* <div className="guessing-button"> Serach</div> */}
 </div>
- 
+{/*  
   {/* form list */}
       {/* {console.log(paginatedPost)} */}
- {error && <p>something went wrong</p>}
- {!paginatedPost && <Box sx={{ display: 'flex' }}>
-      <CircularProgress className="m-auto mt-20"/>
-    </Box>}
+ 
+
  {paginatedPost?.map((item,index)=>
  (   
 
@@ -363,7 +361,7 @@ className="expert-subheading"
  )
  )}
 
- {paginatedPost && paginatedPost.length>0?'':<h2 className="text-center">Not Found</h2>}
+ 
   
  
   {loadingMore && <Box sx={{ display: 'flex' }}>
