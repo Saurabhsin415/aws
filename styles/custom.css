@@ -665,3 +665,19 @@ outline: none!important;
   .py-20{
     padding:20px!important;
   }
+  .whats h3{
+    background: white;
+    padding: 9px;
+    margin: -4px;
+    color: #e70280;
+    margin-bottom: 5px;
+  }
+
+  .click-btn{
+    font-size: 18px;
+    padding: 8px 25px;
+    border-radius: 5px;
+    border: magenta;
+    cursor: pointer;
+}
+ 

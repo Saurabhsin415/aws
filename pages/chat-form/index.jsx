@@ -218,7 +218,10 @@ result.then(response=>{
   let add='Orignally posted by:'+item.username;
   setQuoteValue('<div style="background:#82e38524;color:red;padding:8px 0px 8px 0px">'+add+item.comment+'</div>');
   // editor.chain().focus().setContent('<div class="d-flex">'+add+item.comment+'</div>').run()
- 
+  window.scrollTo({
+    top: 400,
+    behavior: 'smooth',
+});
  }
 
  const orginpost=()=>

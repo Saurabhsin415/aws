@@ -15,7 +15,7 @@ const CommonLayout = ({ children}) => {
   const router = useRouter();
  const pathname=router.pathname;
  const reloadpage=()=>{
-console.log('asd');
+// console.log('asd');
   // console.log(window.scrollY);
   // Router.reload(window.location.pathname);
  }
