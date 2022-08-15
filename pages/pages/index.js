@@ -59,7 +59,7 @@ export default function Page({name}) {
  <Accordion/>
  <div className='content-wrap1'>
   <div className="text-center py-3 text-family">
-  Dfg Sdfg Satta indian satta marketplace {name}s an extended Dfg Sdfgrecord. {name} Satta Matka could be a in style madur matka satta com  {name} Indian Satta Matka recreation matkaparivar that is contend by several of the individuals these days in Indian Dfg Sdfg. As technologies grows day by day, Dfg Sdfg the popularity of Indian Matka improves throughout the world. Some yrs again, you've got to pay a visit to a selected location to fancy this, however currently you'll play this sport by sitting at your property with Satta Dfg Sdfg Matka Asia. 
+  Dfg Sdfg Satta indian satta marketplace {name}s an extended Dfg Sdfgrecord. {name} Satta Matka could be a in style madur matka satta com  {name} Indian Satta Matka recreation matkaparivar that is contend by several of the individuals these days in Indian Dfg Sdfg. As technologies grows day by day, Dfg Sdfg the popularity of Indian Matka improves throughout the world. Some yrs again, you`ve got to pay a visit to a selected location to fancy this, however currently you`ll play this sport by sitting at your property with Satta Dfg Sdfg Matka Asia. 
   </div>
 </div>
     </>
