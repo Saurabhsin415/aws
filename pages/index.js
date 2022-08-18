@@ -13,6 +13,7 @@ import Zone from "./zone";
 // import Notification from "./notification";
 import dynamic from 'next/dynamic';
 import axios from "../components/lib/axios";
+import Content from "./content";
 const Accordion=dynamic(()=>import('./accordion'),{
   ssr: false,
 })
@@ -123,14 +124,19 @@ export default function Home({chart,notify}) {
  </div>
 
           ))}
- <Accordion/>
+ {/* <Accordion/> */}
+ <Content/>
     </>
     
   );
 }
 
 
-export async function getStaticProps() {
+export async function getServerSideProps({ req, res }) {
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
   try {
     const result = await axios.get('chart');
     const noti = await axios.get('notification');

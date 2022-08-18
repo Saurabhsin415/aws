@@ -1,25 +1,16 @@
-
-
-
-
-import axios from "axios";
-import React, {useState,useEffect } from "react";
+import axios from "../../components/lib/axios";
 import useSWR from "swr";
 import Link from 'next/link';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
- 
-export default function ChartIndex(props) {
-  console.log('asdf');
-  console.log(props);
-  const [data,setData]=useState('');
-  // const address = `chart`;
-  // const fetcher = async (url) => await axios.get(url).then((res) => res.data);
-  // const { data, error } = useSWR(address, fetcher);
+export default function ChartIndex() {
+  const address = `chart`;
+  const fetcher = async (url) => await axios.get(url).then((res) => res.data);
+  const { data, error } = useSWR(address, fetcher);
 
-  // if (error) <p>Loading failed...</p>;
-  // if (!data) <h1>Loading...</h1>;
- 
+  if (error) <p>Loading failed...</p>;
+  if (!data) <h1>Loading...</h1>;
+console.log(data);
   return (
     <div>
     {/* //jodichart */}
@@ -41,7 +32,7 @@ export default function ChartIndex(props) {
 <h3 style={{'marginBottom':'0px'}}>Panel Chart</h3>
  </div>
       {/* {console.log(data)} */}
-        {data &&
+        {!data?  <Skeleton height={300}/>: data &&
           data.data.map((item,index) => (
 
             <div className='content-wrap1 text-center text-family result-div div_link' key={index}>
@@ -55,4 +46,3 @@ export default function ChartIndex(props) {
  
   );
 }
-
