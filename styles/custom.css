@@ -681,3 +681,20 @@ outline: none!important;
     cursor: pointer;
 }
  
+.p-0{
+  padding: 5px 0px !important;
+}
+.justify{
+  text-align: justify!important;
+}
+.fon14{
+  font-size: 14px;
+ 
+}
+.line-height{
+  line-height: 1.3;
+}
+.alink{
+  text-transform: capitalize;
+  color: blue;
+}

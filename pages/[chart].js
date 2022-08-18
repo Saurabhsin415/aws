@@ -29,7 +29,7 @@ export default function ChartSlug() {
  
 
 {data && data.chart=='jodi'?<JodiChart name={id} data={data.data} week={data.data.week_day}/>:''}
-{data && data.chart=='pages'?<Pages name={data.data}/>:''}
+{data && data.chart=='pages'?<Pages data={data.data}/>:''}
  
       </div>
  

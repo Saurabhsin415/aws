@@ -10,7 +10,7 @@ import Zone from "../zone";
  
 export default function Page({data}) {
   console.log(data);
-  const name='';
+  const name=data;
   return (
     <>
        <Head lang = "en">
@@ -19,12 +19,11 @@ export default function Page({data}) {
        <meta name="description" content="{name} - satta matka dpboss all market fastest matka result get fix matka number on kalyan matka site"></meta>
        <meta name="keywords" content="{name}, kalyan matka, matka ratan, sattamatka, satta matta matka, kalyan satta, satta matka kalyan, satta matta, sata matka, sattamataka143, matka result, satka matka, satta matka result, satta batta, kalyan matka result"/>
       </Head>
-
-      xzcv
-<div className='content-wrap'>
-  <div className="text-center py-3 text-family">
-  Satta {name} {name} Matka  Gived Fix Satta Matka Number of {name} {name} its tottaly free for all satta Dfg Sdfg matka Jodi Game to find {name} {name} Jodi Weekly Skim Membership, Kalyan Matka just follow Dfg Sdfg Satta Jodi, Satta Matka Free Ank, Free Jodi, Kalyan Dfg Sdfg- Dfg Sdfg Jodi tips, Jodi, Matka Fix Jodi Today, Dfg Sdfg-Dfg Sdfg Sattamatka Jodi Skim, Kalyan Single Jodi Skim, Today Satta Matka Kalyan Matka Daily Chart Dfg Sdfg Repair Matka or satta matka web site that provides you correct and high level quickest dpboss net Fast, Sattamatka, Dfg Sdfg, Kalyan Matka Jodi panel hospitable shut daily or weekly.
-   सट्टा मटका मार्केट में सबसे बेस्ट और फास्टेट सट्टा मटका रिजल्ट वेबसाइट डीपीबॉस नेट से भी आगे. also {name} It to Know daily based of all satta matka market {name} {name} matka result thank you..
+ 
+<div className='content-wrap p-0'>
+  <div className="text-center py-3  p-0 justify  line-height fon14">
+  Satta <Link href="/"><a className='alink'>{name}</a></Link>  Matka  Gived Fix Satta Matka Number of <Link href="/"><a className='alink'>{name}</a></Link> <Link href="/"><a className='alink'>{name}</a></Link> its tottaly free for all satta Dfg Sdfg matka Jodi Game to find {name} {name} Jodi Weekly Skim Membership, Kalyan Matka just follow Dfg Sdfg Satta Jodi, Satta Matka Free Ank, Free Jodi, Kalyan <Link href="/"><a className='alink'>{name}</a></Link>- <Link href="/"><a className='alink'>{name}</a></Link>Jodi tips, Jodi, Matka Fix Jodi Today, <Link href="/"><a className='alink'>{name}</a></Link> Sattamatka Jodi Skim, Kalyan Single Jodi Skim, Today Satta Matka Kalyan Matka Daily Chart<Link href="/"><a className='alink'>{name}</a></Link> Repair Matka or satta matka web site that provides you correct and high level quickest dpboss net Fast, Sattamatka, <Link href="/"><a className='alink'>{name}</a></Link>, Kalyan Matka Jodi panel hospitable shut daily or weekly.
+   सट्टा मटका मार्केट में सबसे बेस्ट और फास्टेट सट्टा मटका रिजल्ट वेबसाइट डीपीबॉस नेट से भी आगे. also <Link href="/"><a className='alink'>{name}</a></Link> It to Know daily based of all satta matka market <Link href="/"><a className='alink'>{name}</a></Link> <Link href="/"><a className='alink'>{name}</a></Link> matka result thank you..
 </div>
 </div>
 
