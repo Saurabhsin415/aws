@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function SimpleAccordion() {
   return (
     <>   
- <div className='gamezone'>
+ <div>
 <h3 style={{'marginBottom':'0px'}}>DAILY GAME ZONE</h3>
  </div>
  <div className='zone-menu'>
