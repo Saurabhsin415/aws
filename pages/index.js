@@ -1,3 +1,5 @@
+
+
 import Link from 'next/link';
 import Typed from "react-typed";
 import SlidePost from "./slidepost";
@@ -10,10 +12,13 @@ import {Helmet} from "react-helmet";
 import Zone from "./zone";
 // import Notification from "./notification";
 import dynamic from 'next/dynamic';
+import axios from "../components/lib/axios";
 const Accordion=dynamic(()=>import('./accordion'),{
   ssr: false,
 })
-export default function Home() {
+export default function Home({chart,notify}) {
+  console.log('asd')
+  console.log(notify);
   return (
     <>
        <Head lang = "en">
@@ -62,6 +67,12 @@ export default function Home() {
 </div>
 
 
+<div className='content-wrap1'>
+  <div className="text-center py-3 text-family m-0"  dangerouslySetInnerHTML={{__html: notify}}>
+   
+</div>
+</div>
+
 
 <div className='px-3 relative'>
 <span className='bedage'>New</span>
@@ -81,10 +92,57 @@ export default function Home() {
  
 <SlidePost/>
 <Zone/>
-<Charts/>
+<div className="text-center py-3 text-family1 result-update">
+<h3 style={{'marginBottom':'0px'}}>Jodi Chart</h3>
+ </div>
  
+      {/* {console.log(data)} */}
+       
+          {chart.map((item,index) => (
+            <div className='content-wrap1 text-center text-family result-div div_link' key={index}>
+            <Link href={`${item.chart_slug.toLowerCase()}-jodi-chart`}>
+  <a className='link'>{`${item.chartname.toLowerCase()}`} Jodi Chart</a>
+ </Link>
+ </div>
+          ))}
+
+
+{/* <Charts/> */}
+           {/* //panel chart */}
+           <div className="text-center py-3 text-family1 result-update">
+<h3 style={{'marginBottom':'0px'}}>Panel Chart</h3>
+ </div>
+      {/* {console.log(data)} */}
+        
+          {chart.map((item,index) => (
+
+            <div className='content-wrap1 text-center text-family result-div div_link' key={index}>
+ <Link href={`${item.chart_slug.toLowerCase()}-panel-chart`}>
+  <a className='link'>{`${item.chartname.toLowerCase()}`} Panel Chart</a>
+ </Link>
+ </div>
+
+          ))}
  <Accordion/>
     </>
     
   );
+}
+
+
+export async function getStaticProps() {
+  try {
+    const result = await axios.get('chart');
+    const noti = await axios.get('notification');
+    const data = result.data;
+    const notification = noti.data;
+    return {
+        props: {
+            chart: data.data,
+            notify:notification.data
+        }
+    }
+} catch (error) {
+    console.log(error);
+}
 }
