@@ -18,7 +18,7 @@ const CommonLayout = ({ children}) => {
  const reloadpage=()=>{
 // console.log('asd');
 toast.success('Refresh')
-router.push(window.location.pathname);
+router.replace(window.location.pathname);
   console.log(window.location.pathname);
   // Router.reload(window.location.pathname);
  }
