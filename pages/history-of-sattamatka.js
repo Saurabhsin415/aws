@@ -21,7 +21,7 @@ the practice changed, so that three numbers were drawn from a pack of playing ca
 
 <p>In 1962, Kalyanji Bhagat started the Worli matka. Ratan Khatri then introduced the New Worli matka in 1964, 
 with slight modifications to the rules of the game with odds that were more favourable to the public. 
-Kalyanji Bhagat's matka ran every day of the week, whereas Ratan Khatri's matka ran only five days a week,
+Kalyanji Bhagat`s matka ran every day of the week, whereas Ratan Khatri`s matka ran only five days a week,
 from Monday to Friday and later as it gained immense popularity and became synonymous with his name, 
 it began to be called Main Ratan matka.</p>
 
