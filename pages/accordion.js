@@ -16,7 +16,7 @@ export default function SimpleAccordion() {
 
   return (
     <> 
-       <h3 style={{'marginBottom':'0px'}}>Jodi Chart</h3>
+       
     <div className='accordion'>
     {/* {console.log(result.data)} */}
 

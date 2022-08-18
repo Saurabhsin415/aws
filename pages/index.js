@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Typed from "react-typed";
 import SlidePost from "./slidepost";
-import Accordion from "./accordion";
+// import Accordion from "./accordion";
 import Charts from './charts';
 import Result from './result';
 import Live from "./live.js";
@@ -10,9 +10,9 @@ import {Helmet} from "react-helmet";
 import Zone from "./zone";
 // import Notification from "./notification";
 import dynamic from 'next/dynamic';
-// const Notification=dynamic(()=>import('./notification'),{
-//   ssr: false,
-// })
+const Accordion=dynamic(()=>import('./accordion'),{
+  ssr: false,
+})
 export default function Home() {
   return (
     <>

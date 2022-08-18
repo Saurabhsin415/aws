@@ -26,7 +26,7 @@ export default function ChartSlug() {
       <CircularProgress className="m-auto mt-20" style={{'margin':'92px auto 35px auto'}}/>
     </Box>:data && data.chart=='panel'?<PanelChart name={id} data={data.data.result} week={data.data.week_day}/>:''}
 
-{console.log(data)}
+ 
 
 {data && data.chart=='jodi'?<JodiChart name={id} data={data.data} week={data.data.week_day}/>:''}
 {data && data.chart=='pages'?<Pages name={data.data}/>:''}

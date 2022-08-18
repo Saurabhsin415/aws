@@ -90,8 +90,9 @@ export default function CustomizedTables({name,data,week}) {
               <StyledTableCell align="center" className={`red-${row.wed2}`}>{row.wed2}</StyledTableCell>
               <StyledTableCell align="center" className={`red-${row.thu2}`}>{row.thu2}</StyledTableCell>
               <StyledTableCell align="center" className={`red-${row.fri2}`}>{row.fri2}</StyledTableCell>
-              <StyledTableCell align="center" className={`red-${row.sat2}`}>{row.sat2}</StyledTableCell>
-              <StyledTableCell align="center" className={`red-${row.sun2}`}>{row.sun2}</StyledTableCell>
+              {week==5?'':
+              <StyledTableCell align="center" className={`red-${row.sat2}`}>{row.sat2}</StyledTableCell>  }
+              {week==6 || week==5?'': <StyledTableCell align="center" className={`red-${row.sun2}`}>{row.sun2}</StyledTableCell> }
             </StyledTableRow>
           ))}
         </TableBody>

@@ -293,7 +293,7 @@ className="expert-subheading"
       <CssBaseline />
  
 <Login token={token} user={user}/>
-      {token && user && user.type==3?<Container maxWidth="lg" className="content-wrap1 py-20 text-center">
+      {token && user && user.type==3 || user.type==1?<Container maxWidth="lg" className="content-wrap1 py-20 text-center">
       <Button onClick={handleOpen} className="emoji_img">Add Emoji</Button>
       <Modal
         keepMounted
