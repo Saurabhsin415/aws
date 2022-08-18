@@ -16,9 +16,10 @@ const CommonLayout = ({ children}) => {
   const router = useRouter();
  const pathname=router.pathname;
  const reloadpage=()=>{
-console.log('asd');
+// console.log('asd');
 toast.success('Refresh')
-  // console.log(window.scrollY);
+router.push(window.location.pathname);
+  console.log(window.location.pathname);
   // Router.reload(window.location.pathname);
  }
  const [showTopBtn, setShowTopBtn] = useState(false);
