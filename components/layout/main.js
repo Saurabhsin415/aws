@@ -11,15 +11,12 @@ import HomeIcon from '@mui/icons-material/Home';
 import {Helmet} from "react-helmet";
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { toast } from "react-toastify";
 const CommonLayout = ({ children}) => {
   const router = useRouter();
  const pathname=router.pathname;
  const reloadpage=()=>{
 // console.log('asd');
-toast.success('Refresh')
-router.replace(window.location.pathname);
-  console.log(window.location.pathname);
+  // console.log(window.scrollY);
   // Router.reload(window.location.pathname);
  }
  const [showTopBtn, setShowTopBtn] = useState(false);
@@ -94,7 +91,7 @@ const scrollToBottom = () => {
   </Link>
 
 </div>
-<div style={{'cursor':'pointer','color':'#e70280'}} onClick={()=>reloadpage()}>
+<div style={{'cursor':'pointer','color':'#e70280'}} onClick={()=>window.location.reload()}>
   
     <RefreshIcon/> <span className="aspan">Refresh</span>
  
