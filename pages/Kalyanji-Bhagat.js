@@ -10,7 +10,7 @@ export default function Content() {
  <div className="content-wrap1 py-20 text-center p-0">
  
  <div className="text-center text-capitalize p-0 justify fon14" >
-<p>Kalyanji Bhagat was born a farmer in the village of Ratadia, Games Wala in Kutch, Gujarat. Kalyanji's family name was Gala and the name Bhagat,
+<p>Kalyanji Bhagat was born a farmer in the village of Ratadia, Games Wala in Kutch, Gujarat. Kalyanji`s family name was Gala and the name Bhagat,
 a modification of bhakt, was a title given to their family by the King of Kutch for their religiousness.
 
 He arrived as a migrant in Bombay in 1941 and initially did odd jobs such as masala ferriwala (spice seller) to managing a grocery store. 
