@@ -54,6 +54,7 @@ export default function CustomizedTables({name,data,week}) {
   return (
 <>
 <Head>
+ 
     <title> {data.title}</title>
        <meta name="description" content={data.description}></meta>
        <meta name="keywords" content={data.keyword}/>
@@ -61,7 +62,7 @@ export default function CustomizedTables({name,data,week}) {
 
   
     <div className="text-center py-3 text-family1 result-update" style={{'marginTop':'40px'}}>
-<h3 style={{'marginBottom':'0px','textTransform':'capitalize'}}>{name}</h3>  
+<h1 style={{'marginBottom':'0px','textTransform':'capitalize','fontSize':'24px'}}>{name}</h1>  
  </div>
     <TableContainer component={Paper}>
       <Table aria-label="customized table">

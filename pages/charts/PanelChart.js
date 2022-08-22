@@ -57,7 +57,7 @@ export default function CustomizedTables({name,data,week}) {
        <meta name="keywords" content={data.panel_keyword}/>
   </Head>
     <div className="text-center py-3 text-family1 result-update" style={{'marginTop':'40px'}}>
-    <h3 style={{'marginBottom':'0px','textTransform':'capitalize'}}>{name}</h3>
+    <h1 style={{'marginBottom':'0px','textTransform':'capitalize','fontSize':'24px','marginTop':'45px',}}>{name}</h1>  
  </div>
     <TableContainer component={Paper}>
       <Table aria-label="customized table">

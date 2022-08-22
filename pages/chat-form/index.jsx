@@ -265,7 +265,7 @@ const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(
       </Head>
 
 <div className="text-center py-3 text-family1 guessing-forum">
-<h3 style={{'marginBottom':'0px'}}>Chat Forum</h3> 
+<h1 style={{'marginBottom':'0px','textTransform':'capitalize','fontSize':'26px',}}>Chat Forum</h1>  
  {/* <div className='text-color1'>Date:10/07/2022</div> */}
  </div> 
  
