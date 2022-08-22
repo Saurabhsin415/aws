@@ -3,13 +3,13 @@ import Link from 'next/link';
 export default function SimpleAccordion() {
   return (
     <>   
- <div>
+<div className="text-center py-3 text-family1 result-update">
 <h3 style={{'marginBottom':'0px'}}>DAILY GAME ZONE</h3>
  </div>
  <div className='zone-menu'>
  <Link href="/guessing-form">
   <a className='link-zone'>GUESSING FORUM</a>
- </Link>
+ </Link>     
  <Link href="/expert-form">
   <a className='link-zone'>EXPERTS FORUM</a>
  </Link>
