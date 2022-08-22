@@ -17,7 +17,7 @@ import { usePagination } from "../../components/lib/hooks";
 import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
- 
+import Head from 'next/head'
 import Link from 'next/link';
 import Document from '@tiptap/extension-document'
 import Dropcursor from '@tiptap/extension-dropcursor'
@@ -266,11 +266,10 @@ result.then(response=>{
 const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(`guessing-forum?orginal=${orgin}&search=${search}`);
   return (
     <>
- <Helmet>
- <title>SATTAMATKA DPBOSS 143 GUESSING FORUM</title>
+  <Head>
+  <title>SATTAMATKA DPBOSS 143 GUESSING FORUM</title>
  <meta name="description" content="DPBOSS GUESSING FORUM - SATTAMATKA 143 GUESSING FORUM , DP BOSS , SATTAMATKà , SATTA MATKA , 143 SATTAMATKA , 143 GUESSING FORUM , DPBOSS 143 GUESSING FORUM "/><meta name="keywords" content="DPBOSS 143 GUESSING FORUM | SATTAMATKà | DPBOSS | KALYAN MATKA TIPS | SATTA MATKA | MATKA.COM | MATKA PANA JODI TODAY | BATTA SATKA | MATKA PATTI JODI NUMBER | MATKA RESULTS | MATKA CHART | MATKA JODI | FULL RATE GAME | MATKA GAME | ALL MATKA RESULT LIVE ONLINE | MATKA RESULT | KALYAN MATKA RESULT | DPBOSS MATKA 143 | MAIN MATKA"/>
- 
- </Helmet>
+      </Head>
 <div className="text-center py-3 text-family1 guessing-forum">
 <h3 style={{'marginBottom':'0px'}}>Guessing Forum</h3> 
  {/* <div className='text-color1'>Date:10/07/2022</div> */}

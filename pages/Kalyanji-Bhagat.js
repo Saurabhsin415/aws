@@ -1,9 +1,16 @@
 import React, { useEffect, useState,Component,useRef } from "react";
 import Link from 'next/link';
+import Head from "next/head";
 export default function Content() {
   
   return (
     <>
+          <Head>
+    <title>Kalyanji Bhagat</title>
+       <meta name="description" content="Kalyanji Bhagat was born a farmer in the village of Ratadia, Games Wala in Kutch, Gujarat. Kalyanji`s family name was Gala and the name Bhagat,
+a modification of bhakt, was a title given to their family by the King of Kutch for their religiousness."></meta>
+       <meta name="keywords" content="history of sattamatka,matka history,sattamatka"/>
+  </Head>
    <div className="text-center py-3 text-family1 result-update" style={{'marginTop':'60px'}}>
     <h3 style={{'marginBottom':'0px','textTransform':'capitalize'}}>Kalyanji Bhagat</h3>
  </div>

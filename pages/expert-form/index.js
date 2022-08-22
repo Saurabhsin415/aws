@@ -1,10 +1,8 @@
-import dynamic from "next/dynamic";
+
 import React, { useEffect, useState,Component,useRef } from "react";
-import { useRouter } from 'next/router'
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
 import Container from '@mui/material/Container';
 import Modal from '@mui/material/Modal'
 import Button from '@mui/material/Button';
@@ -17,7 +15,7 @@ import { usePagination } from "../../components/lib/hooks";
 import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
- 
+import Head from 'next/head'
 import Link from 'next/link';
 import Document from '@tiptap/extension-document'
 import Dropcursor from '@tiptap/extension-dropcursor'
@@ -26,7 +24,6 @@ import Paragraph from '@tiptap/extension-paragraph'
 import Text from '@tiptap/extension-text'
 import TextStyle from '@tiptap/extension-text-style'
 import { EditorContent, useEditor } from '@tiptap/react'
-import {Helmet} from "react-helmet";
 export default function Guessingforum() {
 //  console.log(token);
 const { result, errors } =UserInfo();
@@ -258,11 +255,10 @@ result.then(response=>{
 const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(`expert-forum?orginal=${orgin}&search=${search}`);
   return (
     <>
-   <Helmet>
- <title>SATTAMATKA DPBOSS 143 GUESSING FORUM</title>
- <meta name="description" content="DPBOSS GUESSING FORUM - SATTAMATKA 143 GUESSING FORUM , DP BOSS , SATTAMATKà , SATTA MATKA , 143 SATTAMATKA , 143 GUESSING FORUM , DPBOSS 143 GUESSING FORUM "/><meta name="keywords" content="DPBOSS 143 GUESSING FORUM | SATTAMATKà | DPBOSS | KALYAN MATKA TIPS | SATTA MATKA | MATKA.COM | MATKA PANA JODI TODAY | BATTA SATKA | MATKA PATTI JODI NUMBER | MATKA RESULTS | MATKA CHART | MATKA JODI | FULL RATE GAME | MATKA GAME | ALL MATKA RESULT LIVE ONLINE | MATKA RESULT | KALYAN MATKA RESULT | DPBOSS MATKA 143 | MAIN MATKA"/>
- 
- </Helmet>
+  <Head>
+  <title>SATTAMATKA DPBOSS 143 Expert FORUM</title>
+ <meta name="description" content="DPBOSS Expert FORUM - SATTAMATKA 143 GUESSING FORUM , DP BOSS , SATTAMATKà , SATTA MATKA , 143 SATTAMATKA , 143 GUESSING FORUM , DPBOSS 143 GUESSING FORUM "/><meta name="keywords" content="DPBOSS 143 GUESSING FORUM | SATTAMATKà | DPBOSS | KALYAN MATKA TIPS | SATTA MATKA | MATKA.COM | MATKA PANA JODI TODAY | BATTA SATKA | MATKA PATTI JODI NUMBER | MATKA RESULTS | MATKA CHART | MATKA JODI | FULL RATE GAME | MATKA GAME | ALL MATKA RESULT LIVE ONLINE | MATKA RESULT | KALYAN MATKA RESULT | DPBOSS MATKA 143 | MAIN MATKA"/>
+      </Head>
  <div className="text-center py-15 text-family1 guessing-forum">
 <h1 className="heading-expert mb-0">
 143 Expert Guessing Forum</h1>  

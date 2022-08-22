@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 import CircularProgress from '@mui/material/CircularProgress';
 import Cookies from 'js-cookie'
 import Router from 'next/router'
+import Head from 'next/head';
 const Register = () => {
  
 const [fname,setFname]=useState();
@@ -56,6 +57,10 @@ const   submit=()=>{
 }
     return (
       <>
+       <Head>
+       <title>KalyanMatka Login</title>
+       <meta name="description" content="Guessing login,expert login"></meta>
+       </Head>
         <div className=" py-20 text-center">
 <div className="text-center py-3 text-family1 guessing-forum">
 <h3 style={{'marginBottom':'0px'}}>Login</h3> 

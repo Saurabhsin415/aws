@@ -7,7 +7,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-
+import Head from 'next/head';
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: '#e70280;',
@@ -51,8 +51,13 @@ const rows = [
 export default function CustomizedTables({name,data,week}) {
   return (
 <>
+  <Head>
+    <title> {data.panel_title}</title>
+       <meta name="description" content={data.panel_description}></meta>
+       <meta name="keywords" content={data.panel_keyword}/>
+  </Head>
     <div className="text-center py-3 text-family1 result-update" style={{'marginTop':'40px'}}>
-    <h3 style={{'marginBottom':'0px','textTransform':'capitalize'}}>{name && name.replaceAll('-',' ')}</h3>
+    <h3 style={{'marginBottom':'0px','textTransform':'capitalize'}}>{name}</h3>
  </div>
     <TableContainer component={Paper}>
       <Table aria-label="customized table">
@@ -70,7 +75,7 @@ export default function CustomizedTables({name,data,week}) {
           </TableRow>
         </TableHead>
         <TableBody>  
-          {data && data.map((row) => (
+          {data && data.result.map((row) => (
             <StyledTableRow key={row.name}>
               <StyledTableCell component="th" scope="row" align='center'>
                 {row.fromdate} <br></br> to  <br></br>  {row.todate}

@@ -17,7 +17,10 @@ const [loading,setLoading]=useState(false);
  
     return (
       <>
-     
+       <Head>
+       <title>Top 10 Guesser User list</title>
+       <meta name="description" content="10 user list"></meta>
+       </Head>
         <div className=" py-20 text-center">
 <div className="text-center py-3 text-family1 guessing-forum">
 <h3 style={{'marginBottom':'0px'}}>Top 10 Users</h3> </div>

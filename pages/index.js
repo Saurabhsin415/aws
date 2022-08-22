@@ -8,7 +8,6 @@ import Charts from './charts';
 import Result from './result';
 import Live from "./live.js";
 import Head from 'next/head'
-import {Helmet} from "react-helmet";
 import Zone from "./zone";
 // import Notification from "./notification";
 import dynamic from 'next/dynamic';
@@ -18,11 +17,11 @@ const Accordion=dynamic(()=>import('./accordion'),{
   ssr: false,
 })
 export default function Home({chart,notify}) {
-  console.log('asd')
-  console.log(notify);
+  // console.log('asd')
+  // console.log(notify);
   return (
     <>
-       <Head lang = "en">
+       <Head>
   
                 <meta charSet="utf-8" />
                 <title>Dpboss | Satta Matka | Kalyan Market Result Site |</title>
@@ -40,20 +39,7 @@ export default function Home({chart,notify}) {
        <meta property="og:title" content="Satta Matka"/>
        <meta property="og:description" content="SattaMatka"/>
        <meta property="og:url" content="https://kalyanmatka.site"/>
-       <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png"/>
-       <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png"/>
-       <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png"/>
-       <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png"/>
-       <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png"/>
-       <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png"/>
-       <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png"/>
-       <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png"/>
-       <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png"/>
-       <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png"/>
-       <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png"/>
-       <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png"/>
-       <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"/>
-       <link rel="manifest" href="favicon/manifest.json"/>  
+      
       </Head>
 <div className='content-wrap'>
   <div className="text-center py-3 text-family">
@@ -132,11 +118,8 @@ export default function Home({chart,notify}) {
 }
 
 
-export async function getServerSideProps({ req, res }) {
-  res.setHeader(
-    'Cache-Control',
-    'public, s-maxage=10, stale-while-revalidate=59'
-  )
+export async function getStaticProps() {
+ 
   try {
     const result = await axios.get('chart');
     const noti = await axios.get('notification');
@@ -146,7 +129,8 @@ export async function getServerSideProps({ req, res }) {
         props: {
             chart: data.data,
             notify:notification.data
-        }
+        },
+        revalidate: 10, // In seconds
     }
 } catch (error) {
     console.log(error);

@@ -1,9 +1,16 @@
 import React, { useEffect, useState,Component,useRef } from "react";
 import Link from 'next/link';
+import Head from "next/head";
 export default function Content() {
   
   return (
     <>
+             <Head>
+    <title>Ratan Khatri</title>
+       <meta name="description" content="atan Khatri, known as the original Matka King, from the early 1960s to mid-1990s controlled a nationwide illegal gambling network with international
+connections which involved several lakh punters and dealt with crores of rupees."></meta>
+       <meta name="keywords" content="history of sattamatka,matka history,sattamatka"/>
+  </Head>
    <div className="text-center py-3 text-family1 result-update" style={{'marginTop':'60px'}}>
     <h3 style={{'marginBottom':'0px','textTransform':'capitalize'}}>Ratan Khatri</h3>
  </div>

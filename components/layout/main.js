@@ -10,6 +10,7 @@ import HowToRegIcon from '@mui/icons-material/HowToReg';
 import HomeIcon from '@mui/icons-material/Home';
 import {Helmet} from "react-helmet";
 import Head from 'next/head'
+
 import { useRouter } from 'next/router'
 const CommonLayout = ({ children}) => {
   const router = useRouter();

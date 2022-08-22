@@ -122,10 +122,10 @@ export const GuessingFormPost = (data) => {
   
 
 
-  // export const getUser = (username) => axios.get({
-  //   baseUrl: `https://api.github.com/users/`,
-  //   responseType: 'json',
-  //   })
+  export const getArticleFromAPI = () => {
+  const data=fetch('https://jsonplaceholder.typicode.com/todos/1')
+ return data;
+  }
  
 
   
@@ -135,5 +135,6 @@ export const GuessingFormPost = (data) => {
   //   // const { data:result, error } = useSWR(address, fetcher);
   //   return result
   // }
+
 
 

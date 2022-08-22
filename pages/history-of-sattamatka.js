@@ -1,9 +1,16 @@
 import React, { useEffect, useState,Component,useRef } from "react";
 import Link from 'next/link';
+import Head from "next/head";
 export default function Content() {
   
   return (
     <>
+      <Head>
+    <title>History Of sattamatka</title>
+       <meta name="description" content="In the original form of the game, betting would take place on the opening and closing rates of cotton as transmitted 
+to the Bombay Cotton Exchange from the New York Cotton Exchange, via teleprinters."></meta>
+       <meta name="keywords" content="history of sattamatka,matka history,sattamatka"/>
+  </Head>
    <div className="text-center py-3 text-family1 result-update" style={{'marginTop':'60px'}}>
     <h3 style={{'marginBottom':'0px','textTransform':'capitalize'}}>History of Sattamatka</h3>
  </div>
