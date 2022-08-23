@@ -64,16 +64,8 @@ export default function Home({chart,notify}) {
 <div className='px-3 relative'>
 <span className='bedage'>New</span>
   <div className="text-center py-3 text-family1 live-update">
-{/* <Typed
-      strings={[
-            "Live Update",
-            "Sabse Tezz",
-          ]}
-          typeSpeed={150}
-          backSpeed={30}
-          loop
-        />
-         */}
+ Live Update
+        
         </div></div>
         {/* <Live/> */}
       
@@ -82,7 +74,7 @@ export default function Home({chart,notify}) {
  
  </div> 
  
-      {/* <Result/> */}
+      <Result/>
  
 <SlidePost/>
 <div className="text-center py-3 text-family1 result-update">
