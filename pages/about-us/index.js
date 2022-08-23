@@ -16,7 +16,6 @@ export default function Aboutus() {
     <h3 style={{'marginBottom':'0px','textTransform':'capitalize'}}>About Us</h3>
  </div>
  <div className="content-wrap1 py-20 text-center">
- {console.log(result.data)}
  <div className="text-center text-capitalize" dangerouslySetInnerHTML={{__html: result.data}}></div>
  
       </div>

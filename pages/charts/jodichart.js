@@ -62,7 +62,7 @@ export default function CustomizedTables({name,data,week}) {
 
   
     <div className="text-center py-3 text-family1 result-update" style={{'marginTop':'40px'}}>
-<h1 style={{'marginBottom':'0px','textTransform':'capitalize','fontSize':'24px'}}>{name}</h1>  
+<h1 style={{'marginBottom':'0px','textTransform':'capitalize','fontSize':'24px'}}>{name} Jodi Chart</h1>  
  </div>
     <TableContainer component={Paper}>
       <Table aria-label="customized table">
