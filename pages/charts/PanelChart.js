@@ -52,7 +52,7 @@ export default function CustomizedTables({name,data,week}) {
   return (
 <>
   <Head>
-    <title> {data.panel_title?.data.panel_title}</title>
+    <title> {data.panel_title?data.panel_title:''}</title>
        <meta name="description" content={data.panel_description?.data.panel_description}></meta>
        <meta name="keywords" content={data.panel_keyword?.data.panel_keyword}/>
   </Head>
