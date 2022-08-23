@@ -10,13 +10,13 @@ export default function LiveResult() {
   const { data, error } = useSWR(address, fetcher);
 
   if (error) <p>Loading failed...</p>;
-  if (!data) return <Skeleton height={1547}/>;
+  if (!data) return <Skeleton height={1503}/>;
  
   return (
 <>
 
 
-<div style={{'height':'1547px'}}>
+<div style={{'height':'1506px'}}>
 {data &&
           data.data.map((item,index) => (
             <div className={`content-wrap1 text-center result-div text-family2 ${item.highlight}`} key={index} style={{'height':'108px'}}>

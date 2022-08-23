@@ -14,9 +14,7 @@ const Result=dynamic(()=>import('./result'),{
 const Live=dynamic(()=>import('./live.js'),{
   ssr: false,
 });
-const Zone=dynamic(()=>import('./zone.js'),{
-  ssr: false,
-});
+ 
 const Content=dynamic(()=>import('./content'),{
   ssr: true,
 });
@@ -85,7 +83,20 @@ export default function Home({chart,notify}) {
       <Result/>
  
 <SlidePost/>
-<Zone/>
+<div className="text-center py-3 text-family1 result-update">
+<h3 style={{'marginBottom':'0px'}}>DAILY GAME ZONE</h3>
+ </div>
+ <div className='zone-menu'>
+ <Link href="/guessing-form">
+  <a className='link-zone'>GUESSING FORUM</a>
+ </Link>     
+ <Link href="/expert-form">
+  <a className='link-zone'>EXPERTS FORUM</a>
+ </Link>
+ <Link href="/chat-form">
+  <a className='link-zone'>CHAT FORUM</a>
+ </Link>
+ </div>
 <div className="text-center py-3 text-family1 result-update">
 <h3 style={{'marginBottom':'0px'}}>Jodi Chart</h3>
  </div>
