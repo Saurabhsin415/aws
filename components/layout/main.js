@@ -62,7 +62,7 @@ const scrollToBottom = () => {
 
 {/* <div className="topdown">{showTopBtn?<FontAwesomeIcon icon={faArrowUp}  onClick={goToTop}/>:<FontAwesomeIcon icon={faArrowDown}  onClick={scrollToBottom}/>}</div> */}
 <div className="topdown">{showTopBtn?<KeyboardDoubleArrowUpIcon  onClick={goToTop}/>:<KeyboardDoubleArrowDownIcon  onClick={scrollToBottom}/>}</div>
-<div className="topdownload"><a href="base.apk"><img src="download.jpeg" alt="apkdownload"/></a></div>
+<div className="topdownload"><a href="base.apk"><img src="download.svg" alt="apkdownload"/></a></div>
   <div className="footer text-color1">
 <div className={pathname=='/'?'active':''}>
   <Link href={'/'}>
