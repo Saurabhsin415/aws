@@ -15,10 +15,10 @@ export default function LiveResult() {
 <div className="text-center  text-family1 result-update m-0">
 
  </div> 
- {console.log(data)}
- {!data? <Skeleton height={200}/>:data &&
+ {console.log(data && data.data.length)}
+ {!data? <Skeleton height={143}/>:data &&
           data.data.map((item,index) => (
-            <div className={`content-wrap1 text-center result-div text-family2 ${item.highlight}`} key={index}>
+            <div className={`content-wrap1 text-center result-div text-family2 ${item.highlight}`} key={index} style={{'height':'143px'}}>
 
 <h2 className='text-color2'>{item.chartname}</h2>
 {item.liveersult?<p style={{'padding':'5px'}}>{item && item.liveersult && item.liveersult.left_patti}-{item && item.liveersult && item.liveersult.jodi}

@@ -77,7 +77,7 @@ export default function Home({chart,notify}) {
         /></div></div>
         {/* <Live/> */}
       
-      {/* <Result/> */}
+      <Result/>
  
 <SlidePost/>
 <Zone/>
