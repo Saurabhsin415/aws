@@ -52,9 +52,9 @@ export default function CustomizedTables({name,data,week}) {
   return (
 <>
   <Head>
-    <title> {data.panel_title?data.panel_title:''}</title>
-       <meta name="description" content={data.panel_description?.data.panel_description}></meta>
-       <meta name="keywords" content={data.panel_keyword?.data.panel_keyword}/>
+    <title> {data && data.panel_title}</title>
+       <meta name="description" content={data && data.panel_description}></meta>
+       <meta name="keywords" content={data && data.panel_keyword}/>
   </Head>
     <div className="text-center py-3 text-family1 result-update" style={{'marginTop':'40px'}}>
     <h1 style={{'marginBottom':'0px','textTransform':'capitalize','fontSize':'24px','marginTop':'45px',}}>{name}</h1>  
