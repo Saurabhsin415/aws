@@ -55,8 +55,8 @@ export default function CustomizedTables({name,data,week}) {
 <>
 <Head>
  
-    <title> {data.title?data.title:''}</title>
-       <meta name="description" content={data.description?.data.description}></meta>
+    <title> {data && data.title}</title>
+       <meta name="description" content={data  && data.description}></meta>
        <meta name="keywords" content={data.keyword?.data.keyword}/>
   </Head>
 
