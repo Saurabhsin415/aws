@@ -5,7 +5,7 @@ import * as API from "../api/app";
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import { toast } from "react-toastify";
- 
+import Head from 'next/head';
 const Users = () => {
 const [loading,setLoading]=useState(false);
 // TopUsers
