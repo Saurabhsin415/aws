@@ -18,7 +18,7 @@ const Live=dynamic(()=>import('./live.js'),{
 const Content=dynamic(()=>import('./content'),{
   ssr: true,
 });
-export default function Home({chart,notify}) {  
+export default function Home({chart,notify,live}) {  
   return (
     <>
        <Head>
@@ -74,8 +74,17 @@ export default function Home({chart,notify}) {
  
  </div> 
  
-      <Result/>
- 
+      
+        
+ {live.map((item,index) => (
+  <div className={`content-wrap1 text-center result-div text-family2 ${item.highlight}`} key={index} style={{'height':'108px'}}>
+<h2 className='text-color2'>{item.chartname}</h2>
+<p className=''>{item && item.number && item.number.left_patti}-{item && item.number && item.number.jodi}-{item && item.number && item.number.right_patti}</p>
+<p className='time'>[ {item && item.opentime && item.opentime} ] To [ {item && item.closetime && item.closetime} ]</p>
+ </div>
+          ))}
+
+
 <SlidePost/>
 <div className="text-center py-3 text-family1 result-update">
 <h3 style={{'marginBottom':'0px'}}>DAILY GAME ZONE</h3>
@@ -136,12 +145,15 @@ export async function getStaticProps() {
   try {
     const result = await axios.get('chart');
     const noti = await axios.get('notification');
+    const live =await axios.get('liveupddate');
     const data = result.data;
     const notification = noti.data;
+    const update=live.data;
     return {
         props: {
             chart: data.data,
-            notify:notification.data
+            notify:notification.data,
+            live:update.data,
         },
         revalidate: 10, // In seconds
     }
