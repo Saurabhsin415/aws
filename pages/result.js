@@ -10,14 +10,14 @@ export default function LiveResult() {
   const { data, error } = useSWR(address, fetcher);
 
   if (error) <p>Loading failed...</p>;
-  if (!data) return <Skeleton height={125} count={13} duration={10}/>;
+  if (!data) return <Skeleton height={1597}/>;
  
   return (
 <>
 
 
 <div className="text-center py-3 text-family1 result-update">
-<h3 style={{'marginBottom':'0px'}}>SATTA MATKA RESULTS</h3> 
+<h3 style={{'marginBottom':'0px','marginTop':'0px'}}>SATTA MATKA RESULTS</h3> 
  
  </div> 
  
