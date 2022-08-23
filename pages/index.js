@@ -2,23 +2,25 @@
 
 import Link from 'next/link';
 import Typed from "react-typed";
-import SlidePost from "./slidepost";
-// import Accordion from "./accordion";
-import Charts from './charts';
-import Result from './result';
-import Live from "./live.js";
 import Head from 'next/head'
-import Zone from "./zone";
-// import Notification from "./notification";
 import dynamic from 'next/dynamic';
 import axios from "../components/lib/axios";
-import Content from "./content";
-const Accordion=dynamic(()=>import('./accordion'),{
+const SlidePost=dynamic(()=>import('./slidepost'),{
   ssr: false,
-})
+});
+const Result=dynamic(()=>import('./result'),{
+  ssr: false,
+});
+const Live=dynamic(()=>import('./live.js'),{
+  ssr: false,
+});
+const Zone=dynamic(()=>import('./zone.js'),{
+  ssr: false,
+});
+const Content=dynamic(()=>import('./content'),{
+  ssr: true,
+});
 export default function Home({chart,notify}) {
-  // console.log('asd')
-  // console.log(notify);
   return (
     <>
        <Head>
@@ -94,7 +96,8 @@ export default function Home({chart,notify}) {
           ))}
 
 
-{/* <Charts/> */}
+
+
            {/* //panel chart */}
            <div className="text-center py-3 text-family1 result-update">
 <h3 style={{'marginBottom':'0px'}}>Panel Chart</h3>

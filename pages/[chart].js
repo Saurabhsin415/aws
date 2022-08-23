@@ -1,10 +1,16 @@
 // Example code
 import { useRouter } from 'next/router';
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
-import JodiChart from "./charts/jodichart";
-import PanelChart from "./charts/PanelChart";
-import Pages from "./pages";
+import dynamic from 'next/dynamic';
+const JodiChart=dynamic(()=>import('./charts/jodichart'),{
+  ssr: true,
+})
+const PanelChart=dynamic(()=>import('./charts/PanelChart'),{
+  ssr: true,
+})
+const Pages=dynamic(()=>import('./pages'),{
+  ssr: true,
+});
+
 function Post({ data }) {
 
   return (

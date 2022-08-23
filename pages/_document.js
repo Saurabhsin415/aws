@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-
+import Script from 'next/script'
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const originalRenderPage = ctx.renderPage
@@ -37,10 +37,15 @@ class MyDocument extends Document {
        <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png"/>
        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"/>
        <link rel="manifest" href="favicon/manifest.json"/>  
+       <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Poppins:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
         </Head>
         <body>
           <Main />
           <NextScript />
+          <Script
+  src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.map"
+  strategy="beforeInteractive" // lazyOnload, afterInteractive
+/>
         </body>
       </Html>
     )
