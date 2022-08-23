@@ -80,7 +80,7 @@ export default function Home({chart,notify}) {
  
  </div> 
  
-      <Result/>
+      {/* <Result/> */}
  
 <SlidePost/>
 <div className="text-center py-3 text-family1 result-update">
