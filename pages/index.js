@@ -8,17 +8,14 @@ import axios from "../components/lib/axios";
 const SlidePost=dynamic(()=>import('./slidepost'),{
   ssr: false,
 });
-const Result=dynamic(()=>import('./result'),{
-  ssr: false,
-});
-const Live=dynamic(()=>import('./live.js'),{
-  ssr: false,
-});
+
+ 
  
 const Content=dynamic(()=>import('./content'),{
   ssr: true,
 });
-export default function Home({chart,notify,live}) {  
+export default function Home({chart,notify,live,liveupdate}) {  
+  {console.log(live)}
   return (
     <>
        <Head>
@@ -67,7 +64,18 @@ export default function Home({chart,notify,live}) {
  Live Update
         
         </div></div>
-        {/* <Live/> */}
+ 
+          {liveupdate.map((item,index) => (
+            <div className={`content-wrap1 text-center result-div text-family2 ${item.highlight}`} key={index} style={{'height':'143px'}}>
+
+<h2 className='text-color2'>{item.chartname}</h2>
+{item.liveersult?<p style={{'padding':'5px'}}>{item && item.liveersult && item.liveersult.left_patti}-{item && item.liveersult && item.liveersult.jodi}
+{item && item.liveersult && item.liveersult.right_patti?'-'+item.liveersult.right_patti:''}</p>:<p>Loading...</p>}
+  
+ <p style={{'padding':'5px','fontSize':'18px','color':'blue'}}>{item && item.text_on==1 && item.text?item.text:''}</p>
+ <a className="btn button" style={{'fontSize':'14px','width':'90px','height':'28px','fontWeight':'inherit'}} onClick={()=> window.location.reload()}>Refresh</a> 
+ </div>
+          ))}
       
 <div className="text-center py-3 text-family1 result-update">
 <h3 style={{'marginBottom':'0px','marginTop':'0px'}}>SATTA MATKA RESULTS</h3> 
@@ -146,14 +154,18 @@ export async function getStaticProps() {
     const result = await axios.get('chart');
     const noti = await axios.get('notification');
     const live =await axios.get('liveupddate');
+    const liveresult =await axios.get('liveresult');
+
     const data = result.data;
     const notification = noti.data;
     const update=live.data;
+    
     return {
         props: {
             chart: data.data,
             notify:notification.data,
             live:update.data,
+            liveupdate:liveresult.data.data
         },
         revalidate: 10, // In seconds
     }
