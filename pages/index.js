@@ -75,9 +75,9 @@ export default function Home({chart,notify}) {
           backSpeed={30}
           loop
         /></div></div>
-        <Live/>
+        {/* <Live/> */}
       
-      <Result/>
+      {/* <Result/> */}
  
 <SlidePost/>
 <Zone/>

@@ -37,7 +37,7 @@ class MyDocument extends Document {
        <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png"/>
        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"/>
        <link rel="manifest" href="favicon/site.webmanifest.webmanifest"/>  
-       <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Poppins:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+       <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
         </Head>
         <body>
           <Main />

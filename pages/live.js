@@ -16,7 +16,7 @@ export default function LiveResult() {
 
  </div> 
  {console.log(data)}
- {!data? <Skeleton height={100}/>:data &&
+ {!data? <Skeleton height={200}/>:data &&
           data.data.map((item,index) => (
             <div className={`content-wrap1 text-center result-div text-family2 ${item.highlight}`} key={index}>
 
