@@ -6,7 +6,7 @@ import Charts from '../charts';
 import Result from '../result';
 import Live from "../live.js";
 import Head from 'next/head'
-import Zone from "../zone";
+ 
  
 export default function Page({data}) {
   console.log(data);
@@ -55,7 +55,20 @@ export default function Page({data}) {
 
  
 <SlidePost/>
-<Zone/>
+<div className="text-center py-3 text-family1 result-update">
+<h3 style={{'marginBottom':'0px'}}>DAILY GAME ZONE</h3>
+ </div>
+ <div className='zone-menu'>
+ <Link href="/guessing-form">
+  <a className='link-zone'>GUESSING FORUM</a>
+ </Link>     
+ <Link href="/expert-form">
+  <a className='link-zone'>EXPERTS FORUM</a>
+ </Link>
+ <Link href="/chat-form">
+  <a className='link-zone'>CHAT FORUM</a>
+ </Link>
+ </div>
 <Charts/>
  <Accordion/>
  <div className='content-wrap1'>
