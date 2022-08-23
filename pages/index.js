@@ -77,6 +77,11 @@ export default function Home({chart,notify}) {
         /></div></div>
         {/* <Live/> */}
       
+<div className="text-center py-3 text-family1 result-update">
+<h3 style={{'marginBottom':'0px','marginTop':'0px'}}>SATTA MATKA RESULTS</h3> 
+ 
+ </div> 
+ 
       <Result/>
  
 <SlidePost/>
