@@ -20,7 +20,7 @@ const Zone=dynamic(()=>import('./zone.js'),{
 const Content=dynamic(()=>import('./content'),{
   ssr: true,
 });
-export default function Home({chart,notify}) {
+export default function Home({chart,notify}) {  
   return (
     <>
        <Head>
