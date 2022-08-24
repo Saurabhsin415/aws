@@ -148,7 +148,12 @@ export default function Home({chart,notify,live,liveupdate}) {
 }
 
 
-export async function getStaticProps() {
+export async function getServerSideProps({ req, res }) {
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
+
  
   try {
     const result = await axios.get('chart');
@@ -167,7 +172,6 @@ export async function getStaticProps() {
             live:update.data,
             liveupdate:liveresult.data.data
         },
-        revalidate: 10, // In seconds
     }
 } catch (error) {
     console.log(error);
