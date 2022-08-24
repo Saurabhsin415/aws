@@ -46,7 +46,7 @@ const scrollToBottom = () => {
   return (
     <>
  
-    <div className="header text-color1 "  style={{'fontFamily': 'Kalam'}}>KalyanMatka.<span className="text-color2">Site</span></div>
+    <div className="header text-color1 ">KalyanMatka.<span className="text-color2">Site</span></div>
   <main>{children}</main>
   <div className='foot'>
  

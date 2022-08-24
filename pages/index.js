@@ -151,7 +151,7 @@ export default function Home({chart,notify,live,liveupdate}) {
 export async function getServerSideProps({ req, res }) {
   res.setHeader(
     'Cache-Control',
-    'public, s-maxage=1, stale-while-revalidate=10'
+    'public, s-maxage=1, stale-while-revalidate=1'
   )
 
  
