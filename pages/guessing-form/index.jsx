@@ -271,13 +271,10 @@ const {loadingMore,isReachedEnd,error,size,setSize,paginatedPost}=usePagination(
  <meta name="description" content="DPBOSS GUESSING FORUM - SATTAMATKA 143 GUESSING FORUM , DP BOSS , SATTAMATKà , SATTA MATKA , 143 SATTAMATKA , 143 GUESSING FORUM , DPBOSS 143 GUESSING FORUM "/><meta name="keywords" content="DPBOSS 143 GUESSING FORUM | SATTAMATKà | DPBOSS | KALYAN MATKA TIPS | SATTA MATKA | MATKA.COM | MATKA PANA JODI TODAY | BATTA SATKA | MATKA PATTI JODI NUMBER | MATKA RESULTS | MATKA CHART | MATKA JODI | FULL RATE GAME | MATKA GAME | ALL MATKA RESULT LIVE ONLINE | MATKA RESULT | KALYAN MATKA RESULT | DPBOSS MATKA 143 | MAIN MATKA"/>
       </Head>
 <div className="text-center py-3 text-family1 guessing-forum">
-{/* <h3 style={{'marginBottom':'0px'}}>Guessing Forum</h3>  */}
+
 <h1 style={{'marginBottom':'0px','textTransform':'capitalize','fontSize':'26px',}}>Guessing Forum</h1>  
- {/* <div className='text-color1'>Date:10/07/2022</div> */}
  </div> 
- 
  <div className="liveUpdate">
- 
 <div className='content-wrap1 py-3'>
 <h2
 className="expert-subheading"
@@ -298,7 +295,7 @@ className="expert-subheading"
  
       <CssBaseline />
  
-<Login token={token} user={user}/>
+<Lo gin token={token} user={user}/>
       {token && user && user.type==3 || user.type==1?<Container maxWidth="lg" className="content-wrap1 py-20 text-center">
       <Button onClick={handleOpen} className="emoji_img">Add Emoji</Button>
       <Modal
